@@ -1,9 +1,11 @@
+import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import AnimatedCounter from '../ui/AnimatedCounter'
 import { Icons } from '../ui/Icons'
 
 const statistics = [
+    // ... (same as before)
     {
         id: 1,
         icon: 'clock',
@@ -51,6 +53,12 @@ const statistics = [
 ]
 
 export default function Statistics() {
+    const [mounted, setMounted] = useState(false)
+
+    useEffect(() => {
+        setMounted(true)
+    }, [])
+
     const containerVariants = {
         hidden: { opacity: 0 },
         visible: {
@@ -74,7 +82,7 @@ export default function Statistics() {
     return (
         <section id="statistics" className="stats-section relative overflow-hidden">
             <div className="data-stream">
-                {[...Array(6)].map((_, i) => (
+                {mounted && [...Array(6)].map((_, i) => (
                     <div
                         key={i}
                         className="data-line"

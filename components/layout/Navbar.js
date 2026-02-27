@@ -76,11 +76,11 @@ export default function Navbar() {
                 <div className="nav-actions">
                     <ThemeToggle />
 
-                    <Button href="https://client.firtcore.cz/login" variant="primary" size="small">
+                    <Button href="https://client.firtcore.cz/login" variant="primary" size="small" className="hidden lg:inline-flex">
                         Přihlásit se
                     </Button>
 
-                    <Button href="https://client.firtcore.cz/register" variant="secondary" size="small">
+                    <Button href="https://client.firtcore.cz/register" variant="secondary" size="small" className="hidden lg:inline-flex">
                         Registrace
                     </Button>
 

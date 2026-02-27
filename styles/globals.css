@@ -111,7 +111,7 @@
     }
 
     .navbar-inner {
-        @apply flex items-center justify-between h-16 max-w-7xl mx-auto px-8 relative z-[120];
+        @apply flex items-center justify-between h-16 max-w-7xl mx-auto px-4 md:px-8 relative z-[120];
         transition: all 0.4s;
     }
 
@@ -221,8 +221,13 @@
 
     /* Mobile Toggle */
     .mobile-toggle {
-        @apply lg:hidden flex items-center justify-center w-12 h-12 rounded-lg relative z-[130];
-        background: hsl(var(--color-background));
+        @apply lg:hidden flex items-center justify-center w-12 h-12 rounded-xl relative z-[130] transition-colors;
+        background: transparent;
+        border: 1px solid hsl(var(--color-neutral) / 0.1);
+    }
+
+    .mobile-toggle:hover {
+        @apply bg-primary/5 border-primary/20;
     }
 
     .mobile-toggle svg {

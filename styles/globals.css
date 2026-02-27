@@ -390,6 +390,8 @@
     .data-line {
         @apply absolute top-0 w-px h-full bg-gradient-to-b from-transparent via-primary/50 to-transparent;
         animation: dataFlow 3s linear infinite;
+        will-change: transform;
+        transform: translateZ(0);
     }
 
     @keyframes dataFlow {
@@ -585,7 +587,7 @@
 
     .glass-morphism-v2 {
         background: rgba(255, 255, 255, 0.03);
-        backdrop-filter: blur(16px) saturate(180%);
+        backdrop-filter: blur(10px) saturate(150%);
         border: 1px solid rgba(255, 255, 255, 0.08);
     }
 
@@ -897,17 +899,23 @@
     }
 
     .liquid-blob {
-        @apply absolute blur-[120px] -z-10 opacity-30 animate-float;
+        @apply absolute -z-10 opacity-20;
         background: radial-gradient(circle, hsl(var(--color-primary)) 0%, transparent 70%);
-        width: 600px;
-        height: 600px;
+        width: 500px;
+        height: 500px;
+        filter: blur(80px);
+        will-change: transform;
+        transform: translateZ(0);
     }
 
     .liquid-blob-secondary {
-        @apply absolute blur-[100px] -z-10 opacity-20 animate-reverse-spin;
+        @apply absolute -z-10 opacity-15;
         background: radial-gradient(circle, hsl(var(--color-secondary)) 0%, transparent 70%);
-        width: 500px;
-        height: 500px;
+        width: 400px;
+        height: 400px;
+        filter: blur(60px);
+        will-change: transform;
+        transform: translateZ(0);
     }
 
     @keyframes reverseSpin {
@@ -934,10 +942,11 @@
     }
 
     .glass-morphism-v2 {
-        @apply relative backdrop-blur-xl bg-background-secondary/40 border-2 border-white/5 shadow-2xl;
+        @apply relative backdrop-blur-md bg-background-secondary/40 border border-white/5 shadow-xl;
         box-shadow:
             inset 0 0 0 1px rgba(255, 255, 255, 0.05),
-            0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            0 20px 40px -12px rgba(0, 0, 0, 0.4);
+        will-change: transform;
     }
 
     .border-trace {

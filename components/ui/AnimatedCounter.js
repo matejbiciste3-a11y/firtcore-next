@@ -1,36 +1,39 @@
-import { useEffect, useState } from 'react'
-import { useInView } from 'react-intersection-observer'
+import { useEffect, useState, useRef } from 'react'
 
-export default function AnimatedCounter({ value, suffix = '', duration = 2000, inView }) {
+export default function AnimatedCounter({ value, suffix = '', duration = 1500, inView }) {
     const [count, setCount] = useState(0)
+    const rafRef = useRef(null)
 
     useEffect(() => {
         if (!inView) return
 
-        let start = 0
+        const start = performance.now()
         const end = value
-        const increment = end / (duration / 16)
-        let timer
 
-        const updateCount = () => {
-            start += increment
-            if (start < end) {
-                setCount(start)
-                timer = setTimeout(updateCount, 16)
-            } else {
-                setCount(end)
+        const update = (now) => {
+            const elapsed = now - start
+            const progress = Math.min(elapsed / duration, 1)
+            // ease-out cubic
+            const eased = 1 - Math.pow(1 - progress, 3)
+            setCount(eased * end)
+
+            if (progress < 1) {
+                rafRef.current = requestAnimationFrame(update)
             }
         }
 
-        updateCount()
+        rafRef.current = requestAnimationFrame(update)
 
-        return () => clearTimeout(timer)
+        return () => {
+            if (rafRef.current) cancelAnimationFrame(rafRef.current)
+        }
     }, [value, duration, inView])
 
+    const display = Number.isInteger(value)
+        ? Math.round(count)
+        : count.toFixed(2)
+
     return (
-        <span>
-            {typeof count === 'number' ? count.toFixed(2) : count}
-            {suffix}
-        </span>
+        <span>{display}{suffix}</span>
     )
 }

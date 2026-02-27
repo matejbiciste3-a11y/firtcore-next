@@ -19,7 +19,7 @@ export default function GDPR() {
                             Ochrana soukromí
                         </span>
                         <h1 className="text-4xl md:text-5xl font-black mb-4">Zásady ochrany osobních údajů</h1>
-                        <p className="text-muted-foreground mb-12 text-lg">Platné od 1. 1. 2025 | V souladu s nařízením GDPR (EU) 2016/679</p>
+                        <p className="text-muted-foreground mb-12 text-lg">Platné od 27. 2. 2026 | V souladu s nařízením GDPR (EU) 2016/679</p>
 
                         <div className="space-y-10 legal-content">
 
@@ -27,9 +27,9 @@ export default function GDPR() {
                                 <h2>1. Správce osobních údajů</h2>
                                 <p>Správcem osobních údajů je:</p>
                                 <ul>
-                                    <li><strong>Jan Mikulčík</strong></li>
-                                    <li>IČO: 72409002</li>
-                                    <li>Sídlo: Družstevní 93, 763 26 Luhačovice</li>
+                                    <li><strong>FirtCore</strong></li>
+                                    <li>IČO: [DOPLNIT]</li>
+                                    <li>Sídlo: [DOPLNIT ADRESU]</li>
                                     <li>E-mail: <a href="mailto:info@firtcore.cz">info@firtcore.cz</a></li>
                                     <li>Web: <a href="https://firtcore.cz" target="_blank" rel="noopener">firtcore.cz</a></li>
                                 </ul>

@@ -19,13 +19,13 @@ export default function VOP() {
                             Právní dokumenty
                         </span>
                         <h1 className="text-4xl md:text-5xl font-black mb-4">Všeobecné obchodní podmínky</h1>
-                        <p className="text-muted-foreground mb-12 text-lg">Platné od 1. 1. 2025 | FirtCore datová centra</p>
+                        <p className="text-muted-foreground mb-12 text-lg">Platné od 27. 2. 2026 | FirtCore</p>
 
                         <div className="space-y-10 legal-content">
 
                             <section>
                                 <h2>1. Základní ustanovení</h2>
-                                <p>Tyto všeobecné obchodní podmínky (dále jen „VOP") upravují vzájemná práva a povinnosti mezi poskytovatelem (<strong>Jan Mikulčík, IČO: 72409002</strong>, se sídlem Družstevní 93, 763 26 Luhačovice, dále jen „Poskytovatel") a zákazníkem (dále jen „Zákazník") při poskytování hostingových a dalších IT služeb prostřednictvím webových stránek <strong>firtcore.cz</strong>.</p>
+                                <p>Tyto všeobecné obchodní podmínky (dále jen „VOP") upravují vzájemná práva a povinnosti mezi poskytovatelem (<strong>FirtCore, IČO: [DOPLNIT]</strong>, se sídlem [DOPLNIT ADRESU], dále jen „Poskytovatel") a zákazníkem (dále jen „Zákazník") při poskytování hostingových a dalších IT služeb prostřednictvím webových stránek <strong>firtcore.cz</strong>.</p>
                                 <p>Zákazník odesláním objednávky potvrzuje, že se s těmito VOP seznámil a souhlasí s nimi.</p>
                             </section>
 
@@ -104,8 +104,9 @@ export default function VOP() {
                             <section>
                                 <h2>11. Závěrečná ustanovení</h2>
                                 <p>Tyto VOP se řídí právem České republiky. Veškeré spory budou řešeny příslušným soudem v ČR. Pokud je Zákazník spotřebitel, může využít i mimosoudního řešení sporu prostřednictvím České obchodní inspekce (<a href="https://www.coi.cz" target="_blank" rel="noopener noreferrer">www.coi.cz</a>).</p>
-                                <p>Tyto VOP jsou platné a účinné od <strong>1. 1. 2025</strong>.</p>
+                                <p>Tyto VOP jsou platné a účinné od <strong>27. 2. 2026</strong>.</p>
                             </section>
+
 
                         </div>
                     </motion.div>

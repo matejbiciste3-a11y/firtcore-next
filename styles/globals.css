@@ -111,7 +111,7 @@
     }
 
     .navbar-inner {
-        @apply flex items-center justify-between h-16 max-w-7xl mx-auto px-8;
+        @apply flex items-center justify-between h-16 max-w-7xl mx-auto px-8 relative z-[120];
         transition: all 0.4s;
     }
 
@@ -221,7 +221,7 @@
 
     /* Mobile Toggle */
     .mobile-toggle {
-        @apply lg:hidden flex items-center justify-center w-12 h-12 rounded-lg relative;
+        @apply lg:hidden flex items-center justify-center w-12 h-12 rounded-lg relative z-[130];
         background: hsl(var(--color-background));
     }
 

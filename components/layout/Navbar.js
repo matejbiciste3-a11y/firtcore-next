@@ -22,6 +22,15 @@ export default function Navbar() {
         return () => window.removeEventListener('scroll', handleScroll)
     }, [])
 
+    useEffect(() => {
+        if (isMenuOpen) {
+            document.body.style.overflow = 'hidden'
+        } else {
+            document.body.style.overflow = 'unset'
+        }
+        return () => { document.body.style.overflow = 'unset' }
+    }, [isMenuOpen])
+
     const navLinks = [
         { href: '/minecraft', label: 'Minecraft', icon: Icons.Server },
         { href: '/vps', label: 'VPS', icon: Icons.Cpu },

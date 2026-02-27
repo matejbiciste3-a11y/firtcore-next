@@ -46,9 +46,10 @@ export default function Footer() {
                     </div>
 
                     <div className="footer-section">
-                        <h4>Právní zdroje</h4>
+                        <h4>Právní dokumenty</h4>
                         <ul>
-                            <li><a href="/docs/VOPaGDPR.pdf" target="_blank" rel="noopener">VOP a GDPR</a></li>
+                            <li><Link href="/vop">Všeobecné obchodní podmínky</Link></li>
+                            <li><Link href="/gdpr">Ochrana osobních údajů (GDPR)</Link></li>
                         </ul>
                     </div>
                 </div>

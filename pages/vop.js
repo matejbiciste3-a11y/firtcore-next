@@ -19,94 +19,108 @@ export default function VOP() {
                             Právní dokumenty
                         </span>
                         <h1 className="text-4xl md:text-5xl font-black mb-4">Všeobecné obchodní podmínky</h1>
-                        <p className="text-muted-foreground mb-12 text-lg">Platné od 27. 2. 2026 | FirtCore</p>
+                        <p className="text-muted-foreground mb-2 text-lg">Platné od 27. 2. 2026 | FirtCore.cz</p>
+                        <div className="text-sm text-muted-foreground mb-12 space-y-1">
+                            <p><strong>Provozovatel:</strong> Patrik Vlček, IČO: 23266023</p>
+                            <p><strong>Sídlo:</strong> Na Škvárovně 522, 549 32 Velké Poříčí, Česká republika</p>
+                            <p><strong>Email:</strong> <a href="mailto:support@firtcore.cz" className="text-primary">support@firtcore.cz</a> &nbsp;|&nbsp; <strong>Telefon:</strong> 731 235 377</p>
+                            <p><strong>Discord:</strong> <a href="https://discord.gg/firtcore-cz" target="_blank" rel="noopener noreferrer" className="text-primary">discord.gg/firtcore-cz</a> &nbsp;|&nbsp; <strong>Status:</strong> <a href="https://status.firtcore.cz" target="_blank" rel="noopener noreferrer" className="text-primary">status.firtcore.cz</a></p>
+                        </div>
 
-                        <div className="space-y-10 legal-content">
+                        <div className="space-y-8 legal-content">
 
                             <section>
                                 <h2>1. Základní ustanovení</h2>
-                                <p>Tyto všeobecné obchodní podmínky (dále jen „VOP") upravují vzájemná práva a povinnosti mezi poskytovatelem (<strong>FirtCore, IČO: [DOPLNIT]</strong>, se sídlem [DOPLNIT ADRESU], dále jen „Poskytovatel") a zákazníkem (dále jen „Zákazník") při poskytování hostingových a dalších IT služeb prostřednictvím webových stránek <strong>firtcore.cz</strong>.</p>
-                                <p>Zákazník odesláním objednávky potvrzuje, že se s těmito VOP seznámil a souhlasí s nimi.</p>
+                                <p>Tyto všeobecné obchodní podmínky (dále jen „obchodní podmínky") jsou vydané dle § 1751 a násl. zákona č. 89/2012 Sb., občanský zákoník.</p>
+                                <p>Provozovatelem FirtCore.cz je fyzická osoba <strong>Patrik Vlček</strong>, IČ: 23266023, se sídlem Na Škvárovně 522, 549 32 Velké Poříčí, kontaktní email: support@firtcore.cz.</p>
+                                <p>Práva a povinnosti smluvních stran ohledně práv z vadného plnění se řídí příslušnými obecně závaznými právními předpisy (zejména § 1914 až 1925, § 2099 až 2117 a § 2161 až 2174 občanského zákoníku a zákonem č. 634/1992 Sb.).</p>
+                                <p>Znění obchodních podmínek může provozovatel měnit či doplňovat. Zákazník s uzavřením smlouvy prohlašuje, že se seznámil s funkcemi daných služeb a není oprávněn požadovat vrácení peněz s odůvodněním, že mu provedení či funkce dané služby nevyhovuje.</p>
+                                <p>Zrušením služby se rozumí její pozastavení, ukončení a smazání dat. Pozastavením se rozumí dočasné zrušení dané služby a zamezení přístupu zákazníkovi (včetně souborů, databázového serveru a dalších služeb jako MySQL, data, logy apod.).</p>
+                                <p>Pokud zákazník získá kupon s kredity navíc, nemá nárok na vrácení těchto peněz.</p>
                             </section>
 
                             <section>
-                                <h2>2. Předmět smlouvy</h2>
-                                <p>Poskytovatel se zavazuje poskytovat Zákazníkovi služby hostingu, mezi které patří zejména:</p>
+                                <h2>2. Odpovědnost provozovatele</h2>
+                                <p>Provozovatel neodpovídá za porušení práv k ochranným známkám, práv k obchodní firmě a jiných práv, kterého se dopustí zákazník užíváním služeb. Provozovatel nenese odpovědnost za jakoukoli škodu či ztrátu způsobenou zákazníkovi v důsledku používání jeho služby.</p>
+                                <p>Provozovatel není oprávněn zasahovat do dat uložených zákazníkem, pokud mezi nimi není dohodnuto jinak. Tento zákaz neplatí při podezření z porušení smluvních podmínek, zneužití služby nebo porušení zákonů České republiky.</p>
+                                <p>Poskytovatel si vyhrazuje právo na možné kontroly systému a jejich restartování či vypnutí v nejvyšší nouzi.</p>
+                            </section>
+
+                            <section>
+                                <h2>3. Práva a povinnosti zákazníka</h2>
+                                <p>Zákazník je povinen provést veškerá opatření k zamezení zneužití služeb. Zákazníkovi je zakázáno:</p>
                                 <ul>
-                                    <li>Herní servery (Minecraft, CS2, Garry's Mod a další)</li>
-                                    <li>Virtuální privátní servery (VPS)</li>
-                                    <li>Virtuální dedikované servery (VDS)</li>
-                                    <li>Dedikované fyzické servery</li>
-                                    <li>Webhostingové služby</li>
+                                    <li>Nadměrně přetěžovat nebo pokoušet se poškodit služby</li>
+                                    <li>Stahovat nelegální data (filmy, hry apod.)</li>
+                                    <li>Spouštět skripty nebo programy pro těžbu kryptoměn</li>
+                                    <li>Provozovat útoky typu DoS, DDoS a podobné</li>
+                                    <li>Využívat služby k účelům v rozporu se zákony ČR nebo dobrými mravy</li>
+                                    <li>Rozesílat nevyžádanou poštu nebo špinit jméno firmy</li>
+                                    <li>Zveřejňovat přístupové údaje do uživatelské administrace</li>
                                 </ul>
-                                <p>Konkrétní specifikace a podmínky jsou uvedeny v příslušné objednávce a popisu dané služby.</p>
+                                <p>Zákazník nese odpovědnost za vše, co se na jeho serveru děje. Zákazník je povinen uvádět v registraci správné a úplné údaje a informovat při jejich změně.</p>
+                                <p>Pokud zákazník žádá o vrácení peněz z důvodu nevyhovující služby, dostane v rámci reklamace kredity zpět na svůj zákaznický účet.</p>
                             </section>
 
                             <section>
-                                <h2>3. Objednávka a uzavření smlouvy</h2>
-                                <p>Smlouva o poskytování služeb je uzavřena okamžikem, kdy Poskytovatel potvrdí přijetí objednávky Zákazníka, nejpozději však zahájením poskytování objednané služby. Objednávku lze provést prostřednictvím klientské zóny na <a href="https://client.firtcore.cz" target="_blank" rel="noopener noreferrer">client.firtcore.cz</a>.</p>
-                            </section>
-
-                            <section>
-                                <h2>4. Platební podmínky</h2>
-                                <p>Ceny služeb jsou uvedeny na webových stránkách Poskytovatele a v klientské zóně. Platba se provádí předem na základě vystaveného daňového dokladu. Podporované způsoby platby:</p>
+                                <h2>4. Reklamace</h2>
+                                <p>V případě, že zákazník se domnívá, že jeho služba neodpovídá uvedenému popisu, je oprávněn uplatnit reklamaci na:</p>
                                 <ul>
-                                    <li>Bankovní převod (Air Bank, č. ú. uvedeno na faktuře)</li>
-                                    <li>Online platba kartou</li>
+                                    <li>Email: <a href="mailto:support@firtcore.cz">support@firtcore.cz</a></li>
+                                    <li>Ticketem na Discordu: <a href="https://discord.gg/firtcore-cz" target="_blank" rel="noopener noreferrer">discord.gg/firtcore-cz</a></li>
+                                    <li>Písemně na adrese: Patrik Vlček, Na Škvárovně 522, 549 32 Velké Poříčí</li>
                                 </ul>
-                                <p>Faktura je splatná do <strong>7 dnů</strong> od jejího vystavení. V případě neuhrazení faktury v termínu splatnosti si Poskytovatel vyhrazuje právo pozastavit nebo ukončit poskytování služeb.</p>
+                                <p>Reklamaci poskytovatel vyřídí v zákonem stanovené lhůtě (<strong>30 dní</strong>). Prodávající rozhodne o reklamaci ihned, ve složitých případech do tří pracovních dnů.</p>
                             </section>
 
                             <section>
-                                <h2>5. Dostupnost a SLA</h2>
-                                <p>Poskytovatel se zavazuje zajistit dostupnost nabízených služeb na úrovni minimálně <strong>99,9 % za měsíc</strong> (SLA). Do výpočtu dostupnosti se nezapočítávají plánované odstávky, o nichž byl Zákazník informován alespoň 24 hodin předem, ani výpadky způsobené třetími stranami nebo vyšší mocí.</p>
-                            </section>
-
-                            <section>
-                                <h2>6. Práva a povinnosti zákazníka</h2>
-                                <p>Zákazník je povinen:</p>
+                                <h2>5. Zákaznická podpora a komunikace</h2>
+                                <p>Možnosti komunikace:</p>
                                 <ul>
-                                    <li>Používat služby v souladu s platnými právními předpisy ČR a EU</li>
-                                    <li>Nepoužívat služby k šíření nelegálního obsahu, spamu nebo malwaru</li>
-                                    <li>Neprovozovat DDoS útoky ani jiné útoky na třetí strany</li>
-                                    <li>Chránit přístupové údaje ke svému účtu</li>
-                                    <li>Hradit faktury řádně a včas</li>
-                                </ul>
-                                <p>Porušení těchto povinností je důvodem k okamžitému ukončení poskytování služeb bez nároku na vrácení zaplacených prostředků.</p>
-                            </section>
-
-                            <section>
-                                <h2>7. Práva a povinnosti poskytovatele</h2>
-                                <p>Poskytovatel je oprávněn:</p>
-                                <ul>
-                                    <li>Provádět plánované i neplánované odstávky za účelem údržby infrastruktury</li>
-                                    <li>Pozastavit nebo ukončit poskytování služeb v případě porušení VOP</li>
-                                    <li>Jednostranně měnit VOP s informováním zákazníků minimálně 30 dní předem</li>
+                                    <li>Email: <a href="mailto:support@firtcore.cz">support@firtcore.cz</a></li>
+                                    <li>Telefon: 776 092 263</li>
+                                    <li>Discord: <a href="https://discord.gg/firtcore-cz" target="_blank" rel="noopener noreferrer">discord.gg/firtcore-cz</a> (ticket systém)</li>
                                 </ul>
                             </section>
 
                             <section>
-                                <h2>8. Ochrana dat a soukromí</h2>
-                                <p>Osobní údaje zpracovávané v rámci poskytování služeb jsou chráněny v souladu s nařízením GDPR. Podrobnosti jsou uvedeny v samostatném dokumentu <a href="/gdpr">Zásady ochrany osobních údajů (GDPR)</a>.</p>
+                                <h2>6. Zánik trvání smlouvy</h2>
+                                <p>Při ukončení služby nezaniká povinnost zákazníka uhradit nezaplacené faktury. Minimální doba, po kterou je služba vedena, je <strong>30 dní</strong>. Reklamaci provozovatel vyřídí do 30 dní. U dedikovaných serverů je zákazník povinen zaplatit 25 % z ceny při zrušení, není-li stanoveno jinak.</p>
                             </section>
 
                             <section>
-                                <h2>9. Odstoupení od smlouvy a ukončení</h2>
-                                <p>Zákazník má právo kdykoliv ukončit odběr služeb výpovědí doručenou Poskytovateli. Výpovědní lhůta je <strong>30 dní</strong> a začíná plynout prvním dnem kalendářního měsíce následujícího po doručení výpovědi. Za nevyužité předplacené období nevzniká nárok na vrácení peněz.</p>
-                                <p>Spotřebitel má právo odstoupit od smlouvy uzavřené na dálku bez udání důvodu ve lhůtě 14 dní od jejího uzavření, pokud dosud nedošlo k zahájení poskytování služby.</p>
+                                <h2>7. Datová centra</h2>
+                                <p>Hosting má pronajaté servery u externí firmy. Je zakázáno propojovat naše služby s jinými hostingy, pokud není uvedeno jinak. Zákazník musí požádat o jinou lokaci – v základu je nastavena lokace CZ.</p>
                             </section>
 
                             <section>
-                                <h2>10. Odpovědnost za vady a reklamace</h2>
-                                <p>Reklamace se podávají prostřednictvím klientské zóny nebo e-mailem na <a href="mailto:info@firtcore.cz">info@firtcore.cz</a>. Poskytovatel se zavazuje vyřešit reklamaci bez zbytečného odkladu, nejpozději do <strong>30 dnů</strong>.</p>
+                                <h2>8. Dostupnost služby, poruchy a odstávky</h2>
+                                <p>Provozovatel si vyhrazuje právo na přerušení dodávky služeb. V případě plánované odstávky bude provozovatel včas informovat prostřednictvím uživatelského rozhraní, webových stránek nebo Discordu.</p>
+                                <p>Provozovatel nenese zodpovědnost za ztrátu uložených dat ani za škody způsobené využíváním služeb (např. poškození disku). V případě útoků DDoS provozovatel nenese zodpovědnost za poškození zákazníkovy služby.</p>
                             </section>
 
                             <section>
-                                <h2>11. Závěrečná ustanovení</h2>
-                                <p>Tyto VOP se řídí právem České republiky. Veškeré spory budou řešeny příslušným soudem v ČR. Pokud je Zákazník spotřebitel, může využít i mimosoudního řešení sporu prostřednictvím České obchodní inspekce (<a href="https://www.coi.cz" target="_blank" rel="noopener noreferrer">www.coi.cz</a>).</p>
-                                <p>Tyto VOP jsou platné a účinné od <strong>27. 2. 2026</strong>.</p>
+                                <h2>9. Konektivita</h2>
+                                <p>90 % služeb je připojeno k 10Gbit konektivitě, přičemž pro bezpečnost zákazníků poskytujeme v základu max. 1Gbit. V případě potřeby navyšujeme.</p>
                             </section>
 
+                            <section>
+                                <h2>10. Možnosti plateb</h2>
+                                <p>Platební brány: <strong>Stripe, PayPal</strong>.</p>
+                            </section>
+
+                            <section>
+                                <h2>11. Ochrana informací a osobních údajů</h2>
+                                <p>Zpracovávané osobní údaje: jméno a příjmení, IP adresa, e-mail, adresa, tel. číslo. Tyto údaje jsou nutné pro zpracování objednávek a plnění ze smlouvy (čl. 6 odst. 1 písm. b) GDPR). Osobní údaje jsou uchovávány po dobu <strong>10 let</strong> od realizace poslední části plnění.</p>
+                                <p>Podrobnější informace naleznete v <a href="/gdpr">Zásadách ochrany osobních údajů (GDPR)</a>.</p>
+                            </section>
+
+                            <section>
+                                <h2>12. Závěrečná ustanovení</h2>
+                                <p>Veškerá ujednání mezi provozovatelem a zákazníkem se řídí platným a účinným českým právním řádem. Provozovatel může kteroukoli část smlouvy nebo smluvních podmínek změnit kdykoli, s platností od prvního dne následujícího kalendářního měsíce po zveřejnění změn.</p>
+                                <p>Tyto VOP nabývají účinnosti dnem <strong>27. 2. 2026</strong>.</p>
+                                <p>V případě vzniku spotřebitelského sporu, který se nepodaří vyřešit vzájemnou dohodou, může spotřebitel podat návrh na mimosoudní řešení sporu u České obchodní inspekce (<a href="https://www.coi.cz" target="_blank" rel="noopener noreferrer">www.coi.cz</a>).</p>
+                            </section>
 
                         </div>
                     </motion.div>

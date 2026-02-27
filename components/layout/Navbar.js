@@ -32,6 +32,7 @@ export default function Navbar() {
     }, [isMenuOpen])
 
     const navLinks = [
+        { href: '/services', label: 'Služby', icon: Icons.Layout },
         { href: '/minecraft', label: 'Minecraft', icon: Icons.Server },
         { href: '/vps', label: 'VPS', icon: Icons.Cpu },
         { href: '/vds', label: 'VDS', icon: Icons.Zap },

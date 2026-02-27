@@ -37,10 +37,10 @@ export default function Footer() {
                     <div className="footer-section">
                         <h4>Informace</h4>
                         <ul>
-                            <li>Jan Mikulčík</li>
-                            <li>IČO: 72409002</li>
-                            <li>Družstevní 93</li>
-                            <li>763 26 Luhačovice</li>
+                            <li>Patrik Vlček</li>
+                            <li>IČO: 23266023</li>
+                            <li>Na Škvárovně 522</li>
+                            <li>549 32 Velké Poříčí</li>
                             <li>Neplátce DPH</li>
                         </ul>
                     </div>

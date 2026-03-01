@@ -2,8 +2,11 @@ import { motion } from 'framer-motion'
 import Button from '../ui/Button'
 import Image from 'next/image'
 import { Icons } from '../ui/Icons'
+import { useTranslation } from 'next-i18next'
 
 export default function DiscordCommunity() {
+    const { t } = useTranslation('home')
+    
     return (
         <section className="discord-section relative py-24 overflow-hidden">
             <div className="mesh-gradient opacity-10"></div>
@@ -26,8 +29,8 @@ export default function DiscordCommunity() {
                                 transition={{ delay: 0.2 }}
                                 className="text-4xl lg:text-5xl font-black mb-6 leading-tight"
                             >
-                                Připojte se k více než{' '}
-                                <span className="gradient-text">100 členům</span>
+                                {t('discord.title')}{' '}
+                                <span className="gradient-text">{t('discord.titleGradient')}</span>
                             </motion.h2>
                             <motion.p
                                 initial={{ opacity: 0, x: -20 }}
@@ -36,8 +39,7 @@ export default function DiscordCommunity() {
                                 transition={{ delay: 0.3 }}
                                 className="text-xl text-muted-foreground/80 mb-10 leading-relaxed"
                             >
-                                Okamžitá podpora, novinky jako první a aktivní komunita
-                                hráčů i provozovatelů. Buďte součástí něčeho většího.
+                                {t('discord.description')}
                             </motion.p>
                             <motion.div
                                 initial={{ opacity: 0, y: 20 }}
@@ -53,7 +55,7 @@ export default function DiscordCommunity() {
                                     target="_blank"
                                     className="hover-glow shadow-2xl"
                                 >
-                                    Vstoupit do komunity
+                                    {t('discord.cta')}
                                 </Button>
                             </motion.div>
                         </div>

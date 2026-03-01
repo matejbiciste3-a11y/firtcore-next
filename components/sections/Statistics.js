@@ -3,19 +3,19 @@ import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import AnimatedCounter from '../ui/AnimatedCounter'
 import { Icons } from '../ui/Icons'
+import { useTranslation } from 'next-i18next'
 
 const statistics = [
-    // ... (same as before)
     {
         id: 1,
         icon: 'clock',
         component: Icons.Clock,
         value: 99.99,
         suffix: '%',
-        label: 'Dostupnost',
-        subtext: 'SLA garance',
-        color: 'success',
-        iconBg: 'success'
+        labelKey: 'statistics.uptime',
+        subtextKey: 'statistics.uptimeSub',
+        color: 'primary',
+        iconBg: 'primary'
     },
     {
         id: 2,
@@ -23,8 +23,8 @@ const statistics = [
         component: Icons.Zap,
         value: 5,
         suffix: 'ms',
-        label: 'Latence Praha',
-        subtext: 'Průměrná odezva',
+        labelKey: 'statistics.latency',
+        subtextKey: 'statistics.latencySub',
         color: 'primary',
         iconBg: 'primary'
     },
@@ -34,10 +34,10 @@ const statistics = [
         component: Icons.Shield,
         value: 12,
         suffix: 'Tbps',
-        label: 'DDoS kapacita',
-        subtext: 'Enterprise ochrana',
-        color: 'purple',
-        iconBg: 'purple'
+        labelKey: 'statistics.ddos',
+        subtextKey: 'statistics.ddosSub',
+        color: 'primary',
+        iconBg: 'primary'
     },
     {
         id: 4,
@@ -45,14 +45,15 @@ const statistics = [
         component: Icons.Users,
         value: 24,
         suffix: '/7',
-        label: 'Podpora',
-        subtext: 'Reakce do 15 minut',
-        color: 'orange',
-        iconBg: 'orange'
+        labelKey: 'statistics.support',
+        subtextKey: 'statistics.supportSub',
+        color: 'primary',
+        iconBg: 'primary'
     }
 ]
 
 export default function Statistics() {
+    const { t } = useTranslation('home')
     const [mounted, setMounted] = useState(false)
 
     useEffect(() => {
@@ -110,18 +111,18 @@ export default function Statistics() {
                                 variants={itemVariants}
                                 className="stat-card glass-morphism-v2 p-8 rounded-2xl premium-glow flex flex-col items-center text-center transition-all duration-500 hover:-translate-y-2 group"
                             >
-                                <div className={`stat-icon w-16 h-16 rounded-2xl mb-6 flex items-center justify-center transition-transform duration-500 group-hover:scale-110 ${stat.iconBg === 'primary' ? 'bg-primary/20 text-primary' : stat.iconBg === 'success' ? 'bg-success/20 text-success' : stat.iconBg === 'purple' ? 'bg-purple-500/20 text-purple-400' : 'bg-orange-500/20 text-orange-400'}`}>
+                                <div className={`stat-icon w-16 h-16 rounded-2xl mb-6 flex items-center justify-center transition-transform duration-500 group-hover:scale-110 bg-primary/20 text-primary`}>
                                     <Icon className="w-8 h-8" />
                                 </div>
-                                <div className={`stat-value text-4xl lg:text-5xl font-black mb-2 text-${stat.color}`}>
+                                <div className="stat-value text-4xl lg:text-5xl font-black mb-2 text-primary">
                                     <AnimatedCounter
                                         value={stat.value}
                                         suffix={stat.suffix}
                                         inView={true}
                                     />
                                 </div>
-                                <div className="stat-label text-lg font-bold mb-1 opacity-90">{stat.label}</div>
-                                <div className="stat-sub text-sm opacity-60 leading-relaxed max-w-[150px]">{stat.subtext}</div>
+                                <div className="stat-label text-lg font-bold mb-1 opacity-90">{t(stat.labelKey)}</div>
+                                <div className="stat-sub text-sm opacity-60 leading-relaxed max-w-[150px]">{t(stat.subtextKey)}</div>
                             </motion.div>
                         )
                     })}

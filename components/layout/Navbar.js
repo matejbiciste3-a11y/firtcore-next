@@ -1,15 +1,17 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import Image from 'next/image'
 import { useRouter } from 'next/router'
 import { motion, AnimatePresence } from 'framer-motion'
 import ThemeToggle from '../ui/ThemeToggle'
+import LanguageSwitcher from '../ui/LanguageSwitcher'
 import Button from '../ui/Button'
 import Logo from '../ui/Logo'
 import { Icons } from '../ui/Icons'
 import clsx from 'clsx'
+import { useTranslation } from 'next-i18next'
 
 export default function Navbar() {
+    const { t } = useTranslation('common')
     const [isScrolled, setIsScrolled] = useState(false)
     const [isMenuOpen, setIsMenuOpen] = useState(false)
     const router = useRouter()
@@ -32,12 +34,13 @@ export default function Navbar() {
     }, [isMenuOpen])
 
     const navLinks = [
-        { href: '/services', label: 'Služby', icon: Icons.Layout },
-        { href: '/minecraft', label: 'Minecraft', icon: Icons.Server },
-        { href: '/vps', label: 'VPS', icon: Icons.Cpu },
-        { href: '/vds', label: 'VDS', icon: Icons.Zap },
-        { href: '#features', label: 'Funkce', icon: Icons.Shield },
-        { href: '#faq', label: 'FAQ', icon: Icons.Activity },
+        { href: '/services', label: t('navigation.services'), icon: Icons.Layout },
+        { href: '/minecraft', label: t('navigation.minecraft'), icon: Icons.Server },
+        { href: '/vps', label: t('navigation.vps'), icon: Icons.Cpu },
+        { href: '/vds', label: t('navigation.vds'), icon: Icons.Zap },
+        { href: '/free-credits', label: t('navigation.freeCredits'), icon: Icons.Gift },
+        { href: '#features', label: t('navigation.features'), icon: Icons.Shield },
+        { href: '#faq', label: t('navigation.faq'), icon: Icons.Activity },
     ]
 
     return (
@@ -76,13 +79,14 @@ export default function Navbar() {
 
                 <div className="nav-actions">
                     <ThemeToggle />
-
+                    <LanguageSwitcher />
+                    
                     <Button href="https://client.firtcore.cz/login" variant="primary" size="small" className="hidden lg:inline-flex">
-                        Přihlásit se
+                        {t('navigation.login')}
                     </Button>
 
                     <Button href="https://client.firtcore.cz/register" variant="secondary" size="small" className="hidden lg:inline-flex">
-                        Registrace
+                        {t('navigation.register')}
                     </Button>
 
                     <button
@@ -144,7 +148,7 @@ export default function Navbar() {
                                 transition={{ delay: 0.4 }}
                             >
                                 <Button href="https://client.firtcore.cz/login" variant="primary" fullWidth size="large">
-                                    Přihlášení do Klientky
+                                    {t('navigation.login')}
                                 </Button>
                             </motion.div>
                             <motion.div
@@ -153,7 +157,7 @@ export default function Navbar() {
                                 transition={{ delay: 0.5 }}
                             >
                                 <Button href="https://client.firtcore.cz/register" variant="secondary" fullWidth size="large">
-                                    Vytvořit účet zdarma
+                                    {t('navigation.register')}
                                 </Button>
                             </motion.div>
                         </div>

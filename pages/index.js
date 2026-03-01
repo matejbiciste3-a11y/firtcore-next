@@ -7,6 +7,7 @@ import EnterpriseServices from '@/components/sections/EnterpriseServices'
 import SpecialOffer from '@/components/sections/SpecialOffer'
 import FAQ from '@/components/sections/FAQ'
 import DiscordCommunity from '@/components/sections/DiscordCommunity'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 // Import dat
 import { services } from '@/data/services'
@@ -26,4 +27,12 @@ export default function Home() {
             <DiscordCommunity />
         </Layout>
     )
+}
+
+export async function getStaticProps({ locale }) {
+    return {
+        props: {
+            ...(await serverSideTranslations(locale, ['common'])),
+        },
+    }
 }

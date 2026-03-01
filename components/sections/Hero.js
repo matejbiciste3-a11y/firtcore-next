@@ -2,19 +2,12 @@ import { motion } from 'framer-motion'
 import Button from '../ui/Button'
 import Badge from '../ui/Badge'
 import GridBackground from '../ui/GridBackground'
-import Image from 'next/image'
 import { Icons } from '../ui/Icons'
+import { useTranslation } from 'next-i18next'
 
-export default function Hero({
-    title = (
-        <>
-            Výkon, na který<br />
-            <span className="gradient-text">se můžete spolehnout</span>
-        </>
-    ),
-    subtitle = "Enterprise-grade herní servery s pokročilou DDoS ochranou, nulovou latencí v ČR a podporou, která řeší problémy dřív, než nastanou.",
-    image
-}) {
+export default function Hero() {
+    const { t } = useTranslation('common')
+    
     const containerVariants = {
         hidden: { opacity: 0 },
         visible: {
@@ -41,7 +34,6 @@ export default function Hero({
             <div className="mesh-gradient opacity-20"></div>
             <div className="noise-overlay"></div>
 
-            {/* Premium Floating Elements */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
                 <motion.div
                     animate={{
@@ -80,33 +72,34 @@ export default function Hero({
                 >
                     <motion.div variants={itemVariants} className="mb-6">
                         <Badge variant="primary" withDot className="glass-morphism-v2 border-primary/20">
-                            Všechny služby v provozu • 99.99% uptime
+                            {t('hero.badge')}
                         </Badge>
                     </motion.div>
 
                     <motion.div variants={itemVariants}>
                         <h1 className="text-5xl md:text-6xl lg:text-7xl font-black mb-6 leading-[1.05] tracking-tight">
-                            {title}
+                            {t('hero.title')}<br />
+                            <span className="gradient-text">{t('hero.titleGradient')}</span>
                         </h1>
                     </motion.div>
 
                     <motion.p variants={itemVariants} className="hero-desc text-xl md:text-2xl text-muted-foreground/90 mb-10 max-w-xl leading-relaxed">
-                        {subtitle}
+                        {t('hero.description')}
                     </motion.p>
 
                     <motion.div variants={itemVariants} className="hero-cta flex items-center gap-6">
                         <Button href="#services" variant="primary" size="large" icon="arrow" className="hover-glow shadow-2xl shadow-primary/40">
-                            Začít hned
+                            {t('hero.cta.primary')}
                         </Button>
                         <Button href="#features" variant="outline" size="large" icon="chart" className="backdrop-blur-sm">
-                            Prozkoumat
+                            {t('hero.cta.secondary')}
                         </Button>
                     </motion.div>
 
                     <motion.div variants={itemVariants} className="trust-badges mt-12 flex gap-4 opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
-                        <Badge variant="success" icon="check" className="bg-success/5 border-success/10">Špičkový výkon</Badge>
-                        <Badge variant="success" icon="check" className="bg-success/5 border-success/10">Vysoká dostupnost</Badge>
-                        <Badge variant="success" icon="check" className="bg-success/5 border-success/10">24/7 Podpora</Badge>
+                        <Badge variant="success" icon="check" className="bg-success/5 border-success/10">{t('hero.badges.performance')}</Badge>
+                        <Badge variant="success" icon="check" className="bg-success/5 border-success/10">{t('hero.badges.availability')}</Badge>
+                        <Badge variant="success" icon="check" className="bg-success/5 border-success/10">{t('hero.badges.support')}</Badge>
                     </motion.div>
                 </motion.div>
 
@@ -121,14 +114,11 @@ export default function Hero({
 
                     <div className="hero-image-wrap animate-float relative z-10">
                         <div className="relative w-full aspect-square flex items-center justify-center glass-morphism-v2 rounded-[2.5rem] overflow-hidden group">
-                            {/* Tech-Core Original Illustration */}
                             <div className="relative w-4/5 h-4/5 flex items-center justify-center">
-                                {/* Rotating Outer Rings */}
                                 <div className="absolute inset-0 border-[3px] border-primary/10 rounded-full animate-spin-slow"></div>
                                 <div className="absolute inset-4 border-[2px] border-secondary/20 rounded-full animate-reverse-spin"></div>
                                 <div className="absolute inset-8 border border-primary/30 rounded-full animate-spin-slow opacity-50 border-dashed"></div>
 
-                                {/* Inner Core Hexagon */}
                                 <motion.div
                                     whileHover={{ scale: 1.1, rotate: 5 }}
                                     className="relative z-10 w-32 h-32 bg-primary/20 backdrop-blur-2xl rounded-2xl flex items-center justify-center transition-transform duration-700 shadow-[0_0_50px_rgba(var(--color-primary),0.3)]"
@@ -137,7 +127,6 @@ export default function Hero({
                                     <Icons.Zap className="w-16 h-16 text-primary shadow-2xl shadow-primary/20" />
                                 </motion.div>
 
-                                {/* Floating Modules */}
                                 <motion.div
                                     animate={{ y: [0, -10, 0] }}
                                     transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
@@ -160,17 +149,14 @@ export default function Hero({
                                     <Icons.Network className="w-5 h-5 text-primary" />
                                 </motion.div>
 
-                                {/* Data Streams (Pulse Lines) */}
                                 <div className="absolute top-1/2 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-primary/40 to-transparent animate-pulse"></div>
                                 <div className="absolute left-1/2 top-0 w-[1px] h-full bg-gradient-to-b from-transparent via-primary/40 to-transparent animate-pulse"></div>
                             </div>
 
-                            {/* Background Overlay for Depth */}
                             <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,102,255,0.05),transparent)]"></div>
                             <div className="noise-overlay !opacity-[0.05]"></div>
                         </div>
 
-                        {/* Shadow underneath */}
                         <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 w-4/5 h-10 bg-primary/20 blur-3xl opacity-50 rounded-full"></div>
                     </div>
                 </motion.div>

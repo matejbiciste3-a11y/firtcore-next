@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import Image from 'next/image'
 import Logo from './Logo'
 
 export default function Loader() {
@@ -24,7 +25,19 @@ export default function Loader() {
     return (
         <div id="loader" className="loader">
             <div className="loader-content">
-                <Logo size={64} className="mb-8 flex-col text-2xl" />
+                <div className="mb-8 flex flex-col items-center">
+                    <Image
+                        src="/images/firtcore-web.png"
+                        alt="FirtCore.cz"
+                        width={80}
+                        height={80}
+                        className="mb-4"
+                        priority
+                    />
+                    <span className="text-2xl font-extrabold">
+                        FirtCore<span className="text-primary">.cz</span>
+                    </span>
+                </div>
                 <div className="loader-progress">
                     <div className="loader-bar"></div>
                 </div>

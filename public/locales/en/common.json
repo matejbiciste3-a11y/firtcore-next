@@ -1,0 +1,48 @@
+{
+  "navigation": {
+    "services": "Services",
+    "minecraft": "Minecraft",
+    "vps": "VPS",
+    "vds": "VDS",
+    "freeCredits": "Free Credits",
+    "features": "Features",
+    "faq": "FAQ",
+    "login": "Login",
+    "register": "Register"
+  },
+  "hero": {
+    "badge": "All services operational • 99.99% uptime",
+    "title": "Performance you",
+    "titleGradient": "can rely on",
+    "description": "Enterprise-grade game servers with advanced DDoS protection, zero latency in Czechia, and support that solves problems before they occur.",
+    "cta": {
+      "primary": "Get started",
+      "secondary": "Explore"
+    },
+    "badges": {
+      "performance": "Top performance",
+      "availability": "High availability",
+      "support": "24/7 Support"
+    }
+  },
+  "footer": {
+    "services": "Services",
+    "information": "Information",
+    "legal": "Legal Documents",
+    "rights": "All rights reserved",
+    "company": "Patrik Vlček",
+    "ico": "VAT: CZ23266023",
+    "address": "Na Škvárovně 522",
+    "city": "549 32 Velké Poříčí",
+    "vat": "Non-VAT payer",
+    "downloadVop": "Terms and GDPR (download)"
+  },
+  "buttons": {
+    "copy": "Copy link",
+    "learnMore": "Learn more",
+    "getStarted": "Get started",
+    "explore": "Explore",
+    "contact": "Contact",
+    "joinDiscord": "Join Discord"
+  }
+}

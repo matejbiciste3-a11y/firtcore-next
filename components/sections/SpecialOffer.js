@@ -1,29 +1,31 @@
 import Button from '../ui/Button'
 import Badge from '../ui/Badge'
+import { useTranslation } from 'next-i18next'
 
 export default function SpecialOffer() {
+    const { t } = useTranslation('home')
+    
     return (
         <section className="special-offer-section">
             <div className="container">
                 <div className="offer-box">
                     <div className="offer-content">
                         <h2>
-                            <span className="gradient-text">Vyzkoušejte nás</span> na vlastní kůži
+                            <span className="gradient-text">{t('specialOffer.titleGradient')}</span> {t('specialOffer.title').replace(t('specialOffer.titleGradient'), '')}
                         </h2>
                         <p className="offer-description">
-                            Zaregistrujte se ještě dnes a získejte 10 kreditu zdarma.
-                            Plný přístup ke všem funkcím bez jakýchkoliv omezení.
+                            {t('specialOffer.description')}
                         </p>
 
                         <div className="promo-code">
                             <Badge variant="primary" size="large">
-                                Promo kód: FIRTCORE-START
+                                {t('specialOffer.promoCode')}
                             </Badge>
-                            <p className="promo-note">* Platí pro nové zákazníky.</p>
+                            <p className="promo-note">{t('specialOffer.promoNote')}</p>
                         </div>
 
                         <Button href="/register" variant="primary" size="large" icon="gift">
-                            Založit účet a uplatnit kredit
+                            {t('specialOffer.cta')}
                         </Button>
                     </div>
                 </div>

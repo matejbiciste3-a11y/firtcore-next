@@ -1,0 +1,48 @@
+{
+  "navigation": {
+    "services": "Služby",
+    "minecraft": "Minecraft",
+    "vps": "VPS",
+    "vds": "VDS",
+    "freeCredits": "Kredit zdarma",
+    "features": "Funkce",
+    "faq": "FAQ",
+    "login": "Přihlásit se",
+    "register": "Registrace"
+  },
+  "hero": {
+    "badge": "Všechny služby v provozu • 99.99% uptime",
+    "title": "Výkon, na který",
+    "titleGradient": "se můžete spolehnout",
+    "description": "Enterprise-grade herní servery s pokročilou DDoS ochranou, nulovou latencí v ČR a podporou, která řeší problémy dřív, než nastanou.",
+    "cta": {
+      "primary": "Začít hned",
+      "secondary": "Prozkoumat"
+    },
+    "badges": {
+      "performance": "Špičkový výkon",
+      "availability": "Vysoká dostupnost",
+      "support": "24/7 Podpora"
+    }
+  },
+  "footer": {
+    "services": "Služby",
+    "information": "Informace",
+    "legal": "Právní dokumenty",
+    "rights": "Všechny práva vyhrazena",
+    "company": "Patrik Vlček",
+    "ico": "IČO: 23266023",
+    "address": "Na Škvárovně 522",
+    "city": "549 32 Velké Poříčí",
+    "vat": "Neplátce DPH",
+    "downloadVop": "VOP a GDPR (ke stažení)"
+  },
+  "buttons": {
+    "copy": "Zkopírovat odkaz",
+    "learnMore": "Zjistit více",
+    "getStarted": "Začít hned",
+    "explore": "Prozkoumat",
+    "contact": "Kontaktovat",
+    "joinDiscord": "Připojit se na Discord"
+  }
+}

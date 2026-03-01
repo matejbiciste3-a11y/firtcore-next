@@ -7,8 +7,9 @@ export default function GridBackground() {
                         <path
                             d="M.5 80V.5H80"
                             fill="none"
-                            stroke="hsl(222 100% 50%/0.15)"
+                            stroke="currentColor"
                             strokeWidth="0.5"
+                            className="stroke-primary/20 dark:stroke-white/20 transition-colors duration-500"
                         />
                     </pattern>
                 </defs>

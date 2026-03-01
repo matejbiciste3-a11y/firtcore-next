@@ -1,8 +1,11 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import Logo from '../ui/Logo'
+import { useTranslation } from 'next-i18next'
 
 export default function Footer() {
+    const { t } = useTranslation('common')
+    
     return (
         <footer className="site-footer">
             <div className="footer-inner">
@@ -26,35 +29,36 @@ export default function Footer() {
                     </div>
 
                     <div className="footer-section">
-                        <h4>Služby</h4>
+                        <h4>{t('footer.services')}</h4>
                         <ul>
                             <li><Link href="/minecraft">Minecraft Hosting</Link></li>
                             <li><Link href="/vps">VPS Hosting</Link></li>
                             <li><Link href="/vds">VDS Hosting</Link></li>
+                            <li><Link href="/free-credits">{t('navigation.freeCredits')}</Link></li>
                         </ul>
                     </div>
 
                     <div className="footer-section">
-                        <h4>Informace</h4>
+                        <h4>{t('footer.information')}</h4>
                         <ul>
-                            <li>Patrik Vlček</li>
-                            <li>IČO: 23266023</li>
-                            <li>Na Škvárovně 522</li>
-                            <li>549 32 Velké Poříčí</li>
-                            <li>Neplátce DPH</li>
+                            <li>{t('footer.company')}</li>
+                            <li>{t('footer.ico')}</li>
+                            <li>{t('footer.address')}</li>
+                            <li>{t('footer.city')}</li>
+                            <li>{t('footer.vat')}</li>
                         </ul>
                     </div>
 
                     <div className="footer-section">
-                        <h4>Právní dokumenty</h4>
+                        <h4>{t('footer.legal')}</h4>
                         <ul>
-                            <li><a href="/docs/vop-gdpr-firtcore.docx" download>VOP a GDPR (ke stažení)</a></li>
+                            <li><a href="/docs/vop-gdpr-firtcore.docx" download>{t('footer.downloadVop')}</a></li>
                         </ul>
                     </div>
                 </div>
 
                 <div className="footer-copyright">
-                    © {new Date().getFullYear()} FirtCore datová centra | Všechny práva vyhrazena
+                    © {new Date().getFullYear()} FirtCore datová centra | {t('footer.rights')}
                 </div>
             </div>
         </footer>

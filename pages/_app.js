@@ -1,10 +1,16 @@
 import '@/styles/globals.css'
 import { ThemeProvider } from '@/hooks/useTheme'
+import { appWithTranslation } from 'next-i18next'
+import { useRouter } from 'next/router'
 
-export default function App({ Component, pageProps }) {
-    return (
-        <ThemeProvider>
-            <Component {...pageProps} />
-        </ThemeProvider>
-    )
+function App({ Component, pageProps }) {
+  const router = useRouter()
+  
+  return (
+    <ThemeProvider>
+      <Component {...pageProps} key={router.locale} />
+    </ThemeProvider>
+  )
 }
+
+export default appWithTranslation(App)

@@ -25,6 +25,34 @@
       "support": "24/7 Support"
     }
   },
+  "technologies": {
+    "title": "Technologies",
+    "subtitle": "Built on top-tier hardware",
+    "ddos": {
+      "title": "Enterprise DDOS Protection",
+      "description": "Multi-layer protection up to 12 Tbps with instant filtering."
+    },
+    "cpu": {
+      "title": "AMD Ryzen 7 5700x",
+      "description": "Top performance for demanding game servers."
+    },
+    "ssd": {
+      "title": "NVMe Gen4 SSD",
+      "description": "Read up to 7,000 MB/s for lightning-fast loading."
+    },
+    "network": {
+      "title": "10 Gbps Network",
+      "description": "Redundant connectivity with <1ms latency in Prague."
+    },
+    "backup": {
+      "title": "Automatic backups",
+      "description": "Daily snapshots with 14-day retention."
+    },
+    "docker": {
+      "title": "Docker Ready",
+      "description": "Full support for containerization and orchestration."
+    }
+  },
   "footer": {
     "services": "Services",
     "information": "Information",

@@ -1,8 +1,8 @@
 import Layout from '@/components/layout/Layout'
 import Hero from '@/components/sections/Hero'
 import PricingGrid from '@/components/pricing/PricingGrid'
-import { getVPSPlans } from '@/data/pricing'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import { getVPSPlans } from '@/data/pricing'
 
 export default function VPSPage({ plans }) {
     return (
@@ -10,7 +10,6 @@ export default function VPSPage({ plans }) {
             <Hero
                 title="VPS Hosting"
                 subtitle="Flexibilní virtuální servery s vysokým výkonem"
-                image="/images/vps-hero.webp"
             />
             <PricingGrid plans={plans} category="vps" />
         </Layout>

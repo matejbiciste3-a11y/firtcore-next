@@ -25,35 +25,139 @@
       "support": "24/7 Support"
     }
   },
+  "statistics": {
+    "uptime": "Uptime",
+    "uptimeSub": "SLA guarantee",
+    "latency": "Prague Latency",
+    "latencySub": "Average response",
+    "ddos": "DDoS capacity",
+    "ddosSub": "Enterprise protection",
+    "support": "Support",
+    "supportSub": "Response within 15 minutes"
+  },
   "technologies": {
     "title": "Technologies",
     "subtitle": "Built on top-tier hardware",
-    "ddos": {
-      "title": "Enterprise DDOS Protection",
-      "description": "Multi-layer protection up to 12 Tbps with instant filtering."
+    "items": [
+      {
+        "title": "Enterprise DDOS Protection",
+        "description": "Multi-layer protection up to 12 Tbps with instant filtering."
+      },
+      {
+        "title": "AMD Ryzen 7 5700x",
+        "description": "Top performance for demanding game servers."
+      },
+      {
+        "title": "NVMe Gen4 SSD",
+        "description": "Read up to 7,000 MB/s for lightning-fast loading."
+      },
+      {
+        "title": "10 Gbps Network",
+        "description": "Redundant connectivity with <1ms latency in Prague."
+      },
+      {
+        "title": "Automatic backups",
+        "description": "Daily snapshots with 14-day retention."
+      },
+      {
+        "title": "Docker Ready",
+        "description": "Full support for containerization and orchestration."
+      }
+    ]
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Top infrastructure for your projects. Choose from our game and dedicated solutions.",
+    "minecraft": {
+      "title": "Minecraft Hosting",
+      "description": "Optimal performance for Minecraft servers of all sizes",
+      "price": "from 199 CZK/month",
+      "features": ["Instant activation", "DDoS protection", "24/7 support"]
     },
-    "cpu": {
-      "title": "AMD Ryzen 7 5700x",
-      "description": "Top performance for demanding game servers."
+    "cs2": {
+      "title": "CS2 Hosting",
+      "description": "Professional servers for Counter-Strike 2",
+      "price": "from 149 CZK/month",
+      "features": ["128 tick", "Workshop support", "Anti-cheat"]
     },
-    "ssd": {
-      "title": "NVMe Gen4 SSD",
-      "description": "Read up to 7,000 MB/s for lightning-fast loading."
-    },
-    "network": {
-      "title": "10 Gbps Network",
-      "description": "Redundant connectivity with <1ms latency in Prague."
-    },
-    "backup": {
-      "title": "Automatic backups",
-      "description": "Daily snapshots with 14-day retention."
-    },
-    "docker": {
-      "title": "Docker Ready",
-      "description": "Full support for containerization and orchestration."
+    "gmod": {
+      "title": "Garry's Mod",
+      "description": "Stable servers for GMod with addon support",
+      "price": "from 129 CZK/month",
+      "features": ["FastDL", "ULX", "Wiremod"]
     }
   },
+  "enterprise": {
+    "title": "Need something bigger?",
+    "description": "We offer custom solutions for large projects, game networks and commercial partners. From dedicated servers to managed services.",
+    "button": "Discuss custom solution",
+    "services": {
+      "storage": {
+        "title": "Object Storage",
+        "description": "Scalable S3-compatible storage with unlimited capacity."
+      },
+      "kubernetes": {
+        "title": "Managed Kubernetes",
+        "description": "Professional container orchestration with automatic scaling."
+      },
+      "api": {
+        "title": "Game Hosting API",
+        "description": "Fully documented API for automation and provisioning of game instances."
+      }
+    }
+  },
+  "specialOffer": {
+    "title": "Try us yourself",
+    "titleGradient": "Try us",
+    "description": "Register today and get 10 credits for free. Full access to all features without any limitations.",
+    "promoCode": "Promo code: FIRTCORE-START",
+    "promoNote": "* Valid for new customers.",
+    "cta": "Create account and claim credit"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Everything you need to know about our hosting in one place.",
+    "items": [
+      {
+        "question": "How long does server activation take?",
+        "answer": "Activation is immediate after payment is received. For most payment methods, it's a matter of seconds."
+      },
+      {
+        "question": "What DDoS protection do you use?",
+        "answer": "We use enterprise solutions with over 12 Tbps capacity that can filter even the most complex application layer attacks."
+      },
+      {
+        "question": "Can I change my plan anytime?",
+        "answer": "Yes, you can upgrade or downgrade your plan anytime directly in the client administration. The price difference is calculated automatically."
+      },
+      {
+        "question": "Do you backup my data?",
+        "answer": "Yes, we perform automatic daily backups of all servers. Backups are stored for 7 days in a separate location."
+      },
+      {
+        "question": "I'm switching from competition, will you help me?",
+        "answer": "We'll be happy to help you with migrating all data. Plus, you'll get free hosting for the duration you've paid at your current hosting provider."
+      },
+      {
+        "question": "What payment methods do you accept?",
+        "answer": "Our client zone supports card payments and bank transfers. If you prefer another method, just contact us and we'll figure it out!"
+      }
+    ]
+  },
+  "discord": {
+    "title": "Join over",
+    "titleGradient": "100 members",
+    "description": "Instant support, news first, and an active community of players and operators. Be part of something bigger.",
+    "cta": "Join community",
+    "members": "100+",
+    "membersLabel": "Members",
+    "support": "24/7",
+    "supportLabel": "Support",
+    "contests": "10+",
+    "contestsLabel": "Contests"
+  },
   "footer": {
+    "description": "Enterprise-grade game hosting",
     "services": "Services",
     "information": "Information",
     "legal": "Legal Documents",
@@ -71,6 +175,242 @@
     "getStarted": "Get started",
     "explore": "Explore",
     "contact": "Contact",
-    "joinDiscord": "Join Discord"
+    "joinDiscord": "Join Discord",
+    "selectPlan": "Select plan",
+    "register": "Create account",
+    "login": "Login",
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "close": "Close",
+    "open": "Open",
+    "yes": "Yes",
+    "no": "No",
+    "confirm": "Confirm"
+  },
+  "freeCredits": {
+    "badge": "🎁 Limited offer",
+    "title": "Start with credits and earn",
+    "titleGradient": "credits",
+    "description": "Bring new players to FirtCore and get 125 CZK credit to their account. Each of their future payments will bring you 10% commission.",
+    "stats": {
+      "bonus": "Bonus for new users",
+      "commission": "Commission",
+      "support": "Support"
+    },
+    "affiliateBox": {
+      "title": "Your affiliate code",
+      "code": "FIRTCORE-25",
+      "description": "Share this code or your unique link",
+      "clicks": "Clicks",
+      "registrations": "Registrations",
+      "earnings": "Earnings",
+      "conversion": "Conversion"
+    },
+    "whyJoin": {
+      "title": "Why join",
+      "subtitle": "Affiliate program that pays off",
+      "benefits": {
+        "bonus": {
+          "title": "125 CZK Bonus",
+          "desc": "Every new user gets 125 CZK credit for their first service activation."
+        },
+        "income": {
+          "title": "Long-term income",
+          "desc": "10% commission from every future payment of your referred users."
+        },
+        "stats": {
+          "title": "Clear statistics",
+          "desc": "Track your link performance and earned commissions in real time."
+        }
+      }
+    },
+    "howItWorks": {
+      "title": "How it works",
+      "subtitle": "Three simple steps to your first credit",
+      "steps": {
+        "register": {
+          "title": "Register",
+          "desc": "Create an account at FirtCore.cz and get your unique affiliate code."
+        },
+        "share": {
+          "title": "Share",
+          "desc": "Share your link with friends or community on social networks."
+        },
+        "reward": {
+          "title": "Reward",
+          "desc": "Watch your commissions grow and use them for more services."
+        }
+      }
+    },
+    "tiers": {
+      "start": {
+        "name": "Start",
+        "price": "0 CZK",
+        "features": [
+          "Free affiliate link",
+          "10% commission",
+          "Online statistics",
+          "125 CZK bonus for referrals"
+        ]
+      },
+      "partner": {
+        "name": "Partner",
+        "price": "Custom",
+        "features": [
+          "Everything in Start",
+          "Higher commission (up to 20%)",
+          "Custom promo codes",
+          "Priority support",
+          "Joint contests"
+        ]
+      },
+      "business": {
+        "name": "Business",
+        "price": "Tailored",
+        "features": [
+          "Everything in Partner",
+          "Custom terms",
+          "Dedicated account manager",
+          "Barter cooperation",
+          "Exclusive events"
+        ]
+      },
+      "popular": "Most popular"
+    },
+    "influencer": {
+      "title": "Are you an influencer or streamer?",
+      "description": "Collaborate with us and grow your community. We offer custom terms, exclusive promo codes for your followers and joint contests.",
+      "features": {
+        "commission": "Higher commission",
+        "codes": "Custom promo codes",
+        "support": "Priority support",
+        "events": "Exclusive events"
+      },
+      "button": "Contact partner team"
+    },
+    "discord": {
+      "title": "Discord community",
+      "partners": "150+ active partners",
+      "features": [
+        "Private partner channel",
+        "Regular meetings",
+        "Experience sharing",
+        "Community management support"
+      ]
+    }
+  },
+  "pricing": {
+    "minecraft": {
+      "basic": {
+        "name": "Basic",
+        "price": "199 CZK",
+        "period": "month",
+        "features": ["1 GB RAM", "10 GB SSD", "Unlimited players", "DDoS protection", "24/7 support"],
+        "popular": false
+      },
+      "standard": {
+        "name": "Standard",
+        "price": "349 CZK",
+        "period": "month",
+        "features": ["2 GB RAM", "20 GB SSD", "Unlimited players", "DDoS protection", "24/7 support", "Automatic backups"],
+        "popular": true
+      },
+      "premium": {
+        "name": "Premium",
+        "price": "599 CZK",
+        "period": "month",
+        "features": ["4 GB RAM", "40 GB SSD", "Unlimited players", "DDoS protection", "24/7 support", "Automatic backups", "Custom domain"],
+        "popular": false
+      }
+    },
+    "vps": {
+      "basic": {
+        "name": "Basic VPS",
+        "price": "299 CZK",
+        "period": "month",
+        "features": ["1 vCPU", "2 GB RAM", "30 GB NVMe", "1 TB transfer", "1x IPv4", "DDoS protection"]
+      },
+      "standard": {
+        "name": "Standard VPS",
+        "price": "549 CZK",
+        "period": "month",
+        "features": ["2 vCPU", "4 GB RAM", "60 GB NVMe", "2 TB transfer", "1x IPv4", "DDoS protection", "Automatic backups"]
+      },
+      "premium": {
+        "name": "Premium VPS",
+        "price": "999 CZK",
+        "period": "month",
+        "features": ["4 vCPU", "8 GB RAM", "120 GB NVMe", "4 TB transfer", "1x IPv4", "DDoS protection", "Automatic backups", "Priority support"]
+      }
+    }
+  },
+  "gdpr": {
+    "badge": "Privacy Policy",
+    "title": "Privacy Policy",
+    "valid": "Effective from 27. 2. 2026 | In accordance with GDPR (EU) 2016/679",
+    "controller": "Controller:",
+    "ico": "VAT: CZ23266023",
+    "address": "Registered address:",
+    "email": "Email:",
+    "sections": {
+      "1": {
+        "title": "1. Data Controller",
+        "content": "The data controller is the individual Patrik Vlček, operating the FirtCore.cz portal, VAT: CZ23266023, with registered address Na Škvárovně 522, 549 32 Velké Poříčí, Czech Republic, doing business as a self-employed person (hereinafter referred to as the 'Controller'). The Controller hereby informs you, in accordance with Article 12 GDPR, about the processing of your personal data and about your rights."
+      }
+    }
+  },
+  "vop": {
+    "badge": "Legal Documents",
+    "title": "Terms and Conditions",
+    "valid": "Effective from 27. 2. 2026 | FirtCore.cz",
+    "operator": "Operator:",
+    "address": "Registered address:",
+    "email": "Email:",
+    "sections": {
+      "1": {
+        "title": "1. Basic Provisions",
+        "content": "These general terms and conditions (hereinafter referred to as 'Terms and Conditions') are issued pursuant to Section 1751 et seq. of Act No. 89/2012 Coll., the Civil Code."
+      }
+    }
+  },
+  "errors": {
+    "404": {
+      "title": "Page not found",
+      "message": "We're sorry, but the page you are looking for does not exist.",
+      "button": "Back to homepage"
+    },
+    "500": {
+      "title": "Server error",
+      "message": "We're sorry, but a server error occurred. Please try again later.",
+      "button": "Refresh page"
+    }
+  },
+  "seo": {
+    "default": {
+      "title": "FirtCore.cz | Professional Game Hosting",
+      "description": "Enterprise-grade game servers with advanced DDoS protection, zero latency in Czechia, and support that solves problems before they occur."
+    },
+    "minecraft": {
+      "title": "Minecraft Hosting | FirtCore",
+      "description": "Optimal performance for Minecraft servers of all sizes with instant activation and DDoS protection."
+    },
+    "vps": {
+      "title": "VPS Hosting | FirtCore",
+      "description": "Flexible virtual servers with high performance for your projects."
+    },
+    "vds": {
+      "title": "VDS Hosting | FirtCore",
+      "description": "Powerful dedicated resources for demanding projects."
+    },
+    "freeCredits": {
+      "title": "Free Credits and Affiliate Program | FirtCore.cz",
+      "description": "Get 125 CZK free credits and earn with our affiliate program."
+    }
   }
 }

@@ -25,7 +25,139 @@
       "support": "24/7 Podpora"
     }
   },
+  "statistics": {
+    "uptime": "Dostupnost",
+    "uptimeSub": "SLA garance",
+    "latency": "Latence Praha",
+    "latencySub": "Průměrná odezva",
+    "ddos": "DDoS kapacita",
+    "ddosSub": "Enterprise ochrana",
+    "support": "Podpora",
+    "supportSub": "Reakce do 15 minut"
+  },
+  "technologies": {
+    "title": "Technologie",
+    "subtitle": "Postaveno na špičkovém hardwaru",
+    "items": [
+      {
+        "title": "Enterprise DDOS Protection",
+        "description": "Vícevrstvá ochrana až 12 Tbps s okamžitou filtrací."
+      },
+      {
+        "title": "AMD Ryzen 7 5700x",
+        "description": "Špičkový výkon pro náročné herní servery."
+      },
+      {
+        "title": "NVMe Gen4 SSD",
+        "description": "Čtení až 7,000 MB/s pro bleskové načítání."
+      },
+      {
+        "title": "10 Gbps Network",
+        "description": "Redundantní konektivita s <1ms latencí v Praze."
+      },
+      {
+        "title": "Automatické zálohování",
+        "description": "Denní snapshoty s 14denní retencí."
+      },
+      {
+        "title": "Docker Ready",
+        "description": "Plná podpora containerizace a orchestrace."
+      }
+    ]
+  },
+  "services": {
+    "title": "Naše Služby",
+    "subtitle": "Špičková infrastruktura pro vaše projekty. Vyberte si z naší nabídky herních i dedikovaných řešení.",
+    "minecraft": {
+      "title": "Minecraft Hosting",
+      "description": "Optimální výkon pro Minecraft servery všech velikostí",
+      "price": "od 199 Kč/měs",
+      "features": ["Okamžitá aktivace", "DDoS ochrana", "24/7 podpora"]
+    },
+    "cs2": {
+      "title": "CS2 Hosting",
+      "description": "Profesionální servery pro Counter-Strike 2",
+      "price": "od 149 Kč/měs",
+      "features": ["128 tick", "Workshop podpora", "Anti-cheat"]
+    },
+    "gmod": {
+      "title": "Garry's Mod",
+      "description": "Stabilní servery pro GMod s podporou addonů",
+      "price": "od 129 Kč/měs",
+      "features": ["FastDL", "ULX", "Wiremod"]
+    }
+  },
+  "enterprise": {
+    "title": "Potřebujete něco většího?",
+    "description": "Nabízíme custom řešení pro velké projekty, herní sítě a komerční partnery. Od dedikovaných serverů po managed služby.",
+    "button": "Projednat individuální řešení",
+    "services": {
+      "storage": {
+        "title": "Object Storage",
+        "description": "Škálovatelné úložiště S3 kompatibilní s neomezenou kapacitou."
+      },
+      "kubernetes": {
+        "title": "Managed Kubernetes",
+        "description": "Orchestrace containerů na profesionální úrovni s automatickým škálováním."
+      },
+      "api": {
+        "title": "Game Hosting API",
+        "description": "Plně dokumentované API pro automatizaci a provisioning herních instancí."
+      }
+    }
+  },
+  "specialOffer": {
+    "title": "Vyzkoušejte nás na vlastní kůži",
+    "titleGradient": "Vyzkoušejte nás",
+    "description": "Zaregistrujte se ještě dnes a získejte 10 kreditu zdarma. Plný přístup ke všem funkcím bez jakýchkoliv omezení.",
+    "promoCode": "Promo kód: FIRTCORE-START",
+    "promoNote": "* Platí pro nové zákazníky.",
+    "cta": "Založit účet a uplatnit kredit"
+  },
+  "faq": {
+    "title": "Často kladené otázky",
+    "subtitle": "Vše co potřebujete vědět o našem hostingu na jednom místě.",
+    "items": [
+      {
+        "question": "Jak dlouho trvá aktivace serveru?",
+        "answer": "Aktivace probíhá okamžitě po přijetí platby. U většiny platebních metod je to otázka několika sekund."
+      },
+      {
+        "question": "Jakou DDoS ochranu používáte?",
+        "answer": "Používáme enterprise řešení s kapacitou přes 12 Tbps, které dokáže filtrovat i ty nejkomplexnější útoky na aplikační vrstvě."
+      },
+      {
+        "question": "Je možné kdykoliv změnit tarif?",
+        "answer": "Ano, tarif můžete upgradovat nebo downgradovat kdykoliv přímo v klientské administraci. Rozdíl v ceně se vypočítá automaticky."
+      },
+      {
+        "question": "Zálohujete moje data?",
+        "answer": "Ano, provádíme automatické denní zálohy všech serverů. Zálohy jsou uchovávány po dobu 7 dnů v oddělené lokalitě."
+      },
+      {
+        "question": "Přecházím od konkurence, pomůžete mi?",
+        "answer": "Velice rádi vám pomůžeme s přesunem všech dat. Navíc dostanete u nás hosting zdarma na dobu, kterou máte zaplacenou u konkurenčního hostingu."
+      },
+      {
+        "question": "Jaké platební metody přijímáte?",
+        "answer": "Naše klientská zóna umí platbu kartou a bankovní převod, pokud však chcete platit jinak, není problém! Kontaktujte nás a domluvíme se."
+      }
+    ]
+  },
+  "discord": {
+    "title": "Připojte se k více než",
+    "titleGradient": "100 členům",
+    "description": "Okamžitá podpora, novinky jako první a aktivní komunita hráčů i provozovatelů. Buďte součástí něčeho většího.",
+    "cta": "Vstoupit do komunity",
+    "members": "100+",
+    "membersLabel": "Členů",
+    "support": "24/7",
+    "supportLabel": "Podpora",
+    "contests": "10+",
+    "contestsLabel": "Soutěží"
+  },
   "footer": {
+    "description": "Enterprise-grade herní hosting",
     "services": "Služby",
     "information": "Informace",
     "legal": "Právní dokumenty",
@@ -43,6 +175,242 @@
     "getStarted": "Začít hned",
     "explore": "Prozkoumat",
     "contact": "Kontaktovat",
-    "joinDiscord": "Připojit se na Discord"
+    "joinDiscord": "Připojit se na Discord",
+    "selectPlan": "Vybrat plán",
+    "register": "Vytvořit účet",
+    "login": "Přihlásit se",
+    "submit": "Odeslat",
+    "cancel": "Zrušit",
+    "save": "Uložit",
+    "delete": "Smazat",
+    "edit": "Upravit",
+    "back": "Zpět",
+    "next": "Další",
+    "previous": "Předchozí",
+    "close": "Zavřít",
+    "open": "Otevřít",
+    "yes": "Ano",
+    "no": "Ne",
+    "confirm": "Potvrdit"
+  },
+  "freeCredits": {
+    "badge": "🎁 Limitovaná nabídka",
+    "title": "Začněte s kreditem a vydělávejte",
+    "titleGradient": "kreditem",
+    "description": "Přiveďte na FirtCore nové hráče a získejte 125 Kč na jejich účet. Každá jejich budoucí platba vám přinese 10% provizi.",
+    "stats": {
+      "bonus": "Bonus pro nové",
+      "commission": "Provize",
+      "support": "Podpora"
+    },
+    "affiliateBox": {
+      "title": "Váš affiliate kód",
+      "code": "FIRTCORE-25",
+      "description": "Sdílejte tento kód nebo svůj unikátní odkaz",
+      "clicks": "Prokliky",
+      "registrations": "Registrace",
+      "earnings": "Provize",
+      "conversion": "Konverze"
+    },
+    "whyJoin": {
+      "title": "Proč se zapojit",
+      "subtitle": "Affiliate program, který se vyplatí",
+      "benefits": {
+        "bonus": {
+          "title": "Bonus 125 Kč",
+          "desc": "Každý nový uživatel získá 125 Kč kreditu na první aktivaci služeb."
+        },
+        "income": {
+          "title": "Dlouhodobý příjem",
+          "desc": "10% provize z každé budoucí platby vašich doporučených uživatelů."
+        },
+        "stats": {
+          "title": "Přehledné statistiky",
+          "desc": "Sledujte výkon svých odkazů a vydělané provize v reálném čase."
+        }
+      }
+    },
+    "howItWorks": {
+      "title": "Jak to funguje",
+      "subtitle": "Tři jednoduché kroky k vašemu prvnímu kreditu",
+      "steps": {
+        "register": {
+          "title": "Registrace",
+          "desc": "Vytvořte si účet na FirtCore.cz a získejte svůj unikátní affiliate kód."
+        },
+        "share": {
+          "title": "Sdílení",
+          "desc": "Sdílejte svůj odkaz s přáteli nebo komunitou na sociálních sítích."
+        },
+        "reward": {
+          "title": "Odměna",
+          "desc": "Sledujte, jak rostou vaše provize a využívejte je na další služby."
+        }
+      }
+    },
+    "tiers": {
+      "start": {
+        "name": "Start",
+        "price": "0 Kč",
+        "features": [
+          "Affiliate odkaz zdarma",
+          "10% provize",
+          "Statistiky online",
+          "Bonus 125 Kč pro pozvané"
+        ]
+      },
+      "partner": {
+        "name": "Partner",
+        "price": "Individuální",
+        "features": [
+          "Vše ze Start",
+          "Vyšší provize (až 20%)",
+          "Vlastní promo kódy",
+          "Priority podpora",
+          "Společné soutěže"
+        ]
+      },
+      "business": {
+        "name": "Business",
+        "price": "Na míru",
+        "features": [
+          "Vše z Partner",
+          "Individuální podmínky",
+          "Dedikovaný account manager",
+          "Barter spolupráce",
+          "Exkluzivní akce"
+        ]
+      },
+      "popular": "Nejoblíbenější"
+    },
+    "influencer": {
+      "title": "Jste influencer nebo streamer?",
+      "description": "Spolupracujte s námi a rozvíjejte svou komunitu. Nabízíme individuální podmínky, exkluzivní promo kódy pro vaše sledující a možnost společných soutěží.",
+      "features": {
+        "commission": "Vyšší provize",
+        "codes": "Vlastní promo kódy",
+        "support": "Priority podpora",
+        "events": "Exkluzivní akce"
+      },
+      "button": "Kontaktovat partner tým"
+    },
+    "discord": {
+      "title": "Discord komunita",
+      "partners": "150+ aktivních partnerů",
+      "features": [
+        "Privátní kanál pro partnery",
+        "Pravidelné meetingy",
+        "Sdílení zkušeností",
+        "Podpora od community managementu"
+      ]
+    }
+  },
+  "pricing": {
+    "minecraft": {
+      "basic": {
+        "name": "Basic",
+        "price": "199 Kč",
+        "period": "měsíc",
+        "features": ["1 GB RAM", "10 GB SSD", "Neomezený počet hráčů", "DDoS ochrana", "24/7 podpora"],
+        "popular": false
+      },
+      "standard": {
+        "name": "Standard",
+        "price": "349 Kč",
+        "period": "měsíc",
+        "features": ["2 GB RAM", "20 GB SSD", "Neomezený počet hráčů", "DDoS ochrana", "24/7 podpora", "Automatické zálohy"],
+        "popular": true
+      },
+      "premium": {
+        "name": "Premium",
+        "price": "599 Kč",
+        "period": "měsíc",
+        "features": ["4 GB RAM", "40 GB SSD", "Neomezený počet hráčů", "DDoS ochrana", "24/7 podpora", "Automatické zálohy", "Vlastní doména"],
+        "popular": false
+      }
+    },
+    "vps": {
+      "basic": {
+        "name": "Basic VPS",
+        "price": "299 Kč",
+        "period": "měsíc",
+        "features": ["1 vCPU", "2 GB RAM", "30 GB NVMe", "1 TB přenos", "1x IPv4", "DDoS ochrana"]
+      },
+      "standard": {
+        "name": "Standard VPS",
+        "price": "549 Kč",
+        "period": "měsíc",
+        "features": ["2 vCPU", "4 GB RAM", "60 GB NVMe", "2 TB přenos", "1x IPv4", "DDoS ochrana", "Automatické zálohy"]
+      },
+      "premium": {
+        "name": "Premium VPS",
+        "price": "999 Kč",
+        "period": "měsíc",
+        "features": ["4 vCPU", "8 GB RAM", "120 GB NVMe", "4 TB přenos", "1x IPv4", "DDoS ochrana", "Automatické zálohy", "Prioritní podpora"]
+      }
+    }
+  },
+  "gdpr": {
+    "badge": "Ochrana soukromí",
+    "title": "Zásady ochrany osobních údajů",
+    "valid": "Platné od 27. 2. 2026 | V souladu s nařízením GDPR (EU) 2016/679",
+    "controller": "Správce:",
+    "ico": "IČO: 23266023",
+    "address": "Sídlo:",
+    "email": "Email:",
+    "sections": {
+      "1": {
+        "title": "1. Správce osobních údajů",
+        "content": "Správcem osobních údajů je fyzická osoba Patrik Vlček, provozující portál FirtCore.cz, IČO: 23266023, se sídlem Na Škvárovně 522, 549 32 Velké Poříčí, Česká republika, podnikající jako osoba samostatně výdělečně činná (dále jen „Správce\"). Správce vás tímto v souladu s čl. 12 GDPR informuje o zpracování vašich osobních údajů a o vašich právech."
+      }
+    }
+  },
+  "vop": {
+    "badge": "Právní dokumenty",
+    "title": "Všeobecné obchodní podmínky",
+    "valid": "Platné od 27. 2. 2026 | FirtCore.cz",
+    "operator": "Provozovatel:",
+    "address": "Sídlo:",
+    "email": "Email:",
+    "sections": {
+      "1": {
+        "title": "1. Základní ustanovení",
+        "content": "Tyto všeobecné obchodní podmínky (dále jen „obchodní podmínky\") jsou vydané dle § 1751 a násl. zákona č. 89/2012 Sb., občanský zákoník."
+      }
+    }
+  },
+  "errors": {
+    "404": {
+      "title": "Stránka nenalezena",
+      "message": "Omlouváme se, ale stránka kterou hledáte neexistuje.",
+      "button": "Zpět na hlavní stránku"
+    },
+    "500": {
+      "title": "Chyba serveru",
+      "message": "Omlouváme se, ale došlo k chybě na serveru. Zkuste to prosím později.",
+      "button": "Obnovit stránku"
+    }
+  },
+  "seo": {
+    "default": {
+      "title": "FirtCore.cz | Profesionální herní hosting",
+      "description": "Enterprise-grade herní servery s pokročilou DDoS ochranou, nulovou latencí v ČR a podporou, která řeší problémy dřív, než nastanou."
+    },
+    "minecraft": {
+      "title": "Minecraft Hosting | FirtCore",
+      "description": "Optimální výkon pro Minecraft servery všech velikostí s okamžitou aktivací a DDoS ochranou."
+    },
+    "vps": {
+      "title": "VPS Hosting | FirtCore",
+      "description": "Flexibilní virtuální servery s vysokým výkonem pro vaše projekty."
+    },
+    "vds": {
+      "title": "VDS Hosting | FirtCore",
+      "description": "Výkonné dedikované zdroje pro náročné projekty."
+    },
+    "freeCredits": {
+      "title": "Kredit zdarma a affiliate program | FirtCore.cz",
+      "description": "Získejte 125 Kč kredit zdarma a vydělávejte s naším affiliate programem."
+    }
   }
 }

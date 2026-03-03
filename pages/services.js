@@ -1,13 +1,13 @@
 import Layout from '@/components/layout/Layout'
 import Services from '@/components/sections/Services'
 import { motion } from 'framer-motion'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { services } from '@/data/services'
 import { Icons } from '@/components/ui/Icons'
 
 export default function ServicesPage() {
     return (
         <Layout>
-            {/* Custom Hero for Services Page */}
             <section className="relative pt-32 pb-20 overflow-hidden">
                 <div className="absolute inset-0 !-z-10 overflow-hidden">
                     <div className="absolute top-1/4 -left-20 w-96 h-96 bg-primary/20 rounded-full blur-[100px] animate-pulse"></div>
@@ -34,14 +34,12 @@ export default function ServicesPage() {
                 </div>
             </section>
 
-            {/* Services Grid Section */}
             <Services
                 title="Vše co potřebujete na jednom místě"
                 subtitle="Prozkoumejte naše hostingová řešení navržená pro hráče, vývojáře i firmy."
                 items={services}
             />
 
-            {/* Call to Action Section */}
             <section className="py-20 relative overflow-hidden">
                 <div className="container relative z-10">
                     <motion.div
@@ -57,16 +55,20 @@ export default function ServicesPage() {
                             Náš tým je připraven vám pomoci s jakýmkoliv požadavkem.
                         </p>
                         <div className="flex flex-wrap justify-center gap-4">
-                            <button className="btn-primary">
-                                Kontaktujte podporu
-                            </button>
-                            <button className="btn-secondary">
-                                Individuální poptávka
-                            </button>
+                            <button className="btn-primary">Kontaktujte podporu</button>
+                            <button className="btn-secondary">Individuální poptávka</button>
                         </div>
                     </motion.div>
                 </div>
             </section>
         </Layout>
     )
+}
+
+export async function getStaticProps({ locale }) {
+    return {
+        props: {
+            ...(await serverSideTranslations(locale, ['common'])),
+        },
+    }
 }

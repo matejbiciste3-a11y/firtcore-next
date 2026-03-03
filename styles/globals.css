@@ -15,241 +15,6 @@
         --color-neutral: 220 25% 85%;
     }
 
-    /* ===== NOVÉ DARK MODE POZADÍ ===== */
-    [class~="dark"],
-    .dark {
-        --color-background: 222 47% 6%;
-        --color-background-secondary: 222 47% 10%;
-        --color-base: 220 100% 100%;
-        --color-muted: 220 10% 60%;
-        --color-neutral: 222 47% 15%;
-        
-        /* Hlavní pozadí - hluboký vesmírný gradient */
-        background: 
-            radial-gradient(circle at 20% 30%, hsla(280, 80%, 50%, 0.15) 0%, transparent 40%),
-            radial-gradient(circle at 80% 70%, hsla(200, 100%, 50%, 0.12) 0%, transparent 40%),
-            radial-gradient(circle at 40% 80%, hsla(320, 100%, 60%, 0.1) 0%, transparent 50%),
-            radial-gradient(circle at 90% 20%, hsla(180, 100%, 50%, 0.08) 0%, transparent 40%),
-            linear-gradient(145deg, 
-                hsl(222, 47%, 3%) 0%,
-                hsl(260, 40%, 6%) 25%,
-                hsl(235, 40%, 7%) 50%,
-                hsl(210, 50%, 5%) 75%,
-                hsl(222, 47%, 3%) 100%);
-        background-attachment: fixed;
-        position: relative;
-    }
-
-    /* Efekt mlhoviny - pulzující */
-    .dark::before {
-        content: '';
-        position: fixed;
-        inset: 0;
-        background: 
-            radial-gradient(circle at 30% 40%, hsla(280, 100%, 70%, 0.1) 0%, transparent 50%),
-            radial-gradient(circle at 70% 60%, hsla(200, 100%, 60%, 0.1) 0%, transparent 50%),
-            radial-gradient(circle at 90% 20%, hsla(320, 100%, 70%, 0.08) 0%, transparent 50%);
-        filter: blur(40px);
-        animation: nebulaPulse 15s ease infinite alternate;
-        pointer-events: none;
-        z-index: 0;
-    }
-
-    /* Hvězdné pole - vrstva 1 (malé hvězdy) - BÍLÉ */
-    .dark .stars-small {
-        position: fixed;
-        inset: 0;
-        background-image: 
-            radial-gradient(1px 1px at 5px 10px, rgba(255,255,255,0.8), rgba(0,0,0,0)),
-            radial-gradient(1px 1px at 15px 80px, rgba(255,255,255,0.8), rgba(0,0,0,0)),
-            radial-gradient(2px 2px at 25px 150px, rgba(255,255,255,0.9), rgba(0,0,0,0)),
-            radial-gradient(1px 1px at 45px 40px, rgba(255,255,255,0.8), rgba(0,0,0,0)),
-            radial-gradient(1px 1px at 65px 200px, rgba(255,255,255,0.8), rgba(0,0,0,0)),
-            radial-gradient(2px 2px at 90px 70px, rgba(255,255,255,0.9), rgba(0,0,0,0)),
-            radial-gradient(1px 1px at 115px 120px, rgba(255,255,255,0.8), rgba(0,0,0,0)),
-            radial-gradient(1px 1px at 140px 180px, rgba(255,255,255,0.8), rgba(0,0,0,0)),
-            radial-gradient(2px 2px at 160px 50px, rgba(255,255,255,0.9), rgba(0,0,0,0)),
-            radial-gradient(1px 1px at 185px 220px, rgba(255,255,255,0.8), rgba(0,0,0,0)),
-            radial-gradient(1px 1px at 210px 90px, rgba(255,255,255,0.8), rgba(0,0,0,0)),
-            radial-gradient(2px 2px at 235px 150px, rgba(255,255,255,0.9), rgba(0,0,0,0)),
-            radial-gradient(1px 1px at 260px 30px, rgba(255,255,255,0.8), rgba(0,0,0,0)),
-            radial-gradient(1px 1px at 285px 190px, rgba(255,255,255,0.8), rgba(0,0,0,0)),
-            radial-gradient(2px 2px at 310px 110px, rgba(255,255,255,0.9), rgba(0,0,0,0));
-        background-repeat: repeat;
-        background-size: 400px 300px;
-        opacity: 0.6;
-        pointer-events: none;
-        z-index: 1;
-        animation: starsTwinkle 4s ease infinite alternate;
-    }
-
-    /* Hvězdné pole - vrstva 2 (střední hvězdy) - BÍLÉ */
-    .dark .stars-medium {
-        position: fixed;
-        inset: 0;
-        background-image: 
-            radial-gradient(2px 2px at 120px 30px, rgba(255,255,255,0.9), rgba(0,0,0,0)),
-            radial-gradient(3px 3px at 250px 180px, rgba(255,255,255,1), rgba(0,0,0,0)),
-            radial-gradient(2px 2px at 380px 90px, rgba(255,255,255,0.9), rgba(0,0,0,0)),
-            radial-gradient(2px 2px at 420px 210px, rgba(255,255,255,0.9), rgba(0,0,0,0)),
-            radial-gradient(3px 3px at 550px 140px, rgba(255,255,255,1), rgba(0,0,0,0)),
-            radial-gradient(2px 2px at 680px 60px, rgba(255,255,255,0.9), rgba(0,0,0,0)),
-            radial-gradient(2px 2px at 720px 190px, rgba(255,255,255,0.9), rgba(0,0,0,0)),
-            radial-gradient(3px 3px at 850px 110px, rgba(255,255,255,1), rgba(0,0,0,0));
-        background-repeat: repeat;
-        background-size: 900px 400px;
-        opacity: 0.4;
-        pointer-events: none;
-        z-index: 2;
-        animation: starsFloat 20s linear infinite;
-    }
-
-    /* Hvězdné pole - vrstva 3 (velké hvězdy) - BÍLÉ */
-    .dark .stars-large {
-        position: fixed;
-        inset: 0;
-        background-image: 
-            radial-gradient(4px 4px at 50px 300px, rgba(255,255,255,1), rgba(0,0,0,0)),
-            radial-gradient(3px 3px at 450px 500px, rgba(255,255,255,0.9), rgba(0,0,0,0)),
-            radial-gradient(4px 4px at 650px 150px, rgba(255,255,255,1), rgba(0,0,0,0)),
-            radial-gradient(3px 3px at 800px 400px, rgba(255,255,255,0.9), rgba(0,0,0,0)),
-            radial-gradient(4px 4px at 950px 250px, rgba(255,255,255,1), rgba(0,0,0,0));
-        background-repeat: repeat;
-        background-size: 1200px 800px;
-        opacity: 0.3;
-        pointer-events: none;
-        z-index: 3;
-        animation: starsGlow 3s ease infinite alternate;
-    }
-
-    /* Technologický grid - jemný - BÍLÝ */
-    .dark .tech-grid {
-        position: fixed;
-        inset: 0;
-        background-image: 
-            repeating-linear-gradient(0deg, 
-                transparent, 
-                transparent 49px,
-                rgba(255,255,255,0.03) 49px,
-                transparent 50px),
-            repeating-linear-gradient(90deg, 
-                transparent, 
-                transparent 49px,
-                rgba(255,255,255,0.03) 49px,
-                transparent 50px);
-        mask-image: radial-gradient(circle at 50% 50%, black 30%, transparent 80%);
-        pointer-events: none;
-        z-index: 4;
-        animation: gridPulse 8s ease infinite alternate;
-    }
-
-    /* Padající hvězdy - BÍLÉ */
-    .dark .shooting-star {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 2px;
-        height: 2px;
-        background: linear-gradient(90deg, #fff, rgba(255,255,255,0));
-        opacity: 0;
-        border-radius: 50%;
-        filter: drop-shadow(0 0 6px rgba(255,255,255,0.5));
-        animation: shootingStar 8s linear infinite;
-        pointer-events: none;
-        z-index: 5;
-    }
-
-    .dark .shooting-star:nth-child(1) {
-        top: 10%;
-        left: -10%;
-        animation-delay: 0s;
-    }
-
-    .dark .shooting-star:nth-child(2) {
-        top: 30%;
-        left: -10%;
-        animation-delay: 4s;
-    }
-
-    .dark .shooting-star:nth-child(3) {
-        top: 60%;
-        left: -10%;
-        animation-delay: 2s;
-    }
-
-    /* Animace */
-    @keyframes nebulaPulse {
-        0% {
-            opacity: 0.3;
-            filter: blur(40px);
-        }
-        50% {
-            opacity: 0.5;
-            filter: blur(50px);
-        }
-        100% {
-            opacity: 0.3;
-            filter: blur(40px);
-        }
-    }
-
-    @keyframes starsTwinkle {
-        0% {
-            opacity: 0.4;
-        }
-        100% {
-            opacity: 0.8;
-        }
-    }
-
-    @keyframes starsFloat {
-        from {
-            transform: translateY(0) translateX(0);
-        }
-        to {
-            transform: translateY(-400px) translateX(-100px);
-        }
-    }
-
-    @keyframes starsGlow {
-        0% {
-            opacity: 0.2;
-            filter: brightness(1);
-        }
-        100% {
-            opacity: 0.4;
-            filter: brightness(1.3);
-        }
-    }
-
-    @keyframes gridPulse {
-        0% {
-            opacity: 0.05;
-        }
-        50% {
-            opacity: 0.1;
-        }
-        100% {
-            opacity: 0.05;
-        }
-    }
-
-    @keyframes shootingStar {
-        0% {
-            transform: translateX(0) translateY(0) rotate(45deg);
-            opacity: 1;
-            width: 100px;
-        }
-        20% {
-            opacity: 1;
-        }
-        100% {
-            transform: translateX(2000px) translateY(500px) rotate(45deg);
-            opacity: 0;
-            width: 2px;
-        }
-    }
-
     * {
         @apply m-0 p-0 box-border;
     }
@@ -299,6 +64,239 @@
     }
 }
 
+/* ===== DARK MODE POZADÍ ===== */
+.dark {
+    --color-background: 222 47% 6%;
+    --color-background-secondary: 222 47% 10%;
+    --color-base: 220 100% 100%;
+    --color-muted: 220 10% 60%;
+    --color-neutral: 222 47% 15%;
+    
+    background: 
+        radial-gradient(circle at 20% 30%, hsla(280, 80%, 50%, 0.15) 0%, transparent 40%),
+        radial-gradient(circle at 80% 70%, hsla(200, 100%, 50%, 0.12) 0%, transparent 40%),
+        radial-gradient(circle at 40% 80%, hsla(320, 100%, 60%, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 90% 20%, hsla(180, 100%, 50%, 0.08) 0%, transparent 40%),
+        linear-gradient(145deg, 
+            hsl(222, 47%, 3%) 0%,
+            hsl(260, 40%, 6%) 25%,
+            hsl(235, 40%, 7%) 50%,
+            hsl(210, 50%, 5%) 75%,
+            hsl(222, 47%, 3%) 100%);
+    background-attachment: fixed;
+    position: relative;
+}
+
+/* Efekt mlhoviny */
+.dark::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: 
+        radial-gradient(circle at 30% 40%, hsla(280, 100%, 70%, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 70% 60%, hsla(200, 100%, 60%, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 90% 20%, hsla(320, 100%, 70%, 0.08) 0%, transparent 50%);
+    filter: blur(40px);
+    animation: nebulaPulse 15s ease infinite alternate;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Hvězdné pole - malé hvězdy */
+.dark .stars-small {
+    position: fixed;
+    inset: 0;
+    background-image: 
+        radial-gradient(1px 1px at 5px 10px, rgba(255,255,255,0.8), rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 15px 80px, rgba(255,255,255,0.8), rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 25px 150px, rgba(255,255,255,0.9), rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 45px 40px, rgba(255,255,255,0.8), rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 65px 200px, rgba(255,255,255,0.8), rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 90px 70px, rgba(255,255,255,0.9), rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 115px 120px, rgba(255,255,255,0.8), rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 140px 180px, rgba(255,255,255,0.8), rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 160px 50px, rgba(255,255,255,0.9), rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 185px 220px, rgba(255,255,255,0.8), rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 210px 90px, rgba(255,255,255,0.8), rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 235px 150px, rgba(255,255,255,0.9), rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 260px 30px, rgba(255,255,255,0.8), rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 285px 190px, rgba(255,255,255,0.8), rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 310px 110px, rgba(255,255,255,0.9), rgba(0,0,0,0));
+    background-repeat: repeat;
+    background-size: 400px 300px;
+    opacity: 0.6;
+    pointer-events: none;
+    z-index: 1;
+    animation: starsTwinkle 4s ease infinite alternate;
+}
+
+/* Hvězdné pole - střední hvězdy */
+.dark .stars-medium {
+    position: fixed;
+    inset: 0;
+    background-image: 
+        radial-gradient(2px 2px at 120px 30px, rgba(255,255,255,0.9), rgba(0,0,0,0)),
+        radial-gradient(3px 3px at 250px 180px, rgba(255,255,255,1), rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 380px 90px, rgba(255,255,255,0.9), rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 420px 210px, rgba(255,255,255,0.9), rgba(0,0,0,0)),
+        radial-gradient(3px 3px at 550px 140px, rgba(255,255,255,1), rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 680px 60px, rgba(255,255,255,0.9), rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 720px 190px, rgba(255,255,255,0.9), rgba(0,0,0,0)),
+        radial-gradient(3px 3px at 850px 110px, rgba(255,255,255,1), rgba(0,0,0,0));
+    background-repeat: repeat;
+    background-size: 900px 400px;
+    opacity: 0.4;
+    pointer-events: none;
+    z-index: 2;
+    animation: starsFloat 20s linear infinite;
+}
+
+/* Hvězdné pole - velké hvězdy */
+.dark .stars-large {
+    position: fixed;
+    inset: 0;
+    background-image: 
+        radial-gradient(4px 4px at 50px 300px, rgba(255,255,255,1), rgba(0,0,0,0)),
+        radial-gradient(3px 3px at 450px 500px, rgba(255,255,255,0.9), rgba(0,0,0,0)),
+        radial-gradient(4px 4px at 650px 150px, rgba(255,255,255,1), rgba(0,0,0,0)),
+        radial-gradient(3px 3px at 800px 400px, rgba(255,255,255,0.9), rgba(0,0,0,0)),
+        radial-gradient(4px 4px at 950px 250px, rgba(255,255,255,1), rgba(0,0,0,0));
+    background-repeat: repeat;
+    background-size: 1200px 800px;
+    opacity: 0.3;
+    pointer-events: none;
+    z-index: 3;
+    animation: starsGlow 3s ease infinite alternate;
+}
+
+/* Technologický grid */
+.dark .tech-grid {
+    position: fixed;
+    inset: 0;
+    background-image: 
+        repeating-linear-gradient(0deg, 
+            transparent, 
+            transparent 49px,
+            rgba(255,255,255,0.03) 49px,
+            transparent 50px),
+        repeating-linear-gradient(90deg, 
+            transparent, 
+            transparent 49px,
+            rgba(255,255,255,0.03) 49px,
+            transparent 50px);
+    mask-image: radial-gradient(circle at 50% 50%, black 30%, transparent 80%);
+    pointer-events: none;
+    z-index: 4;
+    animation: gridPulse 8s ease infinite alternate;
+}
+
+/* Padající hvězdy */
+.dark .shooting-star {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 2px;
+    background: linear-gradient(90deg, #fff, rgba(255,255,255,0));
+    opacity: 0;
+    border-radius: 50%;
+    filter: drop-shadow(0 0 6px rgba(255,255,255,0.5));
+    animation: shootingStar 8s linear infinite;
+    pointer-events: none;
+    z-index: 5;
+}
+
+.dark .shooting-star:nth-child(1) {
+    top: 10%;
+    left: -10%;
+    animation-delay: 0s;
+}
+
+.dark .shooting-star:nth-child(2) {
+    top: 30%;
+    left: -10%;
+    animation-delay: 4s;
+}
+
+.dark .shooting-star:nth-child(3) {
+    top: 60%;
+    left: -10%;
+    animation-delay: 2s;
+}
+
+/* Animace */
+@keyframes nebulaPulse {
+    0% {
+        opacity: 0.3;
+        filter: blur(40px);
+    }
+    50% {
+        opacity: 0.5;
+        filter: blur(50px);
+    }
+    100% {
+        opacity: 0.3;
+        filter: blur(40px);
+    }
+}
+
+@keyframes starsTwinkle {
+    0% {
+        opacity: 0.4;
+    }
+    100% {
+        opacity: 0.8;
+    }
+}
+
+@keyframes starsFloat {
+    from {
+        transform: translateY(0) translateX(0);
+    }
+    to {
+        transform: translateY(-400px) translateX(-100px);
+    }
+}
+
+@keyframes starsGlow {
+    0% {
+        opacity: 0.2;
+        filter: brightness(1);
+    }
+    100% {
+        opacity: 0.4;
+        filter: brightness(1.3);
+    }
+}
+
+@keyframes gridPulse {
+    0% {
+        opacity: 0.05;
+    }
+    50% {
+        opacity: 0.1;
+    }
+    100% {
+        opacity: 0.05;
+    }
+}
+
+@keyframes shootingStar {
+    0% {
+        transform: translateX(0) translateY(0) rotate(45deg);
+        opacity: 1;
+        width: 100px;
+    }
+    20% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(2000px) translateY(500px) rotate(45deg);
+        opacity: 0;
+        width: 2px;
+    }
+}
+
 @layer components {
 
     /* Container */
@@ -318,17 +316,6 @@
     .section-header p {
         @apply text-lg max-w-2xl mx-auto leading-relaxed;
         color: hsl(var(--color-muted));
-    }
-
-    /* Grid Background - vylepšeno pro dark mode */
-    .grid-bg {
-        @apply absolute inset-0 pointer-events-none h-[32rem] w-full;
-        mask-image: radial-gradient(100% 100% at top right, white, transparent);
-        -webkit-mask-image: radial-gradient(100% 100% at top right, white, transparent);
-    }
-    
-    .dark .grid-bg svg path {
-        stroke: rgba(255,255,255,0.2);
     }
 
     /* Navbar */
@@ -355,14 +342,6 @@
 
     .logo-link {
         @apply flex items-center gap-2 transition-transform hover:scale-105;
-    }
-
-    .logo-link img {
-        @apply h-10 w-auto;
-    }
-
-    .logo-text {
-        @apply text-xl font-extrabold tracking-tight;
     }
 
     .nav-links {
@@ -398,127 +377,6 @@
         @apply scale-110;
     }
 
-    .theme-toggle svg {
-        @apply w-5 h-5;
-    }
-
-
-    /* Hero specific */
-    .hero h1 {
-        font-size: clamp(3rem, 6vw, 5rem);
-    }
-
-    /* Statistiky barvy */
-    .text-success {
-        color: hsl(var(--color-success));
-    }
-
-    .text-primary {
-        color: hsl(var(--color-primary));
-    }
-
-    .text-purple {
-        color: hsl(270 60% 60%);
-    }
-
-    .text-orange {
-        color: hsl(25 95% 53%);
-    }
-
-    /* Gradient text */
-    .gradient-text {
-        background: linear-gradient(90deg,
-                hsl(var(--color-primary)),
-                hsl(var(--color-secondary)));
-        background-size: 200% 100%;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-    }
-
-    .delay-800 {
-        animation-delay: 800ms;
-    }
-
-    /* Hover efekty */
-    .hover-glow:hover {
-        box-shadow: 0 0 30px hsl(var(--color-primary)/0.3);
-    }
-
-    .hover-scale:hover {
-        transform: scale(1.02);
-    }
-
-    /* Mobile Toggle */
-    .mobile-toggle {
-        @apply lg:hidden flex items-center justify-center w-12 h-12 rounded-xl relative z-[130] transition-colors;
-        background: transparent;
-        border: 1px solid hsl(var(--color-neutral) / 0.1);
-    }
-
-    .mobile-toggle:hover {
-        @apply bg-primary/5 border-primary/20;
-    }
-
-    .mobile-toggle svg {
-        @apply w-6 h-6 transition-all duration-300;
-    }
-
-    .mobile-toggle .icon-close {
-        @apply absolute opacity-0 -rotate-90;
-    }
-
-    .mobile-toggle .icon-menu {
-        @apply opacity-100 rotate-0;
-    }
-
-    .navbar.menu-open .mobile-toggle .icon-menu {
-        @apply opacity-0 rotate-90;
-    }
-
-    .navbar.menu-open .mobile-toggle .icon-close {
-        @apply opacity-100 rotate-0;
-    }
-
-    /* Mobile Menu - Premium Fullscreen Overlay */
-    .mobile-menu {
-        @apply fixed inset-0 z-[100] flex flex-col bg-background/95 backdrop-blur-2xl px-6 pt-24 pb-12 overflow-y-auto;
-        transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    .mobile-menu-item {
-        @apply flex items-center gap-5 p-5 rounded-2xl transition-all duration-300 border border-transparent;
-        color: hsl(var(--color-base) / 0.8);
-    }
-
-    .mobile-menu-item:hover {
-        @apply bg-primary/5 border-primary/10 text-primary translate-x-2;
-    }
-
-    .mobile-menu-item.active {
-        @apply bg-primary/10 border-primary/20 text-primary;
-    }
-
-    .mobile-menu-icon {
-        @apply w-12 h-12 rounded-xl bg-background-secondary flex items-center justify-center shadow-sm transition-transform duration-300;
-    }
-
-    .mobile-menu-item:hover .mobile-menu-icon {
-        @apply scale-110 rotate-3 bg-primary/10;
-    }
-
-    .mobile-menu-actions {
-        @apply mt-auto pt-8 border-t border-white/5 space-y-3;
-    }
-
-    .mobile-menu-socials {
-        @apply flex gap-4 mt-8 justify-center;
-    }
-
-    .mobile-social-link {
-        @apply w-12 h-12 rounded-xl bg-background-secondary flex items-center justify-center text-muted hover:text-primary hover:bg-primary/10 transition-all duration-300;
-    }
-
     /* Hero */
     .hero {
         @apply relative overflow-hidden pt-32 pb-24 lg:pt-48 lg:pb-40 px-6 lg:px-8;
@@ -533,43 +391,14 @@
         @apply grid grid-cols-1 lg:grid-cols-2 gap-16 max-w-7xl mx-auto items-center;
     }
 
-    .hero-badge {
-        @apply inline-flex items-center gap-3 px-6 py-3 rounded-full backdrop-blur mb-10;
-        background: hsl(var(--color-primary) / 0.1);
-        border: 1px solid hsl(var(--color-primary) / 0.2);
-    }
-
-    .dot {
-        @apply relative w-2.5 h-2.5;
-    }
-
-    .dot-ping {
-        @apply absolute inset-0 rounded-full;
-        background: hsl(var(--color-primary));
-        animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
-    }
-
-    .dot-core {
-        @apply relative block w-2.5 h-2.5 rounded-full;
-        background: hsl(var(--color-primary));
-    }
-
-    .hero-badge-text {
-        @apply text-base font-semibold;
-        color: hsl(var(--color-primary));
-    }
-
-    .hero h1 {
-        @apply text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight tracking-tight mb-2;
-    }
-
     .gradient-text {
-        background: linear-gradient(90deg, hsl(var(--color-primary)), hsl(var(--color-secondary)));
+        background: linear-gradient(90deg,
+                hsl(var(--color-primary)),
+                hsl(var(--color-secondary)));
         background-size: 200% 100%;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
-        animation: gradientX 3s ease infinite;
     }
 
     .hero-desc {
@@ -581,75 +410,7 @@
         @apply flex flex-wrap gap-5 mb-12;
     }
 
-    .trust-badges {
-        @apply flex flex-wrap gap-5;
-    }
-
-    .hero-illustration {
-        @apply relative hidden lg:block;
-    }
-
-    .glow {
-        @apply absolute rounded-full pointer-events-none -z-10;
-    }
-
-    .glow-1 {
-        @apply left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] h-[350px] opacity-50 blur-[60px];
-        background: linear-gradient(to top right, hsl(var(--color-primary)/0.3), hsl(var(--color-secondary)/0.3));
-    }
-
-    .glow-2 {
-        @apply left-1/4 top-1/4 w-[250px] h-[250px] opacity-40 blur-[40px];
-        background: linear-gradient(to bottom right, hsl(var(--color-secondary)/0.2), hsl(var(--color-primary)/0.2));
-    }
-
-    .glow-3 {
-        @apply right-1/4 bottom-1/4 w-[300px] h-[300px] opacity-45 blur-[60px];
-        background: linear-gradient(to top left, hsl(var(--color-primary)/0.25), hsl(var(--color-secondary)/0.25));
-    }
-
-    .hero-image-wrap {
-        @apply relative animate-float;
-    }
-
-    /* Statistics Data Stream Effect */
-    .data-stream {
-        @apply absolute inset-0 -z-10 overflow-hidden opacity-10 pointer-events-none;
-    }
-
-    .data-line {
-        @apply absolute top-0 w-px h-full bg-gradient-to-b from-transparent via-primary/50 to-transparent;
-        animation: dataFlow 3s linear infinite;
-        will-change: transform;
-        transform: translateZ(0);
-    }
-
-    @keyframes dataFlow {
-        0% {
-            transform: translateY(-100%);
-            opacity: 0;
-        }
-
-        50% {
-            opacity: 1;
-        }
-
-        100% {
-            transform: translateY(100%);
-            opacity: 0;
-        }
-    }
-
-    /* Stat Cards Polish */
-    .stat-card {
-        @apply relative p-8 rounded-3xl transition-all duration-500 glass-morphism-v2 border-none;
-    }
-
-    .stat-card:hover {
-        @apply translate-y-[-8px];
-        box-shadow: 0 20px 40px -20px hsl(var(--color-primary) / 0.3);
-    }
-
+    /* Stat Cards */
     .stats-grid {
         @apply grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto;
     }
@@ -661,35 +422,16 @@
     }
 
     .stat-icon {
-        @apply inline-flex items-center justify-center w-14 h-14 rounded-xl mb-4;
-    }
-
-    .stat-icon.success {
-        background: hsl(var(--color-success)/0.1);
-        color: hsl(var(--color-success));
-    }
-
-    .stat-icon.primary {
-        background: hsl(var(--color-primary)/0.1);
-        color: hsl(var(--color-primary));
-    }
-
-    .stat-icon.purple {
-        background: hsl(270 60% 60%/0.1);
-        color: hsl(270 60% 60%);
-    }
-
-    .stat-icon.orange {
-        background: hsl(25 95% 53%/0.1);
-        color: hsl(25 95% 53%);
+        @apply inline-flex items-center justify-center w-14 h-14 rounded-xl mb-4 bg-primary/20 text-primary;
     }
 
     .stat-value {
-        @apply text-3xl font-bold mb-2;
+        @apply text-3xl font-bold mb-2 text-primary;
     }
 
     .stat-label {
         @apply text-sm font-semibold;
+        color: hsl(var(--color-base));
     }
 
     .stat-sub {
@@ -706,27 +448,6 @@
         @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-7xl mx-auto;
     }
 
-    .feature-card {
-        @apply p-8 rounded-xl transition-all hover:border-primary/40 hover:-translate-y-1;
-        background: linear-gradient(to bottom right, hsl(var(--color-primary)/0.05), transparent);
-        border: 1px solid hsl(var(--color-primary)/0.2);
-    }
-
-    .feature-card .card-icon {
-        @apply inline-flex items-center justify-center w-12 h-12 rounded-xl mb-6;
-        background: hsl(var(--color-primary)/0.1);
-        color: hsl(var(--color-primary));
-    }
-
-    .feature-card h3 {
-        @apply text-xl font-bold mb-3;
-    }
-
-    .feature-card p {
-        @apply leading-relaxed;
-        color: hsl(var(--color-muted));
-    }
-
     /* Services */
     .services-section {
         @apply py-16 lg:py-24 px-6 lg:px-8;
@@ -740,214 +461,6 @@
         @apply rounded-xl overflow-hidden transition-all hover:scale-102;
         background: hsl(var(--color-background-secondary));
         border: 1px solid hsl(var(--color-neutral)/0.5);
-    }
-
-    .service-card:hover {
-        border-color: hsl(var(--color-primary)/0.5);
-    }
-
-    .service-img {
-        @apply h-48 overflow-hidden relative flex items-center justify-center;
-    }
-
-    .service-card:hover .service-img svg {
-        @apply scale-110;
-    }
-
-    .service-img svg {
-        @apply transition-transform duration-300;
-    }
-
-    .service-body {
-        @apply p-6;
-    }
-
-    .service-body h3 {
-        @apply text-xl font-bold mb-2 transition-colors;
-    }
-
-    .service-card:hover .service-body h3 {
-        color: hsl(var(--color-primary));
-    }
-
-    .service-body .desc {
-        @apply text-sm mb-4 line-clamp-2;
-        color: hsl(var(--color-muted));
-    }
-
-    .view-link {
-        @apply inline-flex items-center gap-2 font-semibold transition-all;
-        color: hsl(var(--color-primary));
-    }
-
-    .view-link:hover {
-        @apply gap-3;
-    }
-
-    .view-link svg {
-        @apply w-4 h-4;
-    }
-
-    /* Enterprise */
-    .enterprise-section {
-        @apply py-20 px-8;
-    }
-
-    .enterprise-header {
-        @apply text-center mb-12;
-    }
-
-    .enterprise-header h3 {
-        @apply text-2xl font-bold mb-4;
-    }
-
-    .enterprise-header p {
-        @apply max-w-2xl mx-auto mb-6;
-        color: hsl(var(--color-muted));
-    }
-
-    .enterprise-grid {
-        @apply grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl mx-auto;
-    }
-
-    /* Special Offer */
-    .special-offer-section {
-        @apply py-16 lg:py-32 px-6 lg:px-8;
-    }
-
-    .glass-morphism-v2 {
-        background: rgba(255, 255, 255, 0.03);
-        backdrop-filter: blur(10px) saturate(150%);
-        border: 1px solid rgba(255, 255, 255, 0.08);
-    }
-
-    .dark .glass-morphism-v2 {
-        background: rgba(15, 23, 42, 0.3);
-        border: 1px solid rgba(255, 255, 255, 0.05);
-    }
-
-    .premium-glow {
-        position: relative;
-    }
-
-    .premium-glow::after {
-        content: '';
-        position: absolute;
-        inset: -1px;
-        background: linear-gradient(45deg,
-                transparent,
-                hsl(var(--color-primary) / 0.3),
-                transparent);
-        z-index: -1;
-        border-radius: inherit;
-        filter: blur(8px);
-        opacity: 0;
-        transition: opacity 0.5s ease;
-    }
-
-    .premium-glow:hover::after {
-        opacity: 1;
-    }
-
-    .mesh-gradient {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        background:
-            radial-gradient(at 0% 0%, hsl(var(--color-primary) / 0.15) 0px, transparent 50%),
-            radial-gradient(at 100% 0%, hsl(var(--color-secondary) / 0.1) 0px, transparent 50%),
-            radial-gradient(at 100% 100%, hsl(var(--color-primary) / 0.05) 0px, transparent 50%),
-            radial-gradient(at 0% 100%, hsl(var(--color-secondary) / 0.05) 0px, transparent 50%);
-        pointer-events: none;
-    }
-
-    .offer-box {
-        @apply max-w-7xl mx-auto relative overflow-hidden;
-        background: linear-gradient(135deg, hsl(var(--color-primary) / 0.15), hsl(var(--color-secondary) / 0.05));
-        @apply rounded-[2rem] p-8 lg:p-20 border border-white/10 shadow-2xl backdrop-blur-2xl;
-    }
-
-    .offer-content {
-        @apply text-center;
-    }
-
-    .offer-content h2 {
-        @apply text-3xl lg:text-4xl font-bold mb-6;
-    }
-
-    .offer-description {
-        @apply text-xl max-w-2xl mx-auto mb-8;
-        color: hsl(var(--color-muted));
-    }
-
-    .promo-code {
-        @apply mb-8;
-    }
-
-    .promo-note {
-        @apply text-sm mt-2;
-        color: hsl(var(--color-muted)/0.7);
-    }
-
-    /* FAQ */
-    .faq-section {
-        @apply py-20 px-8;
-    }
-
-    .faq-list {
-        @apply max-w-7xl mx-auto flex flex-col gap-4;
-    }
-
-    .faq-item {
-        border: 1px solid hsl(var(--color-neutral)/0.5);
-        @apply rounded-xl overflow-hidden;
-        background: hsl(var(--color-background-secondary));
-    }
-
-    .faq-item:hover {
-        border-color: hsl(var(--color-primary)/0.3);
-    }
-
-    .faq-btn {
-        @apply w-full flex items-center justify-between p-6 text-left bg-none border-none text-base font-semibold;
-        color: hsl(var(--color-base));
-    }
-
-    .faq-icon {
-        @apply flex-shrink-0 text-2xl font-light transition-transform duration-300;
-        color: hsl(var(--color-primary));
-    }
-
-    .faq-answer {
-        @apply overflow-hidden;
-    }
-
-    .faq-answer-inner {
-        @apply overflow-hidden leading-relaxed px-6 pb-6;
-        color: hsl(var(--color-muted));
-    }
-
-    /* Discord */
-    .discord-section {
-        @apply py-20 px-8;
-    }
-
-    .discord-box {
-        @apply max-w-7xl mx-auto text-center;
-        background: linear-gradient(to bottom right, hsl(var(--color-primary)/0.1), hsl(var(--color-secondary)/0.05));
-        border: 1px solid hsl(var(--color-neutral)/0.1);
-        @apply rounded-3xl p-12 shadow-xl backdrop-blur-lg;
-    }
-
-    .discord-content h2 {
-        @apply text-3xl lg:text-4xl font-bold mb-4;
-    }
-
-    .discord-content p {
-        @apply text-xl mb-8;
-        color: hsl(var(--color-muted));
     }
 
     /* Footer */
@@ -966,43 +479,6 @@
         @apply grid grid-cols-1 md:grid-cols-[1.5fr_1fr_1fr_1fr] gap-8;
     }
 
-    .footer-brand-logo {
-        @apply flex items-center gap-3 mb-4;
-    }
-
-    .footer-brand-logo img {
-        @apply h-12 w-auto;
-    }
-
-    .footer-brand-logo span {
-        @apply text-lg font-bold;
-    }
-
-    .footer-brand p {
-        @apply text-sm leading-relaxed;
-        color: hsl(var(--color-muted));
-    }
-
-    .footer-brand-socials {
-        @apply flex gap-3 mt-4;
-    }
-
-    .footer-brand-socials a {
-        @apply flex items-center justify-center w-9 h-9 rounded-lg transition-all;
-        background: hsl(var(--color-neutral)/0.2);
-        color: hsl(var(--color-muted));
-    }
-
-    .footer-brand-socials a:hover {
-        background: hsl(var(--color-primary)/0.15);
-        color: hsl(var(--color-primary));
-        @apply scale-110;
-    }
-
-    .footer-brand-socials svg {
-        @apply w-4.5 h-4.5;
-    }
-
     .footer-section h4 {
         @apply font-semibold mb-3;
     }
@@ -1010,11 +486,6 @@
     .footer-section li {
         @apply text-sm py-1;
         color: hsl(var(--color-muted));
-    }
-
-    .footer-section a {
-        color: hsl(var(--color-muted));
-        @apply transition-colors;
     }
 
     .footer-section a:hover {
@@ -1048,21 +519,8 @@
         color: hsl(var(--color-primary));
     }
 
-    .pricing-card .price {
-        @apply mb-6;
-    }
-
     .pricing-card .amount {
         @apply text-3xl font-bold;
-    }
-
-    .pricing-card .period {
-        @apply text-sm;
-        color: hsl(var(--color-muted));
-    }
-
-    .pricing-card .features {
-        @apply list-none mb-6 flex-grow;
     }
 
     .pricing-card .features li {
@@ -1085,18 +543,6 @@
         background: hsl(222, 28%, 7%);
     }
 
-    .loader.hidden {
-        @apply opacity-0 invisible pointer-events-none;
-    }
-
-    .loader-content {
-        @apply text-center;
-    }
-
-    .loader-logo {
-        @apply h-16 mx-auto mb-6 animate-loader-pulse;
-    }
-
     .loader-progress {
         @apply w-40 h-1 mx-auto overflow-hidden rounded;
         background: hsl(220, 25%, 90%);
@@ -1112,30 +558,18 @@
         animation: loaderBar 1.2s ease-in-out forwards;
     }
 
-    /* Page Transition */
-    #page-transition {
-        @apply fixed inset-0 z-[9998] opacity-0 pointer-events-none transition-opacity duration-300;
-        background: hsl(220, 20%, 98%);
+    /* Glass morphism */
+    .glass-morphism-v2 {
+        @apply relative backdrop-blur-md bg-background-secondary/40 border border-white/5 shadow-xl;
     }
 
-    .dark #page-transition {
-        background: hsl(222, 28%, 7%);
-    }
-
-    /* Originality Utilities */
-    .noise-overlay {
-        @apply absolute inset-0 pointer-events-none opacity-[0.05] mix-blend-overlay;
-        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-    }
-
+    /* Liquid blobs - pro light mode */
     .liquid-blob {
         @apply absolute -z-10 opacity-20;
         background: radial-gradient(circle, hsl(var(--color-primary)) 0%, transparent 70%);
         width: 500px;
         height: 500px;
         filter: blur(80px);
-        will-change: transform;
-        transform: translateZ(0);
     }
 
     .liquid-blob-secondary {
@@ -1144,57 +578,6 @@
         width: 400px;
         height: 400px;
         filter: blur(60px);
-        will-change: transform;
-        transform: translateZ(0);
-    }
-
-    @keyframes reverseSpin {
-        from {
-            transform: rotate(360deg);
-        }
-
-        to {
-            transform: rotate(0deg);
-        }
-    }
-
-    .animate-reverse-spin {
-        animation: reverseSpin 20s linear infinite;
-    }
-
-    .mesh-gradient {
-        @apply absolute inset-0 -z-20 opacity-30 blur-[100px];
-        background:
-            radial-gradient(at 0% 0%, hsl(var(--color-primary)/0.6) 0, transparent 50%),
-            radial-gradient(at 100% 0%, hsl(var(--color-secondary)/0.5) 0, transparent 50%),
-            radial-gradient(at 100% 100%, hsl(var(--color-primary)/0.4) 0, transparent 50%),
-            radial-gradient(at 0% 100%, hsl(270 60% 60%/0.4) 0, transparent 50%);
-    }
-
-    .glass-morphism-v2 {
-        @apply relative backdrop-blur-md bg-background-secondary/40 border border-white/5 shadow-xl;
-        box-shadow:
-            inset 0 0 0 1px rgba(255, 255, 255, 0.05),
-            0 20px 40px -12px rgba(0, 0, 0, 0.4);
-        will-change: transform;
-    }
-
-    .border-trace {
-        @apply relative transition-colors duration-500;
-    }
-
-    .border-trace::before {
-        content: '';
-        @apply absolute inset-0 rounded-[inherit] p-[1px] -z-10 transition-opacity duration-500 opacity-0;
-        background: linear-gradient(90deg, transparent, #fff, transparent);
-        -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-        mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-        -webkit-mask-composite: xor;
-        mask-composite: exclude;
-    }
-
-    .border-trace:hover::before {
-        @apply opacity-100;
     }
 
     /* Utilities */
@@ -1202,38 +585,7 @@
         color: hsl(var(--color-primary));
     }
 
-    .text-success {
-        color: hsl(var(--color-success));
-    }
-
-    .text-warning {
-        color: hsl(var(--color-warning));
-    }
-
-    .text-purple {
-        color: hsl(270 60% 60%);
-    }
-
-    .text-orange {
-        color: hsl(25 95% 53%);
-    }
-
     .text-muted {
         color: hsl(var(--color-muted));
-    }
-
-    /* Animations */
-    @keyframes loaderBar {
-        0% {
-            width: 0%;
-        }
-
-        50% {
-            width: 70%;
-        }
-
-        100% {
-            width: 100%;
-        }
     }
 }

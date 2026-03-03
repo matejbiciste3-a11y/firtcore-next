@@ -15,7 +15,6 @@ export function ThemeProvider({ children }) {
         setTheme(initialTheme)
         setMounted(true)
 
-        // Okamžitá aplikace pro zamezení blikání
         if (initialTheme === 'dark') {
             root.classList.add('dark')
         } else {

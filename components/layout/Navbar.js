@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { motion, AnimatePresence } from 'framer-motion'
 import ThemeToggle from '../ui/ThemeToggle'
-import LanguageSwitcher from '../ui/LanguageSwitcher'
+//import LanguageSwitcher from '../ui/LanguageSwitcher'
 import Button from '../ui/Button'
 import Logo from '../ui/Logo'
 import { Icons } from '../ui/Icons'
@@ -79,7 +79,7 @@ export default function Navbar() {
 
                 <div className="nav-actions">
                     <ThemeToggle />
-                    <LanguageSwitcher />
+                        <anguageSwitcher />
                     
                     <Button href="https://client.firtcore.cz/login" variant="primary" size="small" className="hidden lg:inline-flex">
                         {t('navigation.login')}

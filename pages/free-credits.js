@@ -6,44 +6,41 @@ import { Icons } from '@/components/ui/Icons'
 import Card from '@/components/ui/Card'
 import Image from 'next/image'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
-import { useTranslation } from 'next-i18next'
 
 export default function FreeCreditsPage() {
-    const { t } = useTranslation('free-credits')
-    
     const benefits = [
         {
             icon: Icons.Gift,
-            title: t('whyJoin.benefits.bonus.title'),
-            description: t('whyJoin.benefits.bonus.desc')
+            title: "Bonus 125 Kč",
+            description: "Každý nový uživatel získá 125 Kč kreditu na první aktivaci služeb."
         },
         {
             icon: Icons.TrendingUp,
-            title: t('whyJoin.benefits.income.title'),
-            description: t('whyJoin.benefits.income.desc')
+            title: "Dlouhodobý příjem",
+            description: "10% provize z každé budoucí platby vašich doporučených uživatelů."
         },
         {
             icon: Icons.BarChart2,
-            title: t('whyJoin.benefits.stats.title'),
-            description: t('whyJoin.benefits.stats.desc')
+            title: "Přehledné statistiky",
+            description: "Sledujte výkon svých odkazů a vydělané provize v reálném čase."
         }
     ]
 
     const howItWorks = [
         {
             number: "1",
-            title: t('howItWorks.steps.register.title'),
-            description: t('howItWorks.steps.register.desc')
+            title: "Registrace",
+            description: "Vytvořte si účet na FirtCore.cz a získejte svůj unikátní affiliate kód."
         },
         {
             number: "2",
-            title: t('howItWorks.steps.share.title'),
-            description: t('howItWorks.steps.share.desc')
+            title: "Sdílení",
+            description: "Sdílejte svůj odkaz s přáteli nebo komunitou na sociálních sítích."
         },
         {
             number: "3",
-            title: t('howItWorks.steps.reward.title'),
-            description: t('howItWorks.steps.reward.desc')
+            title: "Odměna",
+            description: "Sledujte, jak rostou vaše provize a využívejte je na další služby."
         }
     ]
 
@@ -87,14 +84,10 @@ export default function FreeCreditsPage() {
 
     return (
         <Layout title="Kredit zdarma a affiliate program | FirtCore.cz">
-            {/* Hero sekce */}
+            {/* HERO SEKCE - bez vlastního pozadí */}
             <section className="relative pt-32 pb-20 overflow-hidden">
-                <div className="absolute inset-0 -z-10">
-                    <div className="stars-small"></div>
-                    <div className="stars-medium"></div>
-                    <div className="tech-grid"></div>
-                </div>
-
+                {/* 🚫 ODEBRÁNO: <div className="absolute inset-0 -z-10"> ... </div> */}
+                
                 <div className="container relative z-10">
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
                         <motion.div
@@ -111,17 +104,17 @@ export default function FreeCreditsPage() {
                                     className="rounded-xl"
                                 />
                                 <Badge variant="primary">
-                                    {t('badge')}
+                                    🎁 Limitovaná nabídka
                                 </Badge>
                             </div>
                             
                             <h1 className="text-5xl lg:text-6xl font-black mb-6">
-                                {t('title').replace(t('titleGradient'), '')}
-                                <span className="gradient-text"> {t('titleGradient')}</span>
+                                Začněte s <span className="gradient-text">kreditem</span> a vydělávejte
                             </h1>
                             
                             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                                {t('description')}
+                                Přiveďte na FirtCore nové hráče a získejte 125 Kč na jejich účet. 
+                                Každá jejich budoucí platba vám přinese 10% provizi.
                             </p>
 
                             <div className="flex flex-wrap gap-4">
@@ -133,19 +126,18 @@ export default function FreeCreditsPage() {
                                 </Button>
                             </div>
 
-                            {/* Rychlá statistika */}
                             <div className="flex gap-8 mt-10 pt-8 border-t border-white/10">
                                 <div>
                                     <div className="text-2xl font-bold text-primary">125 Kč</div>
-                                    <div className="text-sm text-muted-foreground">{t('stats.bonus')}</div>
+                                    <div className="text-sm text-muted-foreground">Bonus pro nové</div>
                                 </div>
                                 <div>
                                     <div className="text-2xl font-bold text-primary">10%</div>
-                                    <div className="text-sm text-muted-foreground">{t('stats.commission')}</div>
+                                    <div className="text-sm text-muted-foreground">Provize</div>
                                 </div>
                                 <div>
                                     <div className="text-2xl font-bold text-primary">24/7</div>
-                                    <div className="text-sm text-muted-foreground">{t('stats.support')}</div>
+                                    <div className="text-sm text-muted-foreground">Podpora</div>
                                 </div>
                             </div>
                         </motion.div>
@@ -161,36 +153,35 @@ export default function FreeCreditsPage() {
                                 
                                 <Icons.Gift className="w-16 h-16 text-primary mb-6" />
                                 
-                                <h3 className="text-2xl font-bold mb-4">{t('affiliateBox.title')}</h3>
+                                <h3 className="text-2xl font-bold mb-4">Váš affiliate kód</h3>
                                 
                                 <div className="bg-background-secondary/50 rounded-xl p-4 mb-4 border border-white/5">
-                                    <code className="text-2xl font-mono text-primary">{t('affiliateBox.code')}</code>
+                                    <code className="text-2xl font-mono text-primary">FIRTCORE-25</code>
                                 </div>
                                 
                                 <p className="text-sm text-muted-foreground mb-4">
-                                    {t('affiliateBox.description')}
+                                    Sdílejte tento kód nebo svůj unikátní odkaz
                                 </p>
 
                                 <Button href="#" variant="outline" fullWidth>
-                                    {t('buttons.copy')}
+                                    Zkopírovat odkaz
                                 </Button>
 
-                                {/* Malé statistiky */}
                                 <div className="grid grid-cols-2 gap-3 mt-6 pt-4 border-t border-white/5">
                                     <div>
-                                        <div className="text-xs text-muted-foreground">{t('affiliateBox.clicks')}</div>
+                                        <div className="text-xs text-muted-foreground">Prokliky</div>
                                         <div className="font-bold">1,247</div>
                                     </div>
                                     <div>
-                                        <div className="text-xs text-muted-foreground">{t('affiliateBox.registrations')}</div>
+                                        <div className="text-xs text-muted-foreground">Registrace</div>
                                         <div className="font-bold">89</div>
                                     </div>
                                     <div>
-                                        <div className="text-xs text-muted-foreground">{t('affiliateBox.earnings')}</div>
+                                        <div className="text-xs text-muted-foreground">Provize</div>
                                         <div className="font-bold text-primary">1,850 Kč</div>
                                     </div>
                                     <div>
-                                        <div className="text-xs text-muted-foreground">{t('affiliateBox.conversion')}</div>
+                                        <div className="text-xs text-muted-foreground">Konverze</div>
                                         <div className="font-bold">7.1%</div>
                                     </div>
                                 </div>
@@ -200,7 +191,7 @@ export default function FreeCreditsPage() {
                 </div>
             </section>
 
-            {/* Proč se zapojit */}
+            {/* PROČ SE ZAPOJIT */}
             <section className="py-20">
                 <div className="container">
                     <motion.div
@@ -210,10 +201,10 @@ export default function FreeCreditsPage() {
                         className="text-center mb-12"
                     >
                         <h2 className="text-4xl font-black mb-4">
-                            {t('whyJoin.title')} <span className="gradient-text">{t('whyJoin.subtitle')}</span>
+                            Proč se <span className="gradient-text">zapojit</span>
                         </h2>
                         <p className="text-muted-foreground max-w-2xl mx-auto">
-                            {t('whyJoin.subtitle')}
+                            Affiliate program, který se vyplatí
                         </p>
                     </motion.div>
 
@@ -238,7 +229,7 @@ export default function FreeCreditsPage() {
                 </div>
             </section>
 
-            {/* Jak to funguje */}
+            {/* JAK TO FUNGUJE */}
             <section className="py-20 bg-background-secondary/30">
                 <div className="container">
                     <motion.div
@@ -248,10 +239,10 @@ export default function FreeCreditsPage() {
                         className="text-center mb-12"
                     >
                         <h2 className="text-4xl font-black mb-4">
-                            {t('howItWorks.title')} <span className="gradient-text">{t('howItWorks.subtitle')}</span>
+                            Jak to <span className="gradient-text">funguje</span>
                         </h2>
                         <p className="text-muted-foreground max-w-2xl mx-auto">
-                            {t('howItWorks.subtitle')}
+                            Tři jednoduché kroky k vašemu prvnímu kreditu
                         </p>
                     </motion.div>
 
@@ -270,8 +261,6 @@ export default function FreeCreditsPage() {
                                 </div>
                                 <h3 className="text-xl font-bold mb-2">{step.title}</h3>
                                 <p className="text-muted-foreground">{step.description}</p>
-
-                                {/* Spojovací čára (kromě posledního) */}
                                 {index < 2 && (
                                     <div className="hidden md:block absolute top-8 left-[60%] w-full h-[2px] bg-gradient-to-r from-primary/50 to-transparent"></div>
                                 )}
@@ -281,7 +270,7 @@ export default function FreeCreditsPage() {
                 </div>
             </section>
 
-            {/* Úrovně spolupráce */}
+            {/* ÚROVNĚ SPOLUPRÁCE */}
             <section className="py-20">
                 <div className="container">
                     <motion.div
@@ -317,10 +306,8 @@ export default function FreeCreditsPage() {
                                         Nejoblíbenější
                                     </Badge>
                                 )}
-
                                 <h3 className="text-xl font-bold mb-2">{tier.name}</h3>
                                 <div className="text-3xl font-black text-primary mb-6">{tier.price}</div>
-                                
                                 <ul className="space-y-3 mb-8">
                                     {tier.features.map((feature, i) => (
                                         <li key={i} className="flex items-start gap-2">
@@ -329,7 +316,6 @@ export default function FreeCreditsPage() {
                                         </li>
                                     ))}
                                 </ul>
-
                                 <Button 
                                     href="https://client.firtcore.cz/register" 
                                     variant={tier.popular ? 'primary' : 'outline'} 
@@ -343,7 +329,7 @@ export default function FreeCreditsPage() {
                 </div>
             </section>
 
-            {/* Pro influencery */}
+            {/* PRO INFLUENCERY */}
             <section className="py-20 bg-background-secondary/30">
                 <div className="container">
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -355,12 +341,10 @@ export default function FreeCreditsPage() {
                             <h2 className="text-4xl font-black mb-6">
                                 Jste <span className="gradient-text">influencer nebo streamer?</span>
                             </h2>
-                            
                             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
                                 Spolupracujte s námi a rozvíjejte svou komunitu. Nabízíme individuální podmínky, 
                                 exkluzivní promo kódy pro vaše sledující a možnost společných soutěží.
                             </p>
-
                             <div className="grid grid-cols-2 gap-4 mb-8">
                                 <div className="flex items-center gap-3">
                                     <Icons.Shield className="w-5 h-5 text-primary" />
@@ -379,7 +363,6 @@ export default function FreeCreditsPage() {
                                     <span className="text-sm">Exkluzivní akce</span>
                                 </div>
                             </div>
-
                             <Button href="mailto:partner@firtcore.cz" variant="primary">
                                 Kontaktovat partner tým
                             </Button>
@@ -401,7 +384,6 @@ export default function FreeCreditsPage() {
                                         <div className="text-sm text-muted-foreground">150+ aktivních partnerů</div>
                                     </div>
                                 </div>
-
                                 <div className="space-y-3">
                                     {[
                                         "Privátní kanál pro partnery",
@@ -427,7 +409,7 @@ export default function FreeCreditsPage() {
 export async function getStaticProps({ locale }) {
     return {
         props: {
-            ...(await serverSideTranslations(locale, ['free-credits', 'common'])),
+            ...(await serverSideTranslations(locale, ['common'])),
         },
     }
 }

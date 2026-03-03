@@ -1,54 +1,51 @@
 import Card from '../ui/Card'
-import { useTranslation } from 'next-i18next'
 
-const defaultTechnologies = [
+const technologies = [
     {
         id: 1,
         icon: 'shield',
-        titleKey: 'technologies.ddos.title',
-        descKey: 'technologies.ddos.description'
+        title: 'Enterprise DDOS Protection',
+        description: 'Vícevrstvá ochrana až 12 Tbps s okamžitou filtrací.'
     },
     {
         id: 2,
         icon: 'cpu',
-        titleKey: 'technologies.cpu.title',
-        descKey: 'technologies.cpu.description'
+        title: 'AMD Ryzen 7 5700x',
+        description: 'Špičkový výkon pro náročné herní servery.'
     },
     {
         id: 3,
         icon: 'ssd',
-        titleKey: 'technologies.ssd.title',
-        descKey: 'technologies.ssd.description'
+        title: 'NVMe Gen4 SSD',
+        description: 'Čtení až 7,000 MB/s pro bleskové načítání.'
     },
     {
         id: 4,
         icon: 'network',
-        titleKey: 'technologies.network.title',
-        descKey: 'technologies.network.description'
+        title: '10 Gbps Network',
+        description: 'Redundantní konektivita s <1ms latencí v Praze.'
     },
     {
         id: 5,
         icon: 'backup',
-        titleKey: 'technologies.backup.title',
-        descKey: 'technologies.backup.description'
+        title: 'Automatické zálohování',
+        description: 'Denní snapshoty s 14denní retencí.'
     },
     {
         id: 6,
         icon: 'docker',
-        titleKey: 'technologies.docker.title',
-        descKey: 'technologies.docker.description'
+        title: 'Docker Ready',
+        description: 'Plná podpora containerizace a orchestrace.'
     }
 ]
 
-export default function Technologies({ technologies = defaultTechnologies }) {
-    const { t } = useTranslation('common')
-    
+export default function Technologies() {
     return (
         <section id="features" className="technologies-section">
             <div className="container">
                 <div className="section-header">
-                    <h2>{t('technologies.title')}</h2>
-                    <p>{t('technologies.subtitle')}</p>
+                    <h2>Technologie</h2>
+                    <p>Postaveno na špičkovém hardwaru</p>
                 </div>
 
                 <div className="technologies-grid">
@@ -56,8 +53,8 @@ export default function Technologies({ technologies = defaultTechnologies }) {
                         <Card
                             key={tech.id}
                             icon={tech.icon}
-                            title={t(tech.titleKey)}
-                            description={t(tech.descKey)}
+                            title={tech.title}
+                            description={tech.description}
                             variant="enterprise"
                             className="h-full"
                         />

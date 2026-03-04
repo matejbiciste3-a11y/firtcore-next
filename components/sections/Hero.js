@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import Button from '../ui/Button'
 import Badge from '../ui/Badge'
-import GridBackground from '../ui/GridBackground'
+// import GridBackground from '../ui/GridBackground'  // <-- ODEBRÁNO
 import { Icons } from '../ui/Icons'
 import { useTranslation } from 'next-i18next'
 
@@ -30,7 +30,7 @@ export default function Hero() {
 
     return (
         <section className="hero">
-            <GridBackground />
+            {/* <GridBackground />  <-- ODEBRÁNO */}
             <div className="mesh-gradient opacity-20"></div>
             <div className="noise-overlay"></div>
 
@@ -70,6 +70,7 @@ export default function Hero() {
                     animate="visible"
                     className="flex flex-col relative z-20"
                 >
+                    {/* BADGE ZŮSTÁVÁ */}
                     <motion.div variants={itemVariants} className="mb-6">
                         <Badge variant="primary" withDot className="glass-morphism-v2 border-primary/20">
                             {t('hero.badge')}

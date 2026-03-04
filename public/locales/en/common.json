@@ -412,5 +412,26 @@
       "title": "Free Credits and Affiliate Program | FirtCore.cz",
       "description": "Get 125 CZK free credits and earn with our affiliate program."
     }
+  },
+  "reviews": {
+    "title": "What our clients say",
+    "titleGradient": "clients",
+    "subtitle": "Over 500 satisfied customers trust us. Read their experiences.",
+    "items": [
+      {
+        "name": "maxinoo7",
+        "role": "Customer",
+        "rating": 5,
+        "text": "I bought the discord bot - pro package for 60 CZK/month and personally I think the price/performance ratio is absolutely OP. I haven't encountered any problems yet, which I'm glad for ;) 9.5/10",
+        "date": "February 28, 2026"
+      },
+      {
+        "name": "Art Vik (art333vik)",
+        "role": "Customer",
+        "rating": 5,
+        "text": "I had the opportunity to try your minecraft hosting, and I'm very satisfied! The helpers quickly prepared it for me and helped with the setup, and the server itself was great: plenty of options, no lags or other technical issues. 9/10",
+        "date": "March 1, 2026"
+      }
+    ]
   }
 }

@@ -7,6 +7,7 @@ import EnterpriseServices from '@/components/sections/EnterpriseServices'
 import SpecialOffer from '@/components/sections/SpecialOffer'
 import FAQ from '@/components/sections/FAQ'
 import DiscordCommunity from '@/components/sections/DiscordCommunity'
+import Reviews from '@/components/sections/Reviews'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 // Import dat
@@ -22,6 +23,7 @@ export default function Home() {
             <Technologies technologies={technologies} />
             <Services services={services} />
             <EnterpriseServices />
+            <Reviews />
             <SpecialOffer />
             <FAQ faq={faqItems} />
             <DiscordCommunity />

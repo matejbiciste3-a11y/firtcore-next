@@ -1,9 +1,9 @@
 import Layout from '@/components/layout/Layout'
 import Services from '@/components/sections/Services'
+import Reviews from '@/components/sections/Reviews'
 import { motion } from 'framer-motion'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { services } from '@/data/services'
-import { Icons } from '@/components/ui/Icons'
 
 export default function ServicesPage() {
     return (
@@ -39,6 +39,8 @@ export default function ServicesPage() {
                 subtitle="Prozkoumejte naše hostingová řešení navržená pro hráče, vývojáře i firmy."
                 items={services}
             />
+
+            <Reviews />
 
             <section className="py-20 relative overflow-hidden">
                 <div className="container relative z-10">

@@ -1,51 +1,54 @@
 import Card from '../ui/Card'
+import { useTranslation } from 'next-i18next'
 
 const technologies = [
     {
         id: 1,
         icon: 'shield',
-        title: 'Enterprise DDOS Protection',
-        description: 'Vícevrstvá ochrana až 12 Tbps s okamžitou filtrací.'
+        titleKey: 'technologies.items.0.title',
+        descKey: 'technologies.items.0.description'
     },
     {
         id: 2,
         icon: 'cpu',
-        title: 'AMD Ryzen 7 5700x',
-        description: 'Špičkový výkon pro náročné herní servery.'
+        titleKey: 'technologies.items.1.title',
+        descKey: 'technologies.items.1.description'
     },
     {
         id: 3,
         icon: 'ssd',
-        title: 'NVMe Gen4 SSD',
-        description: 'Čtení až 7,000 MB/s pro bleskové načítání.'
+        titleKey: 'technologies.items.2.title',
+        descKey: 'technologies.items.2.description'
     },
     {
         id: 4,
         icon: 'network',
-        title: '10 Gbps Network',
-        description: 'Redundantní konektivita s <1ms latencí v Praze.'
+        titleKey: 'technologies.items.3.title',
+        descKey: 'technologies.items.3.description'
     },
     {
         id: 5,
         icon: 'backup',
-        title: 'Automatické zálohování',
-        description: 'Denní snapshoty s 14denní retencí.'
+        titleKey: 'technologies.items.4.title',
+        descKey: 'technologies.items.4.description'
     },
     {
         id: 6,
         icon: 'docker',
-        title: 'Docker Ready',
-        description: 'Plná podpora containerizace a orchestrace.'
+        titleKey: 'technologies.items.5.title',
+        descKey: 'technologies.items.5.description'
     }
 ]
 
 export default function Technologies() {
+    const { t } = useTranslation('common')
+    
     return (
         <section id="features" className="technologies-section">
             <div className="container">
                 <div className="section-header">
-                    <h2>Technologie</h2>
-                    <p>Postaveno na špičkovém hardwaru</p>
+                    <h2>{t('technologies.title')}</h2>
+                    <p>{t('technologies.subtitle')}</p>
                 </div>
 
                 <div className="technologies-grid">
@@ -53,8 +56,8 @@ export default function Technologies() {
                         <Card
                             key={tech.id}
                             icon={tech.icon}
-                            title={tech.title}
-                            description={tech.description}
+                            title={t(tech.titleKey)}
+                            description={t(tech.descKey)}
                             variant="enterprise"
                             className="h-full"
                         />

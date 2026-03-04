@@ -50,21 +50,9 @@
     ::-webkit-scrollbar-thumb:hover {
         background: hsl(var(--color-primary) / 0.5);
     }
-
-    a {
-        @apply no-underline text-inherit;
-    }
-
-    img {
-        @apply max-w-full block;
-    }
-
-    button {
-        @apply font-sans cursor-pointer;
-    }
 }
 
-/* ===== DARK MODE POZADÍ ===== */
+/* ===== JEDNOTNÉ DARK MODE POZADÍ PRO CELÝ WEB ===== */
 .dark {
     --color-background: 222 47% 6%;
     --color-background-secondary: 222 47% 10%;
@@ -463,6 +451,90 @@
         border: 1px solid hsl(var(--color-neutral)/0.5);
     }
 
+    /* SPECIAL OFFER - NOVÝ DESIGN */
+    .special-offer-section {
+        @apply py-16 lg:py-32 px-6 lg:px-8;
+    }
+
+    .offer-box {
+        @apply max-w-7xl mx-auto relative overflow-hidden rounded-[3rem];
+        background: linear-gradient(135deg, 
+            hsl(260, 80%, 60%, 0.1) 0%, 
+            hsl(200, 100%, 50%, 0.05) 100%);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(10px);
+    }
+
+    .offer-box::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -20%;
+        width: 140%;
+        height: 200%;
+        background: conic-gradient(
+            from 0deg at 50% 50%,
+            transparent 0deg,
+            hsl(var(--color-primary) / 0.2) 90deg,
+            transparent 180deg,
+            hsl(var(--color-secondary) / 0.2) 270deg,
+            transparent 360deg
+        );
+        animation: rotateGradient 20s linear infinite;
+        opacity: 0.3;
+        pointer-events: none;
+    }
+
+    .offer-box::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(circle at 70% 30%, 
+            hsl(var(--color-primary) / 0.15) 0%, 
+            transparent 50%);
+        pointer-events: none;
+    }
+
+    .offer-content {
+        @apply relative z-10 text-center p-12 lg:p-20;
+    }
+
+    .offer-content h2 {
+        @apply text-3xl lg:text-5xl font-black mb-8 leading-tight;
+        text-shadow: 0 0 30px hsl(var(--color-primary) / 0.3);
+    }
+
+    .offer-description {
+        @apply text-lg lg:text-xl max-w-3xl mx-auto mb-10 leading-relaxed;
+        color: hsl(var(--color-muted));
+    }
+
+    .promo-code {
+        @apply mb-10 inline-block;
+    }
+
+    .promo-code .badge {
+        @apply px-8 py-4 text-lg font-mono tracking-wider;
+        background: hsl(var(--color-primary) / 0.1);
+        border: 1px solid hsl(var(--color-primary) / 0.3);
+        box-shadow: 0 0 30px hsl(var(--color-primary) / 0.2);
+    }
+
+    .promo-note {
+        @apply text-sm mt-3;
+        color: hsl(var(--color-muted) / 0.7);
+    }
+
+    @keyframes rotateGradient {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
     /* Footer */
     .site-footer {
         @apply mx-10 mb-8 rounded-xl;
@@ -521,16 +593,6 @@
 
     .pricing-card .amount {
         @apply text-3xl font-bold;
-    }
-
-    .pricing-card .features li {
-        @apply py-1.5 text-sm flex items-center gap-2;
-        color: hsl(var(--color-muted));
-    }
-
-    .pricing-card .features li svg {
-        @apply w-4 h-4;
-        color: hsl(var(--color-success));
     }
 
     /* Loader */

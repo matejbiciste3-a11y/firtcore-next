@@ -412,5 +412,26 @@
       "title": "Kredit zdarma a affiliate program | FirtCore.cz",
       "description": "Získejte 125 Kč kredit zdarma a vydělávejte s naším affiliate programem."
     }
+  },
+  "reviews": {
+    "title": "Co o nás říkají klienti",
+    "titleGradient": "klienti",
+    "subtitle": "Přes 500 spokojených zákazníků nám důvěřuje. Přečtěte si jejich zkušenosti.",
+    "items": [
+      {
+        "name": "maxinoo7",
+        "role": "Zákazník",
+        "rating": 5,
+        "text": "Koupil jsem si balicek discord bot - pro a za cenu 60kc/mesic si ja osobne myslím ze pomer cena/vykon absolutne OP. Zatim jsem nenarazil za zadnej problem za coz jsem rad ;) 9.5/10",
+        "date": "28. února 2026"
+      },
+      {
+        "name": "Art Vik (art333vik)",
+        "role": "Zákazník",
+        "rating": 5,
+        "text": "Mal som tú možnosť si odskúšať váš minecraft hostong, a som veľmi spokojný! Helperi mi ho rýchlo pripravili a pomohli nastaviť, a samotný server bol uplne super: dosť možností, žiadne lagy alebo iné technické problémy. 9/10",
+        "date": "1. března 2026"
+      }
+    ]
   }
 }

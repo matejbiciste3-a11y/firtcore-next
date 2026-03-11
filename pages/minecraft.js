@@ -18,6 +18,7 @@ export default function MinecraftPage({ plans }) {
 
 export async function getStaticProps({ locale }) {
     const plans = getMinecraftPlans()
+    
     return {
         props: {
             plans,

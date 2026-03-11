@@ -72,19 +72,61 @@
       "title": "Minecraft Hosting",
       "description": "Optimální výkon pro Minecraft servery všech velikostí",
       "price": "od 199 Kč/měs",
-      "features": ["Okamžitá aktivace", "DDoS ochrana", "24/7 podpora"]
+      "features": [
+        "Okamžitá aktivace",
+        "DDoS ochrana",
+        "24/7 podpora"
+      ]
     },
     "cs2": {
       "title": "CS2 Hosting",
       "description": "Profesionální servery pro Counter-Strike 2",
       "price": "od 149 Kč/měs",
-      "features": ["128 tick", "Workshop podpora", "Anti-cheat"]
+      "features": [
+        "128 tick",
+        "Workshop podpora",
+        "Anti-cheat"
+      ]
     },
     "gmod": {
       "title": "Garry's Mod",
       "description": "Stabilní servery pro GMod s podporou addonů",
       "price": "od 129 Kč/měs",
-      "features": ["FastDL", "ULX", "Wiremod"]
+      "features": [
+        "FastDL",
+        "ULX",
+        "Wiremod"
+      ]
+    },
+    "vds": {
+      "title": "VDS Cloud",
+      "description": "Virtuální dedikované servery s vyhrazenými zdroji",
+      "price": "od 899 Kč/měs",
+      "features": [
+        "Dedikované CPU",
+        "Žádný overselling",
+        "20 Gbps síť"
+      ]
+    },
+    "dedicated": {
+      "title": "Dedikované Servery",
+      "description": "Exkluzivní hardware plně k dispozici pouze pro vás v našem pražském datacentru.",
+      "price": "od 2490 Kč/měs",
+      "features": [
+        "Vlastní hardware",
+        "IPMI přístup",
+        "NBD servis"
+      ]
+    },
+    "webhosting": {
+      "title": "Webhosting",
+      "description": "Rychlý a bezpečný prostor pro vaše webové stránky s PHP 8.x a MySQL.",
+      "price": "od 49 Kč/měs",
+      "features": [
+        "HTTPS zdarma",
+        "Daily backup",
+        "Anycast DNS"
+      ]
     }
   },
   "enterprise": {
@@ -296,7 +338,7 @@
     },
     "discord": {
       "title": "Discord komunita",
-      "partners": "150+ aktivních partnerů",
+      "partners": "5+ aktivních partnerů",
       "features": [
         "Privátní kanál pro partnery",
         "Pravidelné meetingy",
@@ -311,21 +353,58 @@
         "name": "Basic",
         "price": "199 Kč",
         "period": "měsíc",
-        "features": ["1 GB RAM", "10 GB SSD", "Neomezený počet hráčů", "DDoS ochrana", "24/7 podpora"],
+        "features": [
+          "1 GB RAM",
+          "10 GB SSD",
+          "Neomezený počet hráčů",
+          "DDoS ochrana",
+          "24/7 podpora"
+        ],
         "popular": false
       },
       "standard": {
         "name": "Standard",
         "price": "349 Kč",
         "period": "měsíc",
-        "features": ["2 GB RAM", "20 GB SSD", "Neomezený počet hráčů", "DDoS ochrana", "24/7 podpora", "Automatické zálohy"],
+        "features": [
+          "2 GB RAM",
+          "20 GB SSD",
+          "Neomezený počet hráčů",
+          "DDoS ochrana",
+          "24/7 podpora",
+          "Automatické zálohy"
+        ],
         "popular": true
       },
       "premium": {
         "name": "Premium",
         "price": "599 Kč",
         "period": "měsíc",
-        "features": ["4 GB RAM", "40 GB SSD", "Neomezený počet hráčů", "DDoS ochrana", "24/7 podpora", "Automatické zálohy", "Vlastní doména"],
+        "features": [
+          "4 GB RAM",
+          "40 GB SSD",
+          "Neomezený počet hráčů",
+          "DDoS ochrana",
+          "24/7 podpora",
+          "Automatické zálohy",
+          "Vlastní doména"
+        ],
+        "popular": false
+      },
+      "extreme": {
+        "name": "Extreme",
+        "price": "999 Kč",
+        "period": "měsíc",
+        "features": [
+          "8 GB RAM",
+          "80 GB SSD",
+          "Neomezený počet hráčů",
+          "DDoS ochrana",
+          "24/7 podpora",
+          "Automatické zálohy",
+          "Vlastní doména",
+          "Prioritní podpora"
+        ],
         "popular": false
       }
     },
@@ -334,19 +413,58 @@
         "name": "Basic VPS",
         "price": "299 Kč",
         "period": "měsíc",
-        "features": ["1 vCPU", "2 GB RAM", "30 GB NVMe", "1 TB přenos", "1x IPv4", "DDoS ochrana"]
+        "features": [
+          "1 vCPU",
+          "2 GB RAM",
+          "30 GB NVMe",
+          "1 TB přenos",
+          "1x IPv4",
+          "DDoS ochrana"
+        ]
       },
       "standard": {
         "name": "Standard VPS",
         "price": "549 Kč",
         "period": "měsíc",
-        "features": ["2 vCPU", "4 GB RAM", "60 GB NVMe", "2 TB přenos", "1x IPv4", "DDoS ochrana", "Automatické zálohy"]
+        "features": [
+          "2 vCPU",
+          "4 GB RAM",
+          "60 GB NVMe",
+          "2 TB přenos",
+          "1x IPv4",
+          "DDoS ochrana",
+          "Automatické zálohy"
+        ]
       },
       "premium": {
         "name": "Premium VPS",
         "price": "999 Kč",
         "period": "měsíc",
-        "features": ["4 vCPU", "8 GB RAM", "120 GB NVMe", "4 TB přenos", "1x IPv4", "DDoS ochrana", "Automatické zálohy", "Prioritní podpora"]
+        "features": [
+          "4 vCPU",
+          "8 GB RAM",
+          "120 GB NVMe",
+          "4 TB přenos",
+          "1x IPv4",
+          "DDoS ochrana",
+          "Automatické zálohy",
+          "Prioritní podpora"
+        ]
+      },
+      "extreme": {
+        "name": "Extreme VPS",
+        "price": "1899 Kč",
+        "period": "měsíc",
+        "features": [
+          "8 vCPU",
+          "16 GB RAM",
+          "240 GB NVMe",
+          "8 TB přenos",
+          "2x IPv4",
+          "DDoS ochrana",
+          "Automatické zálohy",
+          "Prioritní podpora"
+        ]
       }
     }
   },
@@ -362,6 +480,30 @@
       "1": {
         "title": "1. Správce osobních údajů",
         "content": "Správcem osobních údajů je fyzická osoba Patrik Vlček, provozující portál FirtCore.cz, IČO: 23266023, se sídlem Na Škvárovně 522, 549 32 Velké Poříčí, Česká republika, podnikající jako osoba samostatně výdělečně činná (dále jen „Správce\"). Správce vás tímto v souladu s čl. 12 GDPR informuje o zpracování vašich osobních údajů a o vašich právech."
+      },
+      "2": {
+        "title": "2. Zpracovávané osobní údaje",
+        "content": "Ve smyslu nařízení Evropského parlamentu a Rady (EU) č. 2016/679 (GDPR) správce zpracovává tyto osobní údaje: Jméno a příjmení, IP adresa, E-mail, Adresa, Telefonní číslo (není-li stanoveno jinak). Výše uvedené osobní údaje jsou nutné pro zpracování objednávek a další plnění ze smlouvy (čl. 6 odst. 1 písm. b) GDPR). Správce zpracovává tyto údaje rovněž za účelem evidence smlouvy a případného uplatnění a obrany práv a povinností smluvních stran."
+      },
+      "3": {
+        "title": "3. Doba uchovávání osobních údajů",
+        "content": "Osobní údaje jsou uchovávány po dobu 10 let od realizace poslední části plnění dle smlouvy, nepožaduje-li jiný právní předpis uchování delší (čl. 6 odst. 1 písm. c) a f) GDPR)."
+      },
+      "4": {
+        "title": "4. Obchodní sdělení",
+        "content": "Na e-mailovou adresu, případně telefonní číslo mohou být zákazníkovi zasílány novinky a jiná obchodní sdělení dle § 7 odst. 3 zákona č. 480/2004 Sb., pokud je zákazník neodmítne. Tato sdělení lze kdykoliv odhlásit."
+      },
+      "5": {
+        "title": "5. Vaše práva jako subjektu údajů",
+        "content": "Dle nařízení GDPR máte tato práva: Zrušit zasílání obchodních sdělení, Vznést námitku proti zpracování na základě oprávněného zájmu správce, Požadovat informaci o zpracovávaných osobních údajích, Požadovat přístup k údajům, jejich opravu, aktualizaci nebo omezení zpracování, Požadovat výmaz osobních údajů (není-li v rozporu s právními předpisy), Právo na přenositelnost údajů, Požadovat kopii zpracovávaných osobních údajů, Právo na účinnou soudní ochranu, Podat stížnost u Úřadu pro ochranu osobních údajů. Svá práva uplatňujte na: support@firtcore.cz"
+      },
+      "6": {
+        "title": "6. Cookies",
+        "content": "Provozovatel webu firtcore.cz užívá cookies za účelem: měření návštěvnosti a vytváření statistik, základní funkčnosti webových stránek. Zpracování cookies je možné na základě oprávněného zájmu správce (čl. 6 odst. 1 písm. f) GDPR). Návštěvník může nastavit prohlížeč tak, aby sbírání údajů neumožňoval, nebo vznést námitku dle čl. 21 GDPR. Cookies nezbytné pro funkčnost webu jsou uchovávány po dobu nezbytně nutnou."
+      },
+      "7": {
+        "title": "7. Stížnosti",
+        "content": "Máte právo podat stížnost u dozorového úřadu – Úřad pro ochranu osobních údajů (ÚOOÚ), sídlem Pplk. Sochora 27, 170 00 Praha 7, web: www.uoou.cz."
       }
     }
   },
@@ -375,7 +517,51 @@
     "sections": {
       "1": {
         "title": "1. Základní ustanovení",
-        "content": "Tyto všeobecné obchodní podmínky (dále jen „obchodní podmínky\") jsou vydané dle § 1751 a násl. zákona č. 89/2012 Sb., občanský zákoník."
+        "content": "Tyto všeobecné obchodní podmínky (dále jen „obchodní podmínky\") jsou vydané dle § 1751 a násl. zákona č. 89/2012 Sb., občanský zákoník (dále jen „občanský zákoník\")."
+      },
+      "2": {
+        "title": "2. Odpovědnost provozovatele",
+        "content": "Provozovatel neodpovídá za porušení práv k ochranným známkám, práv k obchodní firmě a jiných práv chráněných obecně závaznými právními předpisy, kterého se dopustí Zákazník užíváním služeb. Provozovatel nenese odpovědnost za jakoukoli škodu či ztrátu, která byla způsobena Zákazníkovi v důsledku používání jeho služby. Provozovatel není oprávněn zasahovat do dat uložených či umístěných Zákazníkem, pokud mezi nimi není dohodnuto jinak. Tento zákaz neplatí ve chvíli podezření týkajícího se porušení těchto smluvních podmínek, zneužití poskytované služby nebo porušení zákonů České republiky. Poskytovatel si vyhrazuje právo na možné kontroly systému a jejich restartování či vypnutí v nejvyšší nouzi."
+      },
+      "3": {
+        "title": "3. Práva a povinnosti zákazníka",
+        "content": "Zákazník je povinen na své straně provést veškerá opatření potřebná k zamezení zneužití služeb. Pokud k němu dojde, zákazník je za tyto škody odpovědný a jeho služby mohou být zrušeny. Zákazníkovi je zakázáno pokoušet se o nadměrné přetěžování služby nebo pokoušet se o poškození služeb. Zákazníkovi je zakázáno stahovat jakékoliv nelegální data (filmy, hry atp.). Zákazník je povinen zamezit zneužití nebo zveřejnění svých přístupových údajů do uživatelské administrace na webu firtcore.cz. V případě zneužití přihlašovacích údajů oprávněného uživatele nese odpovědnost za vzniklou škodu zákazník. Zákazníkovi je zakázáno na službách provozovatele spouštět skript nebo program na těžbu kryptoměn a to jakýchkoliv (DoS, DDoS a další). Zákazník nese odpovědnost za vše, co se na jeho serveru děje. Při podezření na útok je Zákazník povinen oznámit problém poskytovateli služeb (firtcore.cz). Zákazníkovi je zakázáno využívat služeb k účelům, které jsou v rozporu se zákony ČR nebo v rozporu s dobrými mravy, rozesílání nevyžádané pošty nebo špinění jména firmy. Zákazník je povinen vyřešit bezpečnostní hrozby, za které je odpovědný. V případě neřešení problému je poskytovatel oprávněn pozastavit, zastavit či zrušit služby do doby neurčité bez nároku na vrácení peněz, není-li stanoveno jinak. Zákazník je povinen Provozovateli uvést v registraci správné a úplné údaje uvedené v registraci, ve všech objednávkách atd. Zákazník je povinen, pokud dojde ke změně, tyto informace opravit. Provozovatel neodpovídá za jakékoliv škody či problémy způsobené v důsledku uvedení neplatných údajů. Bez uvedení pravdivých a úplných údajů je Provozovatel oprávněn službu kdykoliv bez varování pozastavit nebo bez náhrady zrušit bez nároku na vrácení peněz. Pokud zákazník žádá o vrácení peněz z důvodu nevyhovující služby, dostane v rámci reklamace kredity zpět na svůj zákaznický účet."
+      },
+      "4": {
+        "title": "4. Reklamace",
+        "content": "V případě, že zákazník se domnívá, že jeho služba neodpovídá uvedenému popisu na webu, ať už cenou, vadou atd., je oprávněn příslušná práva z odpovědnosti za tyto vady písemně uplatnit u poskytovatele služeb na emailu support@firtcore.cz či ticketem na Discordu, nebo písemně na adrese: Patrik Vlček, Na Škvárovně 522, 549 32 Velké Poříčí. Reklamaci Poskytovatel vyřídí v zákonem stanovené lhůtě (30 dní). V ostatních případech se uplatnění práva z odpovědnosti za vady a vyřízení uplatněné reklamace řídí zejména občanským zákoníkem a právními předpisy na ochranu spotřebitele. Zákazník, který reklamuje produkt nebo službu, je povinen svou reklamaci řádně odůvodnit."
+      },
+      "5": {
+        "title": "5. Zákaznická podpora a komunikace se zákazníkem",
+        "content": "Možnosti komunikace: Discord, email, telefon. Email: support@firtcore.cz. Telefon: 776 092 263. Discord: https://discord.gg/firtcore-cz (případně ticket systém). Poskytovatel: Patrik Vlček, IČO: 23266023, se sídlem Na Škvárovně 522, 549 32 Velké Poříčí, podnikající jako osoba samostatně výdělečně činná."
+      },
+      "6": {
+        "title": "6. Zánik trvání smlouvy",
+        "content": "Při ukončení služby nezaniká povinnost zákazníka uhradit nezaplacené výzvy k platbě (faktury). Minimální doba, po kterou je služba vedena, je 30 dní. Reklamaci Provozovatel vyřídí do 30 dní. U dedikovaných serverů je zákazník povinen zaplatit 25 % z ceny při zrušení, není-li stanoveno jinak. Dobu trvání dohody a její zánik upravují smluvní podmínky konkrétních služeb."
+      },
+      "7": {
+        "title": "7. Datová centra",
+        "content": "Hosting má pronajaté servery u externí firmy. Je zakázáno propojovat naše služby s jinými hostingy, pokud není uvedeno jinak. Zákazník musí požádat o jinou lokaci -- v základu je nastavena lokace CZ."
+      },
+      "8": {
+        "title": "8. Dostupnost služby, poruchy a odstávky",
+        "content": "Provozovatel si vyhrazuje právo na přerušení dodávky služeb či omezení jejich dostupnosti. V případě plánované odstávky bude provozovatel včas informovat v uživatelském rozhraní nebo na webových stránkách (Discord, status.firtcore.cz). Provozovatel nenese zodpovědnost za ztrátu uložených dat či za škody způsobené využíváním služeb provozovatele, například poškození disku a záloh. Zákazník nese zodpovědnost za všechna data uložená na jeho datovém disku a dále také nese veškerou zodpovědnost za dodržování autorských práv. V případě útoků DoS, DDoS atp. Provozovatel nenese zodpovědnost za poškození zákazníkovy služby. O poruchách a odstávkách bude provozovatel informovat na WWW stránkách. Provozovatel nenese odpovědnost za ztrátu či poškození dat v důsledku hardwarové poruchy či poruchy disků."
+      },
+      "9": {
+        "title": "9. Konektivita a její pravidla",
+        "content": "90 % služeb je připojeno k 10Gbit konektivitě, přičemž pro bezpečnost zákazníků poskytujeme v základu max. 1Gbit. V případě potřeby navyšujeme."
+      },
+      "10": {
+        "title": "10. Možnosti plateb a platby samotné",
+        "content": "Platební brány: Stripe, PayPal."
+      },
+      "11": {
+        "title": "11. Ochrana informací a ochrana osobních údajů",
+        "content": "Udělujete tímto souhlas podnikající fyzické osobě Patrik Vlček, provozující portál FirtCore.cz, IČO: 23266023, se sídlem Na Škvárovně 522, 549 32 Velké Poříčí, Česká republika, podnikající jako osoba samostatně výdělečně činná (dále jen „Správce\"), aby ve smyslu nařízení Evropského parlamentu a Rady (EU) č. 2016/679 (GDPR) zpracovávala tyto osobní údaje: Jméno a příjmení, IP adresa, E-mail, Adresa, Tel. číslo (není-li stanoveno jinak). Výše uvedené osobní údaje jsou nutné pro zpracování objednávek a další plnění ze smlouvy (čl. 6 odst. 1 písm. b) GDPR). Prodávající zpracovává tyto údaje rovněž za účelem evidence smlouvy a případného budoucího uplatnění a obrany práv a povinností smluvních stran. Osobní údaje jsou uchovávány po dobu 10 let od realizace poslední části plnění dle smlouvy, nepožaduje-li jiný právní předpis uchování delší (čl. 6 odst. 1 písm. c) a f) GDPR). Na e-mailovou adresu, případně telefonní číslo mohou být kupujícímu zasílány novinky a jiná obchodní sdělení dle § 7 odst. 3 zákona č. 480/2004 Sb., pokud je kupující neodmítne. Tato sdělení lze kdykoliv odhlásit."
+      },
+      "12": {
+        "title": "12. Závěrečná ustanovení",
+        "content": "Veškerá ujednání mezi Provozovatelem a Zákazníkem se řídí platným a účinným českým právním řádem. Provozovatel může kteroukoli část Smlouvy nebo smluvních podmínek změnit kdykoli, a to s platností a účinností od prvního dne následujícího kalendářního měsíce po zveřejnění změn. Zachováním provozu svých služeb i po změně Smlouvy, Podmínek, smluvních podmínek či dalších souvisejících dokumentů dává Zákazník najevo svůj jednoznačný souhlas s novým zněním těchto dokumentů a jejich plnou akceptaci při provozu svých služeb. Tyto VOP nabývají účinnosti dnem 12. 02. 2026. V případě vzniku spotřebitelského sporu, který se nepodaří vyřešit vzájemnou dohodou, může spotřebitel podat návrh na mimosoudní řešení sporu u České obchodní inspekce, Ústřední inspektorát -- Praha a Královéhradecky kraj."
       }
     }
   },
@@ -421,17 +607,29 @@
       {
         "name": "maxinoo7",
         "role": "Zákazník",
-        "rating": 5,
+        "rating": 9.5,
         "text": "Koupil jsem si balicek discord bot - pro a za cenu 60kc/mesic si ja osobne myslím ze pomer cena/vykon absolutne OP. Zatim jsem nenarazil za zadnej problem za coz jsem rad ;) 9.5/10",
         "date": "28. února 2026"
       },
       {
         "name": "Art Vik (art333vik)",
         "role": "Zákazník",
-        "rating": 5,
+        "rating": 9,
         "text": "Mal som tú možnosť si odskúšať váš minecraft hostong, a som veľmi spokojný! Helperi mi ho rýchlo pripravili a pomohli nastaviť, a samotný server bol uplne super: dosť možností, žiadne lagy alebo iné technické problémy. 9/10",
         "date": "1. března 2026"
       }
     ]
+  },
+  "servicesPage": {
+    "badge": "Naše Portfolio",
+    "title": "Kompletní nabídka",
+    "titleGradient": "Služeb",
+    "description": "Od nejvýkonnějšího herního hostingu po enterprise dedikovaná řešení. Vše s důrazem na maximální výkon, stabilitu a špičkovou podporu.",
+    "servicesTitle": "Vše co potřebujete na jednom místě",
+    "servicesSubtitle": "Prozkoumejte naše hostingová řešení navržená pro hráče, vývojáře i firmy.",
+    "ctaTitle": "Nenašli jste co jste hledali?",
+    "ctaDescription": "Potřebujete individuální konfiguraci nebo speciální řešení na míru? Náš tým je připraven vám pomoci s jakýmkoliv požadavkem.",
+    "ctaSupport": "Kontaktujte podporu",
+    "ctaCustom": "Individuální poptávka"
   }
 }

@@ -164,7 +164,7 @@ export default function Navbar() {
 
                         <div className="mobile-menu-socials">
                             {[
-                                { icon: Icons.Discord, href: 'https://discord.gg/firtcore' },
+                                { icon: Icons.Discord, href: 'https://discord.gg/firtcore-cz' },
                                 { icon: Icons.Users, href: '#' },
                                 { icon: Icons.Shield, href: '#' }
                             ].map((social, idx) => (

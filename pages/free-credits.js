@@ -11,18 +11,18 @@ export default function FreeCreditsPage() {
     const benefits = [
         {
             icon: Icons.Gift,
-            title: "Bonus 125 Kč",
-            description: "Každý nový uživatel získá 125 Kč kreditu na první aktivaci služeb."
+            title: "15 kreditů",
+            description: "Za každého pozvaného uživatele získáte 15 kreditů zdarma."
         },
         {
             icon: Icons.TrendingUp,
-            title: "Dlouhodobý příjem",
-            description: "10% provize z každé budoucí platby vašich doporučených uživatelů."
+            title: "10% provize",
+            description: "Až 10% provize z každé platby od pozvaného uživatele."
         },
         {
             icon: Icons.BarChart2,
-            title: "Přehledné statistiky",
-            description: "Sledujte výkon svých odkazů a vydělané provize v reálném čase."
+            title: "Podrobné statistiky",
+            description: "Přehled prokliků, registrací a získaných provizí v reálném čase."
         }
     ]
 
@@ -40,54 +40,89 @@ export default function FreeCreditsPage() {
         {
             number: "3",
             title: "Odměna",
-            description: "Sledujte, jak rostou vaše provize a využívejte je na další služby."
+            description: "Získejte 15 kreditů za každého pozvaného a 10% provizi z jeho plateb."
+        }
+    ]
+
+    const stats = [
+        { value: '15', label: 'Kreditů', subtext: 'zadarmo za pozvaného uživatele' },
+        { value: '10', suffix: '%', label: 'Provize', subtext: 'Z každé platby' },
+        { value: '10+', label: 'Partnerů', subtext: 'Aktivních' },
+        { value: '24/7', label: 'Podpora', subtext: 'Pro partnery' },
+    ]
+
+    const contests = [
+        {
+            icon: Icons.Gift,
+            title: "Kredit zadarmo",
+            description: "Pravidelné soutěže o kredity do vašeho účtu"
+        },
+        {
+            icon: Icons.Server,
+            title: "Hosting zadarmo",
+            description: "Šance vyhrát hosting na několik měsíců zadarmo"
+        },
+        {
+            icon: Icons.Shield,
+            title: "Exkluzivní slevy",
+            description: "Speciální slevy a promo akce výhradně pro členy"
         }
     ]
 
     const tiers = [
         {
-            name: "Start",
-            price: "0 Kč",
+            name: "Affiliate Partner",
+            description: "Doporučeno pro začátečníky",
             features: [
-                "Affiliate odkaz zdarma",
-                "10% provize",
-                "Statistiky online",
-                "Bonus 125 Kč pro pozvané"
-            ],
-            popular: false
-        },
-        {
-            name: "Partner",
-            price: "Individuální",
-            features: [
-                "Vše ze Start",
-                "Vyšší provize (až 20%)",
-                "Vlastní promo kódy",
-                "Priority podpora",
-                "Společné soutěže"
+                "10% z každého dobití od pozvaného",
+                "Statistiky prokliků, registrací a kreditů",
+                "Extra kredit bez nutnosti platby",
+                "15 kreditů zadarmo za pozvaného uživatele!"
             ],
             popular: true
         },
         {
-            name: "Business",
-            price: "Na míru",
+            name: "Business Partner",
+            description: "Pro větší projekty",
             features: [
-                "Vše z Partner",
-                "Individuální podmínky",
-                "Dedikovaný account manager",
-                "Barter spolupráce",
-                "Exkluzivní akce"
+                "1000+ možností spolupráce",
+                "Vlastní role na discordu",
+                "Speciální nabídky a podmínky",
+                "Seriózní přístup a smlouvy"
             ],
             popular: false
         }
     ]
 
+    const affiliateFeatures = [
+        {
+            icon: Icons.TrendingUp,
+            title: "10% provize z každé platby",
+            description: "Získejte 10% z každé platby, kterou osoba pozvaná přes váš odkaz provedla."
+        },
+        {
+            icon: Icons.BarChart2,
+            title: "Podrobné statistiky",
+            description: "Přehled prokliků, registrací a získaných provizí v reálném čase."
+        },
+        {
+            icon: Icons.Gift,
+            title: "15 kreditů bonus",
+            description: "Okamžitý bonus 15 kreditů za každého pozvaného uživatele."
+        }
+    ]
+
+    const influencerFeatures = [
+        { icon: Icons.TrendingUp, text: "Provize" },
+        { icon: Icons.Users, text: "Propagace" },
+        { icon: Icons.Gift, text: "Bonusy" },
+        { icon: Icons.Shield, text: "Podpora" }
+    ]
+
     return (
-        <Layout title="Kredit zdarma a affiliate program | FirtCore.cz">
-            {/* HERO SEKCE - bez vlastního pozadí */}
+        <Layout title="15 kreditů zdarma a affiliate program | FirtCore.cz">
+            {/* Hero sekce */}
             <section className="relative pt-32 pb-20 overflow-hidden">
-                {/* 🚫 ODEBRÁNO: <div className="absolute inset-0 -z-10"> ... </div> */}
-                
                 <div className="container relative z-10">
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
                         <motion.div
@@ -95,50 +130,36 @@ export default function FreeCreditsPage() {
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.8 }}
                         >
-                            <div className="flex items-center gap-3 mb-6">
-                                <Image
-                                    src="/images/logo.png"
-                                    alt="FirtCore.cz"
-                                    width={48}
-                                    height={48}
-                                    className="rounded-xl"
-                                />
-                                <Badge variant="primary">
-                                    🎁 Limitovaná nabídka
-                                </Badge>
-                            </div>
+                            <Badge variant="primary" className="mb-6">
+                                Časově omezená nabídka • 15 Kč kreditů zadarmo
+                            </Badge>
                             
                             <h1 className="text-5xl lg:text-6xl font-black mb-6">
-                                Začněte s <span className="gradient-text">kreditem</span> a vydělávejte
+                                Ušetřete peníze, <span className="gradient-text">získejte kredit navíc</span>
                             </h1>
                             
                             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                                Přiveďte na FirtCore nové hráče a získejte 125 Kč na jejich účet. 
-                                Každá jejich budoucí platba vám přinese 10% provizi.
+                                Za každého, kterého pozvete, získáte 15 kreditů a navíc až 10 % provizi z každé jeho platby. Jednoduchý způsob, jak vydělat na herním hostingu.
                             </p>
 
                             <div className="flex flex-wrap gap-4">
                                 <Button href="https://client.firtcore.cz/register" variant="primary" size="large">
                                     Založit účet
                                 </Button>
-                                <Button href="https://discord.gg/firtcore" variant="discord" size="large">
+                                <Button href="https://discord.gg/firtcore-cz" variant="discord" size="large">
                                     Discord komunita
                                 </Button>
                             </div>
 
-                            <div className="flex gap-8 mt-10 pt-8 border-t border-white/10">
-                                <div>
-                                    <div className="text-2xl font-bold text-primary">125 Kč</div>
-                                    <div className="text-sm text-muted-foreground">Bonus pro nové</div>
-                                </div>
-                                <div>
-                                    <div className="text-2xl font-bold text-primary">10%</div>
-                                    <div className="text-sm text-muted-foreground">Provize</div>
-                                </div>
-                                <div>
-                                    <div className="text-2xl font-bold text-primary">24/7</div>
-                                    <div className="text-sm text-muted-foreground">Podpora</div>
-                                </div>
+                            {/* Statistiky */}
+                            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-10 pt-8 border-t border-white/10">
+                                {stats.map((stat, index) => (
+                                    <div key={index}>
+                                        <div className="text-2xl font-bold text-primary">{stat.value}{stat.suffix || ''}</div>
+                                        <div className="text-sm font-semibold">{stat.label}</div>
+                                        <div className="text-xs text-muted-foreground">{stat.subtext}</div>
+                                    </div>
+                                ))}
                             </div>
                         </motion.div>
 
@@ -153,83 +174,25 @@ export default function FreeCreditsPage() {
                                 
                                 <Icons.Gift className="w-16 h-16 text-primary mb-6" />
                                 
-                                <h3 className="text-2xl font-bold mb-4">Váš affiliate kód</h3>
+                                <h3 className="text-2xl font-bold mb-2">Váš affiliate kód</h3>
+                                <p className="text-sm text-muted-foreground mb-4">
+                                    Za pozvaného uživatele dostanete 15 kreditů!
+                                </p>
                                 
                                 <div className="bg-background-secondary/50 rounded-xl p-4 mb-4 border border-white/5">
-                                    <code className="text-2xl font-mono text-primary">FIRTCORE-25</code>
+                                    <code className="text-2xl font-mono text-primary">IXfH9ykG</code>
                                 </div>
-                                
-                                <p className="text-sm text-muted-foreground mb-4">
-                                    Sdílejte tento kód nebo svůj unikátní odkaz
-                                </p>
 
                                 <Button href="#" variant="outline" fullWidth>
-                                    Zkopírovat odkaz
+                                    Zkopírovat kód
                                 </Button>
-
-                                <div className="grid grid-cols-2 gap-3 mt-6 pt-4 border-t border-white/5">
-                                    <div>
-                                        <div className="text-xs text-muted-foreground">Prokliky</div>
-                                        <div className="font-bold">1,247</div>
-                                    </div>
-                                    <div>
-                                        <div className="text-xs text-muted-foreground">Registrace</div>
-                                        <div className="font-bold">89</div>
-                                    </div>
-                                    <div>
-                                        <div className="text-xs text-muted-foreground">Provize</div>
-                                        <div className="font-bold text-primary">1,850 Kč</div>
-                                    </div>
-                                    <div>
-                                        <div className="text-xs text-muted-foreground">Konverze</div>
-                                        <div className="font-bold">7.1%</div>
-                                    </div>
-                                </div>
                             </div>
                         </motion.div>
                     </div>
                 </div>
             </section>
 
-            {/* PROČ SE ZAPOJIT */}
-            <section className="py-20">
-                <div className="container">
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        className="text-center mb-12"
-                    >
-                        <h2 className="text-4xl font-black mb-4">
-                            Proč se <span className="gradient-text">zapojit</span>
-                        </h2>
-                        <p className="text-muted-foreground max-w-2xl mx-auto">
-                            Affiliate program, který se vyplatí
-                        </p>
-                    </motion.div>
-
-                    <div className="grid md:grid-cols-3 gap-6">
-                        {benefits.map((benefit, index) => (
-                            <motion.div
-                                key={index}
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: index * 0.1 }}
-                            >
-                                <Card
-                                    icon={<benefit.icon className="w-6 h-6" />}
-                                    title={benefit.title}
-                                    description={benefit.description}
-                                    className="h-full"
-                                />
-                            </motion.div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* JAK TO FUNGUJE */}
+            {/* Soutěže sekce */}
             <section className="py-20 bg-background-secondary/30">
                 <div className="container">
                     <motion.div
@@ -238,39 +201,50 @@ export default function FreeCreditsPage() {
                         viewport={{ once: true }}
                         className="text-center mb-12"
                     >
-                        <h2 className="text-4xl font-black mb-4">
-                            Jak to <span className="gradient-text">funguje</span>
+                        <h2 className="text-4xl md:text-5xl font-black mb-4">
+                            Soutěže & <span className="gradient-text">Giveaway</span>
                         </h2>
-                        <p className="text-muted-foreground max-w-2xl mx-auto">
-                            Tři jednoduché kroky k vašemu prvnímu kreditu
+                        <p className="text-muted-foreground text-lg">
+                            Připoj se na náš Discord a získej
                         </p>
                     </motion.div>
 
-                    <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-                        {howItWorks.map((step, index) => (
+                    <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                        {contests.map((item, index) => (
                             <motion.div
                                 key={index}
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: index * 0.1 }}
-                                className="text-center relative"
+                                className="glass-morphism-v2 p-6 rounded-2xl text-center"
                             >
-                                <div className="w-16 h-16 rounded-2xl bg-primary/20 text-primary text-2xl font-bold flex items-center justify-center mx-auto mb-4">
-                                    {step.number}
+                                <div className="w-16 h-16 rounded-2xl bg-primary/20 flex items-center justify-center mx-auto mb-4">
+                                    <item.icon className="w-8 h-8 text-primary" />
                                 </div>
-                                <h3 className="text-xl font-bold mb-2">{step.title}</h3>
-                                <p className="text-muted-foreground">{step.description}</p>
-                                {index < 2 && (
-                                    <div className="hidden md:block absolute top-8 left-[60%] w-full h-[2px] bg-gradient-to-r from-primary/50 to-transparent"></div>
-                                )}
+                                <h3 className="text-xl font-bold mb-2">{item.title}</h3>
+                                <p className="text-muted-foreground text-sm">{item.description}</p>
                             </motion.div>
                         ))}
                     </div>
+
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        className="text-center mt-10"
+                    >
+                        <p className="text-muted-foreground mb-6">
+                            Získejte hosting zadarmo účastí v našich pravidelných soutěžích a exkluzivních akcích pro členy komunity.
+                        </p>
+                        <Button href="https://discord.gg/firtcore-cz" variant="discord" size="large">
+                            Připojit se na Discord
+                        </Button>
+                    </motion.div>
                 </div>
             </section>
 
-            {/* ÚROVNĚ SPOLUPRÁCE */}
+            {/* Affiliate program sekce */}
             <section className="py-20">
                 <div className="container">
                     <motion.div
@@ -279,15 +253,15 @@ export default function FreeCreditsPage() {
                         viewport={{ once: true }}
                         className="text-center mb-12"
                     >
-                        <h2 className="text-4xl font-black mb-4">
-                            Úrovně <span className="gradient-text">spolupráce</span>
+                        <h2 className="text-4xl md:text-5xl font-black mb-4">
+                            Vydělávejte s <span className="gradient-text">FirtCorem</span>
                         </h2>
-                        <p className="text-muted-foreground max-w-2xl mx-auto">
-                            Vyberte si, co vám nejlépe vyhovuje
+                        <p className="text-muted-foreground text-lg">
+                            Vyberte si úroveň spolupráce, která vám vyhovuje
                         </p>
                     </motion.div>
 
-                    <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                    <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-16">
                         {tiers.map((tier, index) => (
                             <motion.div
                                 key={index}
@@ -303,11 +277,11 @@ export default function FreeCreditsPage() {
                             >
                                 {tier.popular && (
                                     <Badge variant="primary" className="absolute -top-3 left-1/2 -translate-x-1/2">
-                                        Nejoblíbenější
+                                        NEJPOPULÁRNĚJŠÍ
                                     </Badge>
                                 )}
-                                <h3 className="text-xl font-bold mb-2">{tier.name}</h3>
-                                <div className="text-3xl font-black text-primary mb-6">{tier.price}</div>
+                                <h3 className="text-2xl font-bold mb-2">{tier.name}</h3>
+                                <p className="text-muted-foreground text-sm mb-6">{tier.description}</p>
                                 <ul className="space-y-3 mb-8">
                                     {tier.features.map((feature, i) => (
                                         <li key={i} className="flex items-start gap-2">
@@ -326,10 +300,30 @@ export default function FreeCreditsPage() {
                             </motion.div>
                         ))}
                     </div>
+
+                    {/* Affiliate features */}
+                    <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                        {affiliateFeatures.map((feature, index) => (
+                            <motion.div
+                                key={index}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: index * 0.1 }}
+                                className="text-center"
+                            >
+                                <div className="w-16 h-16 rounded-2xl bg-primary/20 flex items-center justify-center mx-auto mb-4">
+                                    <feature.icon className="w-8 h-8 text-primary" />
+                                </div>
+                                <h3 className="text-lg font-bold mb-2">{feature.title}</h3>
+                                <p className="text-sm text-muted-foreground">{feature.description}</p>
+                            </motion.div>
+                        ))}
+                    </div>
                 </div>
             </section>
 
-            {/* PRO INFLUENCERY */}
+            {/* Influencer sekce */}
             <section className="py-20 bg-background-secondary/30">
                 <div className="container">
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -339,32 +333,28 @@ export default function FreeCreditsPage() {
                             viewport={{ once: true }}
                         >
                             <h2 className="text-4xl font-black mb-6">
-                                Jste <span className="gradient-text">influencer nebo streamer?</span>
+                                Jste <span className="gradient-text">influencer, streamer nebo máte větší herní projekt?</span>
                             </h2>
+                            
                             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                                Spolupracujte s námi a rozvíjejte svou komunitu. Nabízíme individuální podmínky, 
-                                exkluzivní promo kódy pro vaše sledující a možnost společných soutěží.
+                                Spolupracujte s námi a rozvíjejte svou komunitu
                             </p>
+
                             <div className="grid grid-cols-2 gap-4 mb-8">
-                                <div className="flex items-center gap-3">
-                                    <Icons.Shield className="w-5 h-5 text-primary" />
-                                    <span className="text-sm">Vyšší provize</span>
-                                </div>
-                                <div className="flex items-center gap-3">
-                                    <Icons.Users className="w-5 h-5 text-primary" />
-                                    <span className="text-sm">Vlastní promo kódy</span>
-                                </div>
-                                <div className="flex items-center gap-3">
-                                    <Icons.Zap className="w-5 h-5 text-primary" />
-                                    <span className="text-sm">Priority podpora</span>
-                                </div>
-                                <div className="flex items-center gap-3">
-                                    <Icons.Gift className="w-5 h-5 text-primary" />
-                                    <span className="text-sm">Exkluzivní akce</span>
-                                </div>
+                                {influencerFeatures.map((item, index) => (
+                                    <div key={index} className="flex items-center gap-3">
+                                        <item.icon className="w-5 h-5 text-primary" />
+                                        <span className="text-sm">{item.text}</span>
+                                    </div>
+                                ))}
                             </div>
+
+                            <p className="text-muted-foreground mb-6">
+                                Máte jiný nápad na spolupráci? Neváhejte nás kontaktovat! Vždy hledáme nové způsoby, jak rozvíjet herní komunitu.
+                            </p>
+
                             <Button href="mailto:partner@firtcore.cz" variant="primary">
-                                Kontaktovat partner tým
+                                Kontaktovat nás
                             </Button>
                         </motion.div>
 
@@ -381,24 +371,57 @@ export default function FreeCreditsPage() {
                                     </div>
                                     <div>
                                         <div className="font-bold">Discord komunita</div>
-                                        <div className="text-sm text-muted-foreground">150+ aktivních partnerů</div>
+                                        <div className="text-sm text-muted-foreground">50+ členů</div>
                                     </div>
                                 </div>
-                                <div className="space-y-3">
-                                    {[
-                                        "Privátní kanál pro partnery",
-                                        "Pravidelné meetingy",
-                                        "Sdílení zkušeností",
-                                        "Podpora od community managementu"
-                                    ].map((item, i) => (
-                                        <div key={i} className="flex items-center gap-2">
-                                            <Icons.Check className="w-4 h-4 text-primary" />
-                                            <span className="text-sm">{item}</span>
-                                        </div>
-                                    ))}
+
+                                <div className="grid grid-cols-2 gap-3 mb-4">
+                                    <div>
+                                        <div className="text-xl font-bold text-primary">50+</div>
+                                        <div className="text-xs text-muted-foreground">Členů</div>
+                                    </div>
+                                    <div>
+                                        <div className="text-xl font-bold text-primary">24/7</div>
+                                        <div className="text-xs text-muted-foreground">Podpora</div>
+                                    </div>
+                                    <div>
+                                        <div className="text-xl font-bold text-primary">10+</div>
+                                        <div className="text-xs text-muted-foreground">Soutěží</div>
+                                    </div>
+                                    <div>
+                                        <div className="text-xl font-bold text-primary">30+</div>
+                                        <div className="text-xs text-muted-foreground">Právě online</div>
+                                    </div>
                                 </div>
+
+                                <p className="text-xs text-muted-foreground">
+                                    Partneři mají přístup k privátním kanálům a priority support
+                                </p>
                             </div>
                         </motion.div>
+                    </div>
+                </div>
+            </section>
+
+            {/* FAQ sekce - můžeš použít existující FAQ komponentu */}
+            <section className="py-20">
+                <div className="container">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        className="text-center mb-12"
+                    >
+                        <h2 className="text-4xl md:text-5xl font-black mb-4">
+                            Často kladené <span className="gradient-text">otázky</span>
+                        </h2>
+                        <p className="text-muted-foreground text-lg">
+                            Vše, co potřebujete vědět o affiliate programu
+                        </p>
+                    </motion.div>
+
+                    <div className="max-w-3xl mx-auto space-y-4">
+                        {/* Zde můžeš importovat FAQ komponentu s affiliate otázkami */}
                     </div>
                 </div>
             </section>

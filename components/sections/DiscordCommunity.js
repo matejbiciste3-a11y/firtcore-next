@@ -48,7 +48,7 @@ export default function DiscordCommunity() {
                                 transition={{ delay: 0.4 }}
                             >
                                 <Button
-                                    href="https://discord.gg/firtcore"
+                                    href="https://discord.gg/firtcore-cz"
                                     variant="discord"
                                     size="large"
                                     icon="discord"

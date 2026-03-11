@@ -72,19 +72,61 @@
       "title": "Minecraft Hosting",
       "description": "Optimal performance for Minecraft servers of all sizes",
       "price": "from 199 CZK/month",
-      "features": ["Instant activation", "DDoS protection", "24/7 support"]
+      "features": [
+        "Instant activation",
+        "DDoS protection",
+        "24/7 support"
+      ]
     },
     "cs2": {
       "title": "CS2 Hosting",
       "description": "Professional servers for Counter-Strike 2",
       "price": "from 149 CZK/month",
-      "features": ["128 tick", "Workshop support", "Anti-cheat"]
+      "features": [
+        "128 tick",
+        "Workshop support",
+        "Anti-cheat"
+      ]
     },
     "gmod": {
       "title": "Garry's Mod",
       "description": "Stable servers for GMod with addon support",
       "price": "from 129 CZK/month",
-      "features": ["FastDL", "ULX", "Wiremod"]
+      "features": [
+        "FastDL",
+        "ULX",
+        "Wiremod"
+      ]
+    },
+    "vds": {
+      "title": "VDS Cloud",
+      "description": "Virtual dedicated servers with dedicated resources",
+      "price": "from 899 CZK/month",
+      "features": [
+        "Dedicated CPU",
+        "No overselling",
+        "20 Gbps network"
+      ]
+    },
+    "dedicated": {
+      "title": "Dedicated Servers",
+      "description": "Exclusive hardware fully available only for you in our Prague data center.",
+      "price": "from 2490 CZK/month",
+      "features": [
+        "Own hardware",
+        "IPMI access",
+        "NBD service"
+      ]
+    },
+    "webhosting": {
+      "title": "Webhosting",
+      "description": "Fast and secure space for your websites with PHP 8.x and MySQL.",
+      "price": "from 49 CZK/month",
+      "features": [
+        "Free HTTPS",
+        "Daily backup",
+        "Anycast DNS"
+      ]
     }
   },
   "enterprise": {
@@ -296,7 +338,7 @@
     },
     "discord": {
       "title": "Discord community",
-      "partners": "150+ active partners",
+      "partners": "5+ active partners",
       "features": [
         "Private partner channel",
         "Regular meetings",
@@ -311,21 +353,58 @@
         "name": "Basic",
         "price": "199 CZK",
         "period": "month",
-        "features": ["1 GB RAM", "10 GB SSD", "Unlimited players", "DDoS protection", "24/7 support"],
+        "features": [
+          "1 GB RAM",
+          "10 GB SSD",
+          "Unlimited players",
+          "DDoS protection",
+          "24/7 support"
+        ],
         "popular": false
       },
       "standard": {
         "name": "Standard",
         "price": "349 CZK",
         "period": "month",
-        "features": ["2 GB RAM", "20 GB SSD", "Unlimited players", "DDoS protection", "24/7 support", "Automatic backups"],
+        "features": [
+          "2 GB RAM",
+          "20 GB SSD",
+          "Unlimited players",
+          "DDoS protection",
+          "24/7 support",
+          "Automatic backups"
+        ],
         "popular": true
       },
       "premium": {
         "name": "Premium",
         "price": "599 CZK",
         "period": "month",
-        "features": ["4 GB RAM", "40 GB SSD", "Unlimited players", "DDoS protection", "24/7 support", "Automatic backups", "Custom domain"],
+        "features": [
+          "4 GB RAM",
+          "40 GB SSD",
+          "Unlimited players",
+          "DDoS protection",
+          "24/7 support",
+          "Automatic backups",
+          "Custom domain"
+        ],
+        "popular": false
+      },
+      "extreme": {
+        "name": "Extreme",
+        "price": "999 CZK",
+        "period": "month",
+        "features": [
+          "8 GB RAM",
+          "80 GB SSD",
+          "Unlimited players",
+          "DDoS protection",
+          "24/7 support",
+          "Automatic backups",
+          "Custom domain",
+          "Priority support"
+        ],
         "popular": false
       }
     },
@@ -334,19 +413,58 @@
         "name": "Basic VPS",
         "price": "299 CZK",
         "period": "month",
-        "features": ["1 vCPU", "2 GB RAM", "30 GB NVMe", "1 TB transfer", "1x IPv4", "DDoS protection"]
+        "features": [
+          "1 vCPU",
+          "2 GB RAM",
+          "30 GB NVMe",
+          "1 TB transfer",
+          "1x IPv4",
+          "DDoS protection"
+        ]
       },
       "standard": {
         "name": "Standard VPS",
         "price": "549 CZK",
         "period": "month",
-        "features": ["2 vCPU", "4 GB RAM", "60 GB NVMe", "2 TB transfer", "1x IPv4", "DDoS protection", "Automatic backups"]
+        "features": [
+          "2 vCPU",
+          "4 GB RAM",
+          "60 GB NVMe",
+          "2 TB transfer",
+          "1x IPv4",
+          "DDoS protection",
+          "Automatic backups"
+        ]
       },
       "premium": {
         "name": "Premium VPS",
         "price": "999 CZK",
         "period": "month",
-        "features": ["4 vCPU", "8 GB RAM", "120 GB NVMe", "4 TB transfer", "1x IPv4", "DDoS protection", "Automatic backups", "Priority support"]
+        "features": [
+          "4 vCPU",
+          "8 GB RAM",
+          "120 GB NVMe",
+          "4 TB transfer",
+          "1x IPv4",
+          "DDoS protection",
+          "Automatic backups",
+          "Priority support"
+        ]
+      },
+      "extreme": {
+        "name": "Extreme VPS",
+        "price": "1899 CZK",
+        "period": "month",
+        "features": [
+          "8 vCPU",
+          "16 GB RAM",
+          "240 GB NVMe",
+          "8 TB transfer",
+          "2x IPv4",
+          "DDoS protection",
+          "Automatic backups",
+          "Priority support"
+        ]
       }
     }
   },
@@ -362,6 +480,30 @@
       "1": {
         "title": "1. Data Controller",
         "content": "The data controller is the individual Patrik Vlček, operating the FirtCore.cz portal, VAT: CZ23266023, with registered address Na Škvárovně 522, 549 32 Velké Poříčí, Czech Republic, doing business as a self-employed person (hereinafter referred to as the 'Controller'). The Controller hereby informs you, in accordance with Article 12 GDPR, about the processing of your personal data and about your rights."
+      },
+      "2": {
+        "title": "2. Processed Personal Data",
+        "content": "Within the meaning of Regulation (EU) 2016/679 (GDPR), the controller processes the following personal data: Name and surname, IP address, Email, Address, Telephone number (unless otherwise specified). The above personal data are necessary for order processing and further performance of the contract (Art. 6 para. 1 letter b) GDPR). The controller also processes this data for the purpose of contract documentation and possible future exercise and defense of the rights and obligations of the contracting parties."
+      },
+      "3": {
+        "title": "3. Personal Data Retention Period",
+        "content": "Personal data is kept for 10 years from the fulfillment of the last part of the contract, unless another legal regulation requires longer storage (Art. 6 para. 1 letter c) and f) GDPR)."
+      },
+      "4": {
+        "title": "4. Commercial Communications",
+        "content": "News and other commercial communications may be sent to the customer's email address or telephone number according to Section 7 para. 3 of Act No. 480/2004 Coll., unless the customer refuses them. These communications can be unsubscribed at any time."
+      },
+      "5": {
+        "title": "5. Your Rights as a Data Subject",
+        "content": "Under the GDPR regulation, you have the following rights: Unsubscribe from commercial communications, Object to processing based on the controller's legitimate interest, Request information about processed personal data, Request access to data, its correction, update or restriction of processing, Request erasure of personal data (unless contrary to legal regulations), Right to data portability, Request a copy of processed personal data, Right to effective judicial protection, File a complaint with the Office for Personal Data Protection. Exercise your rights at: support@firtcore.cz"
+      },
+      "6": {
+        "title": "6. Cookies",
+        "content": "The operator of the website firtcore.cz uses cookies for the purpose of: measuring traffic and creating statistics, basic functionality of the website. Cookie processing is possible based on the legitimate interest of the controller (Art. 6 para. 1 letter f) GDPR). The visitor can set the browser to disallow data collection, or object according to Art. 21 GDPR. Cookies necessary for website functionality are stored for the necessary time."
+      },
+      "7": {
+        "title": "7. Complaints",
+        "content": "You have the right to file a complaint with the supervisory authority – the Office for Personal Data Protection (ÚOOÚ), based at Pplk. Sochora 27, 170 00 Prague 7, website: www.uoou.cz."
       }
     }
   },
@@ -375,7 +517,51 @@
     "sections": {
       "1": {
         "title": "1. Basic Provisions",
-        "content": "These general terms and conditions (hereinafter referred to as 'Terms and Conditions') are issued pursuant to Section 1751 et seq. of Act No. 89/2012 Coll., the Civil Code."
+        "content": "These general terms and conditions (hereinafter referred to as 'Terms and Conditions') are issued pursuant to Section 1751 et seq. of Act No. 89/2012 Coll., the Civil Code (hereinafter referred to as the 'Civil Code')."
+      },
+      "2": {
+        "title": "2. Operator's Liability",
+        "content": "The operator is not liable for infringement of trademark rights, trade name rights and other rights protected by generally binding legal regulations, committed by the Customer using the services. The operator bears no responsibility for any damage or loss caused to the Customer as a result of using his service. The operator is not authorized to interfere with data stored or placed by the Customer, unless agreed otherwise between them. This prohibition does not apply in case of suspicion concerning violation of these contractual terms, misuse of the provided service or violation of the laws of the Czech Republic. The Provider reserves the right to possible system checks and their restart or shutdown in utmost emergency."
+      },
+      "3": {
+        "title": "3. Customer's Rights and Obligations",
+        "content": "The Customer is obliged to take all necessary measures on his part to prevent misuse of services. If it occurs, the customer is responsible for these damages and his services may be canceled. The Customer is prohibited from attempting to excessively burden the service or attempting to damage services. The Customer is prohibited from downloading any illegal data (movies, games, etc.). The Customer is obliged to prevent misuse or disclosure of his access data to the user administration on the website firtcore.cz. In case of misuse of an authorized user's login details, the customer bears responsibility for the damage caused. The Customer is prohibited from running any script or program for cryptocurrency mining on the provider's services, of any kind (DoS, DDoS and others). The Customer bears responsibility for everything that happens on his server. If an attack is suspected, the Customer is obliged to report the problem to the service provider (firtcore.cz). The Customer is prohibited from using the services for purposes that are contrary to the laws of the Czech Republic or contrary to good morals, sending unsolicited mail or tarnishing the company's name. The Customer is obliged to resolve security threats for which he is responsible. If the problem is not resolved, the provider is entitled to suspend, stop or cancel the services indefinitely without entitlement to a refund, unless otherwise stated. The Customer is obliged to provide the Operator with correct and complete data stated in the registration, in all orders, etc. The Customer is obliged, if a change occurs, to correct this information. The Operator is not responsible for any damages or problems caused as a result of providing invalid data. Without providing truthful and complete data, the Operator is entitled to suspend the service at any time without warning or cancel it without compensation and without entitlement to a refund. If the customer requests a refund due to unsatisfactory service, they will receive credits back to their customer account as part of the complaint."
+      },
+      "4": {
+        "title": "4. Complaints",
+        "content": "If the customer believes that his service does not correspond to the description on the website, whether by price, defect, etc., he is entitled to exercise the relevant rights from liability for these defects in writing to the service provider at email support@firtcore.cz or via ticket on Discord, or in writing to the address: Patrik Vlček, Na Škvárovně 522, 549 32 Velké Poříčí. The Provider will handle the complaint within the statutory period (30 days). In other cases, the exercise of the right from liability for defects and the handling of the complaint are governed mainly by the Civil Code and consumer protection regulations. The customer who complains about a product or service is obliged to properly justify his complaint."
+      },
+      "5": {
+        "title": "5. Customer Support and Communication with the Customer",
+        "content": "Communication options: Discord, email, phone. Email: support@firtcore.cz. Phone: 776 092 263. Discord: https://discord.gg/firtcore-cz (or ticket system). Provider: Patrik Vlček, VAT: CZ23266023, with registered address Na Škvárovně 522, 549 32 Velké Poříčí, doing business as a self-employed person."
+      },
+      "6": {
+        "title": "6. Termination of the Contract",
+        "content": "Upon termination of the service, the customer's obligation to pay unpaid invoices does not cease. The minimum period for which the service is maintained is 30 days. The Provider will handle the complaint within 30 days. For dedicated servers, the customer is obliged to pay 25% of the price upon cancellation, unless otherwise stated. The duration of the agreement and its termination are governed by the contractual terms of the specific services."
+      },
+      "7": {
+        "title": "7. Data Centers",
+        "content": "The hosting has servers leased from an external company. It is forbidden to connect our services with other hostings, unless stated otherwise. The customer must request a different location – by default, the CZ location is set."
+      },
+      "8": {
+        "title": "8. Service Availability, Failures and Outages",
+        "content": "The Operator reserves the right to interrupt the supply of services or limit their availability. In case of a planned outage, the operator will inform in a timely manner in the user interface or on the websites (Discord, status.firtcore.cz). The Operator is not responsible for loss of stored data or for damages caused by using the operator's services, for example damage to disk and backups. The Customer is responsible for all data stored on his data disk and also bears full responsibility for compliance with copyrights. In case of DoS, DDoS attacks, etc., the Operator is not responsible for damage to the customer's service. The operator will inform about failures and outages on the website. The Operator is not responsible for loss or damage of data due to hardware failure or disk failure."
+      },
+      "9": {
+        "title": "9. Connectivity and its Rules",
+        "content": "90% of services are connected to 10Gbit connectivity, while for customer safety we provide max. 1Gbit as standard. We increase it if necessary."
+      },
+      "10": {
+        "title": "10. Payment Options and Payments Themselves",
+        "content": "Payment gateways: Stripe, PayPal."
+      },
+      "11": {
+        "title": "11. Information Protection and Personal Data Protection",
+        "content": "By this, you consent to the self-employed person Patrik Vlček, operating the portal FirtCore.cz, VAT: CZ23266023, with registered address Na Škvárovně 522, 549 32 Velké Poříčí, Czech Republic, doing business as a self-employed person (hereinafter referred to as the 'Controller'), to process, within the meaning of Regulation (EU) 2016/679 (GDPR), the following personal data: Name and surname, IP address, Email, Address, Phone number (unless otherwise specified). The above personal data are necessary for order processing and further performance of the contract (Art. 6 para. 1 letter b) GDPR). The seller also processes this data for the purpose of contract documentation and possible future exercise and defense of the rights and obligations of the contracting parties. Personal data is kept for 10 years from the fulfillment of the last part of the contract, unless another legal regulation requires longer storage (Art. 6 para. 1 letter c) and f) GDPR). News and other commercial communications may be sent to the buyer's email address or telephone number according to Section 7 para. 3 of Act No. 480/2004 Coll., unless the buyer refuses them. These communications can be unsubscribed at any time."
+      },
+      "12": {
+        "title": "12. Final Provisions",
+        "content": "All agreements between the Operator and the Customer are governed by the valid and effective Czech legal order. The Operator may change any part of the Contract or contractual terms at any time, effective from the first day of the following calendar month after the publication of the changes. By continuing to operate his services even after the change of the Contract, Terms, contractual terms or other related documents, the Customer expresses his unequivocal consent to the new wording of these documents and their full acceptance during the operation of his services. These Terms and Conditions take effect on 12. 02. 2026. In the event of a consumer dispute that cannot be resolved by mutual agreement, the consumer may submit a proposal for out-of-court dispute resolution to the Czech Trade Inspection Authority, Central Inspectorate – Prague and Hradec Králové Region."
       }
     }
   },
@@ -421,17 +607,29 @@
       {
         "name": "maxinoo7",
         "role": "Customer",
-        "rating": 5,
+        "rating": 9.5,
         "text": "I bought the discord bot - pro package for 60 CZK/month and personally I think the price/performance ratio is absolutely OP. I haven't encountered any problems yet, which I'm glad for ;) 9.5/10",
         "date": "February 28, 2026"
       },
       {
         "name": "Art Vik (art333vik)",
         "role": "Customer",
-        "rating": 5,
+        "rating": 9,
         "text": "I had the opportunity to try your minecraft hosting, and I'm very satisfied! The helpers quickly prepared it for me and helped with the setup, and the server itself was great: plenty of options, no lags or other technical issues. 9/10",
         "date": "March 1, 2026"
       }
     ]
+  },
+  "servicesPage": {
+    "badge": "Our Portfolio",
+    "title": "Complete offer of",
+    "titleGradient": "Services",
+    "description": "From the most powerful game hosting to enterprise dedicated solutions. Everything with emphasis on maximum performance, stability and top-notch support.",
+    "servicesTitle": "Everything you need in one place",
+    "servicesSubtitle": "Explore our hosting solutions designed for gamers, developers and businesses.",
+    "ctaTitle": "Didn't find what you were looking for?",
+    "ctaDescription": "Do you need individual configuration or a custom solution? Our team is ready to help you with any request.",
+    "ctaSupport": "Contact support",
+    "ctaCustom": "Custom request"
   }
 }

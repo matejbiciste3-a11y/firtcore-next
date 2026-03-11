@@ -19,7 +19,7 @@ export default function CustomSolution() {
                         <Button href="mailto:info@firtcore.cz" variant="primary" size="large">
                             Kontaktovat obchodní oddělení
                         </Button>
-                        <Button href="https://discord.gg/firtcore" variant="secondary" size="large" icon="discord">
+                        <Button href="https://discord.gg/firtcore-cz" variant="secondary" size="large" icon="discord">
                             Poptat na Discordu
                         </Button>
                     </div>

@@ -651,3 +651,91 @@
         color: hsl(var(--color-muted));
     }
 }
+
+/* Footer vylepšení */
+.site-footer {
+    @apply mx-4 md:mx-8 lg:mx-10 mb-4 md:mb-6 lg:mb-8 rounded-xl;
+    background: hsl(var(--color-background-secondary)/0.8);
+    backdrop-filter: blur(12px);
+    border: 1px solid hsl(var(--color-neutral)/0.5);
+}
+
+.footer-inner {
+    @apply p-6 md:p-8 lg:p-10;
+}
+
+.footer-cols {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-6;
+}
+
+.footer-brand {
+    @apply col-span-1;
+}
+
+.footer-brand p {
+    @apply text-sm text-muted-foreground leading-relaxed max-w-[250px];
+}
+
+.footer-brand-socials {
+    @apply flex gap-3 mt-4;
+}
+
+.social-icon {
+    @apply flex items-center justify-center w-10 h-10 rounded-xl bg-neutral/10 hover:bg-primary/10 border border-white/5 transition-all duration-300;
+    color: hsl(var(--color-muted));
+}
+
+.social-icon:hover {
+    @apply scale-110;
+    color: hsl(var(--color-primary));
+}
+
+.footer-heading {
+    @apply text-base font-bold mb-4 text-foreground;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.footer-heading::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background: linear-gradient(90deg, hsl(var(--color-primary)), transparent);
+}
+
+.footer-links {
+    @apply space-y-2;
+}
+
+.footer-links li {
+    @apply text-sm;
+}
+
+.footer-links a {
+    @apply text-muted-foreground hover:text-primary transition-colors duration-300;
+}
+
+.footer-links span {
+    @apply text-muted-foreground;
+}
+
+.legal-link {
+    @apply inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-primary/5 hover:bg-primary/10 border border-primary/10 transition-all duration-300;
+    color: hsl(var(--color-primary));
+}
+
+.legal-link:hover {
+    @apply translate-x-1;
+}
+
+.footer-copyright {
+    @apply mt-8 pt-6 text-xs text-center border-t border-white/5;
+    color: hsl(var(--color-muted)/0.5);
+}
+
+.footer-copyright p {
+    @apply text-xs;
+}

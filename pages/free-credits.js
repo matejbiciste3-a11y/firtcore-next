@@ -146,7 +146,7 @@ export default function FreeCreditsPage() {
                                 <Button href="https://client.firtcore.cz/register" variant="primary" size="large">
                                     Založit účet
                                 </Button>
-                                <Button href="https://discord.gg/firtcore-cz" variant="discord" size="large">
+                                <Button href="https://discord.gg/J9WuqZZtJ4" variant="discord" size="large">
                                     Discord komunita
                                 </Button>
                             </div>
@@ -155,7 +155,7 @@ export default function FreeCreditsPage() {
                             <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-10 pt-8 border-t border-white/10">
                                 {stats.map((stat, index) => (
                                     <div key={index}>
-                                        <div className="text-2xl font-bold text-primary">{stat.value}{stat.suffix || ''}</div>
+                                        <div className="text-2xl font-bold text-brand">{stat.value}{stat.suffix || ''}</div>
                                         <div className="text-sm font-semibold">{stat.label}</div>
                                         <div className="text-xs text-muted-foreground">{stat.subtext}</div>
                                     </div>
@@ -170,9 +170,9 @@ export default function FreeCreditsPage() {
                             className="relative"
                         >
                             <div className="glass-morphism-v2 p-8 rounded-3xl relative overflow-hidden">
-                                <div className="absolute top-0 right-0 w-32 h-32 bg-primary/20 blur-[60px]"></div>
+                                <div className="absolute top-0 right-0 w-32 h-32 bg-brand/20 blur-[60px]"></div>
                                 
-                                <Icons.Gift className="w-16 h-16 text-primary mb-6" />
+                                <Icons.Gift className="w-16 h-16 text-brand mb-6" />
                                 
                                 <h3 className="text-2xl font-bold mb-2">Váš affiliate kód</h3>
                                 <p className="text-sm text-muted-foreground mb-4">
@@ -180,7 +180,7 @@ export default function FreeCreditsPage() {
                                 </p>
                                 
                                 <div className="bg-background-secondary/50 rounded-xl p-4 mb-4 border border-white/5">
-                                    <code className="text-2xl font-mono text-primary">IXfH9ykG</code>
+                                    <code className="text-2xl font-mono text-brand">IXfH9ykG</code>
                                 </div>
 
                                 <Button href="#" variant="outline" fullWidth>
@@ -219,8 +219,8 @@ export default function FreeCreditsPage() {
                                 transition={{ delay: index * 0.1 }}
                                 className="glass-morphism-v2 p-6 rounded-2xl text-center"
                             >
-                                <div className="w-16 h-16 rounded-2xl bg-primary/20 flex items-center justify-center mx-auto mb-4">
-                                    <item.icon className="w-8 h-8 text-primary" />
+                                <div className="w-16 h-16 rounded-2xl bg-brand/20 flex items-center justify-center mx-auto mb-4">
+                                    <item.icon className="w-8 h-8 text-brand" />
                                 </div>
                                 <h3 className="text-xl font-bold mb-2">{item.title}</h3>
                                 <p className="text-muted-foreground text-sm">{item.description}</p>
@@ -237,7 +237,7 @@ export default function FreeCreditsPage() {
                         <p className="text-muted-foreground mb-6">
                             Získejte hosting zadarmo účastí v našich pravidelných soutěžích a exkluzivních akcích pro členy komunity.
                         </p>
-                        <Button href="https://discord.gg/firtcore-cz" variant="discord" size="large">
+                        <Button href="https://discord.gg/J9WuqZZtJ4" variant="discord" size="large">
                             Připojit se na Discord
                         </Button>
                     </motion.div>
@@ -271,7 +271,7 @@ export default function FreeCreditsPage() {
                                 transition={{ delay: index * 0.1 }}
                                 className={`relative p-8 rounded-2xl ${
                                     tier.popular 
-                                        ? 'glass-morphism-v2 border-primary/30 scale-105' 
+                                        ? 'glass-morphism-v2 border-brand/30 scale-105' 
                                         : 'glass-morphism-v2 border-white/5'
                                 }`}
                             >
@@ -285,7 +285,7 @@ export default function FreeCreditsPage() {
                                 <ul className="space-y-3 mb-8">
                                     {tier.features.map((feature, i) => (
                                         <li key={i} className="flex items-start gap-2">
-                                            <Icons.Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                                            <Icons.Check className="w-5 h-5 text-brand flex-shrink-0 mt-0.5" />
                                             <span className="text-sm text-muted-foreground">{feature}</span>
                                         </li>
                                     ))}
@@ -312,8 +312,8 @@ export default function FreeCreditsPage() {
                                 transition={{ delay: index * 0.1 }}
                                 className="text-center"
                             >
-                                <div className="w-16 h-16 rounded-2xl bg-primary/20 flex items-center justify-center mx-auto mb-4">
-                                    <feature.icon className="w-8 h-8 text-primary" />
+                                <div className="w-16 h-16 rounded-2xl bg-brand/20 flex items-center justify-center mx-auto mb-4">
+                                    <feature.icon className="w-8 h-8 text-brand" />
                                 </div>
                                 <h3 className="text-lg font-bold mb-2">{feature.title}</h3>
                                 <p className="text-sm text-muted-foreground">{feature.description}</p>
@@ -343,7 +343,7 @@ export default function FreeCreditsPage() {
                             <div className="grid grid-cols-2 gap-4 mb-8">
                                 {influencerFeatures.map((item, index) => (
                                     <div key={index} className="flex items-center gap-3">
-                                        <item.icon className="w-5 h-5 text-primary" />
+                                        <item.icon className="w-5 h-5 text-brand" />
                                         <span className="text-sm">{item.text}</span>
                                     </div>
                                 ))}
@@ -366,8 +366,8 @@ export default function FreeCreditsPage() {
                         >
                             <div className="glass-morphism-v2 p-8 rounded-3xl">
                                 <div className="flex items-center gap-4 mb-6">
-                                    <div className="w-16 h-16 rounded-2xl bg-primary/20 flex items-center justify-center">
-                                        <Icons.Discord className="w-8 h-8 text-primary" />
+                                    <div className="w-16 h-16 rounded-2xl bg-brand/20 flex items-center justify-center">
+                                        <Icons.Discord className="w-8 h-8 text-brand" />
                                     </div>
                                     <div>
                                         <div className="font-bold">Discord komunita</div>
@@ -377,19 +377,19 @@ export default function FreeCreditsPage() {
 
                                 <div className="grid grid-cols-2 gap-3 mb-4">
                                     <div>
-                                        <div className="text-xl font-bold text-primary">50+</div>
+                                        <div className="text-xl font-bold text-brand">50+</div>
                                         <div className="text-xs text-muted-foreground">Členů</div>
                                     </div>
                                     <div>
-                                        <div className="text-xl font-bold text-primary">24/7</div>
+                                        <div className="text-xl font-bold text-brand">24/7</div>
                                         <div className="text-xs text-muted-foreground">Podpora</div>
                                     </div>
                                     <div>
-                                        <div className="text-xl font-bold text-primary">10+</div>
+                                        <div className="text-xl font-bold text-brand">10+</div>
                                         <div className="text-xs text-muted-foreground">Soutěží</div>
                                     </div>
                                     <div>
-                                        <div className="text-xl font-bold text-primary">30+</div>
+                                        <div className="text-xl font-bold text-brand">30+</div>
                                         <div className="text-xs text-muted-foreground">Právě online</div>
                                     </div>
                                 </div>
@@ -403,7 +403,7 @@ export default function FreeCreditsPage() {
                 </div>
             </section>
 
-            {/* FAQ sekce - můžeš použít existující FAQ komponentu */}
+            {/* FAQ sekce */}
             <section className="py-20">
                 <div className="container">
                     <motion.div

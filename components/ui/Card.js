@@ -19,9 +19,9 @@ export default function Card({ icon, title, description, children, variant = 'de
             <div className="noise-overlay opacity-[0.02]"></div>
             <div className="relative z-10 flex-1">
                 {icon && (
-                    <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
+                    <div className="w-12 h-12 rounded-xl bg-brand/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
                         {typeof icon === 'string' ? (
-                            <div className="w-6 h-6 text-primary">
+                            <div className="w-6 h-6 text-brand">
                                 {Icons[icon.charAt(0).toUpperCase() + icon.slice(1)] ? (
                                     React.createElement(Icons[icon.charAt(0).toUpperCase() + icon.slice(1)], { className: "w-full h-full" })
                                 ) : (
@@ -29,11 +29,11 @@ export default function Card({ icon, title, description, children, variant = 'de
                                 )}
                             </div>
                         ) : (
-                            <div className="w-6 h-6 text-primary">{icon}</div>
+                            <div className="w-6 h-6 text-brand">{icon}</div>
                         )}
                     </div>
                 )}
-                <h3 className="text-xl font-bold mb-3 group-hover:text-primary transition-colors">{title}</h3>
+                <h3 className="text-xl font-bold mb-3 group-hover:text-brand transition-colors">{title}</h3>
                 <p className="text-muted-foreground leading-relaxed">{description}</p>
                 {children}
             </div>

@@ -41,6 +41,6 @@ export const STATISTICS = [
 ]
 
 export const SOCIAL_LINKS = {
-    discord: 'https://discord.gg/firtcore-cz',
+    discord: 'https://discord.gg/J9WuqZZtJ4',
     email: 'mailto:support@firtcore.cz'
 }

@@ -533,7 +533,7 @@
       },
       "5": {
         "title": "5. Zákaznická podpora a komunikace se zákazníkem",
-        "content": "Možnosti komunikace: Discord, email, telefon. Email: support@firtcore.cz. Telefon: 776 092 263. Discord: https://discord.gg/firtcore-cz (případně ticket systém). Poskytovatel: Patrik Vlček, IČO: 23266023, se sídlem Na Škvárovně 522, 549 32 Velké Poříčí, podnikající jako osoba samostatně výdělečně činná."
+        "content": "Možnosti komunikace: Discord, email, telefon. Email: support@firtcore.cz. Telefon: 776 092 263. Discord: https://discord.gg/J9WuqZZtJ4 (případně ticket systém). Poskytovatel: Patrik Vlček, IČO: 23266023, se sídlem Na Škvárovně 522, 549 32 Velké Poříčí, podnikající jako osoba samostatně výdělečně činná."
       },
       "6": {
         "title": "6. Zánik trvání smlouvy",
@@ -631,5 +631,17 @@
     "ctaDescription": "Potřebujete individuální konfiguraci nebo speciální řešení na míru? Náš tým je připraven vám pomoci s jakýmkoliv požadavkem.",
     "ctaSupport": "Kontaktujte podporu",
     "ctaCustom": "Individuální poptávka"
-  }
+  },
+  "discord": {
+  "title": "Připojte se k více než",
+  "titleGradient": "100 členům",
+  "description": "Okamžitá podpora, novinky jako první a aktivní komunita hráčů i provozovatelů. Buďte součástí něčeho většího.",
+  "cta": "Vstoupit do komunity",
+  "members": "100+",
+  "membersLabel": "Členů",
+  "support": "24/7",
+  "supportLabel": "Podpora",
+  "contests": "10+",
+  "contestsLabel": "Soutěží"
+}
 }

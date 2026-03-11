@@ -9,7 +9,7 @@ export default function Badge({
     className
 }) {
     const variants = {
-        primary: 'bg-primary/10 text-primary border-primary/20',
+        primary: 'bg-brand/10 text-brand border-brand/20',
         success: 'bg-success/10 text-success border-success/30',
         warning: 'bg-warning/10 text-warning border-warning/30',
         purple: 'bg-purple/10 text-purple border-purple/30',

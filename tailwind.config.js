@@ -19,6 +19,12 @@ module.exports = {
                 base: 'hsl(var(--color-base))',
                 muted: 'hsl(var(--color-muted))',
                 neutral: 'hsl(var(--color-neutral))',
+                brand: {
+                    DEFAULT: '#800080',
+                    light: '#b300b3',
+                    dark: '#4d004d',
+                    muted: '#b3b3ff',
+                },
             },
             fontFamily: {
                 sans: ['Figtree', 'sans-serif'],

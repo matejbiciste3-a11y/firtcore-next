@@ -14,10 +14,10 @@ export default function Button({
     const baseStyles = 'inline-flex items-center justify-center gap-2 font-semibold rounded-lg transition-all duration-300 hover:scale-105'
 
     const variants = {
-        primary: 'bg-primary text-white hover:bg-primary/90 shadow-lg shadow-primary/30',
-        secondary: 'bg-primary/80 text-white hover:bg-primary/90 shadow-lg shadow-primary/20',
+        primary: 'bg-brand text-white hover:bg-brand/90 shadow-lg shadow-brand/30',
+        secondary: 'bg-brand/80 text-white hover:bg-brand/90 shadow-lg shadow-brand/20',
         discord: 'bg-[#5865F2] text-white hover:bg-[#4752C4] shadow-lg shadow-[#5865F2]/30',
-        outline: 'border-2 border-primary text-primary hover:bg-primary/10'
+        outline: 'border-2 border-brand text-brand hover:bg-brand/10'
     }
 
     const sizes = {

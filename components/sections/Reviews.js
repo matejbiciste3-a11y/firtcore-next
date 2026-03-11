@@ -142,9 +142,9 @@ export default function Reviews() {
                                     className="flex-shrink-0 w-full sm:w-1/2 px-3"
                                     style={{ flexBasis: `${100 / visibleCount}%` }}
                                 >
-                                    <div className="review-card glass-morphism-v2 p-6 rounded-2xl h-full flex flex-col border border-white/5 hover:border-primary/30 transition-all duration-300">
+                                    <div className="review-card glass-morphism-v2 p-6 rounded-2xl h-full flex flex-col border border-white/5 hover:border-brand/30 transition-all duration-300">
                                         <div className="flex items-center gap-4 mb-4">
-                                            <div className="w-14 h-14 rounded-full bg-primary/20 flex items-center justify-center text-primary text-xl font-bold flex-shrink-0">
+                                            <div className="w-14 h-14 rounded-full bg-brand/20 flex items-center justify-center text-brand text-xl font-bold flex-shrink-0">
                                                 {review.name.charAt(0)}
                                             </div>
                                             <div className="flex-1">
@@ -164,8 +164,8 @@ export default function Reviews() {
                                         <div className="flex items-center justify-between mt-auto pt-4 border-t border-white/5">
                                             <span className="text-xs text-muted-foreground">{review.date}</span>
                                             <div className="flex items-center gap-1">
-                                                <span className="text-sm font-bold text-primary">{review.rating}/10</span>
-                                                <Icons.Check className="w-4 h-4 text-primary" />
+                                                <span className="text-sm font-bold text-brand">{review.rating}/10</span>
+                                                <Icons.Check className="w-4 h-4 text-brand" />
                                             </div>
                                         </div>
                                     </div>
@@ -182,11 +182,11 @@ export default function Reviews() {
                                 className={`absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 w-12 h-12 rounded-full glass-morphism-v2 flex items-center justify-center transition-all duration-300 ${
                                     currentIndex === 0 
                                         ? 'opacity-50 cursor-not-allowed' 
-                                        : 'hover:bg-primary/10 hover:scale-110'
+                                        : 'hover:bg-brand/10 hover:scale-110'
                                 }`}
                                 aria-label="Předchozí recenze"
                             >
-                                <Icons.ChevronLeft className="w-6 h-6 text-primary" />
+                                <Icons.ChevronLeft className="w-6 h-6 text-brand" />
                             </button>
 
                             <button
@@ -195,11 +195,11 @@ export default function Reviews() {
                                 className={`absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 w-12 h-12 rounded-full glass-morphism-v2 flex items-center justify-center transition-all duration-300 ${
                                     currentIndex === maxIndex 
                                         ? 'opacity-50 cursor-not-allowed' 
-                                        : 'hover:bg-primary/10 hover:scale-110'
+                                        : 'hover:bg-brand/10 hover:scale-110'
                                 }`}
                                 aria-label="Další recenze"
                             >
-                                <Icons.ChevronRight className="w-6 h-6 text-primary" />
+                                <Icons.ChevronRight className="w-6 h-6 text-brand" />
                             </button>
                         </>
                     )}

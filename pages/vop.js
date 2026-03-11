@@ -7,7 +7,7 @@ export default function VOP() {
         <Layout>
             <section className="relative pt-32 pb-20 overflow-hidden">
                 <div className="absolute inset-0 !-z-10">
-                    <div className="absolute top-1/4 -left-20 w-96 h-96 bg-primary/10 rounded-full blur-[100px]"></div>
+                    <div className="absolute top-1/4 -left-20 w-96 h-96 bg-brand/10 rounded-full blur-[100px]"></div>
                 </div>
                 <div className="container relative z-10">
                     <motion.div
@@ -16,7 +16,7 @@ export default function VOP() {
                         transition={{ duration: 0.8 }}
                         className="max-w-4xl mx-auto"
                     >
-                        <span className="inline-block py-1 px-4 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-bold mb-6 tracking-wider uppercase">
+                        <span className="inline-block py-1 px-4 rounded-full bg-brand/10 border border-brand/20 text-brand text-sm font-bold mb-6 tracking-wider uppercase">
                             Právní dokumenty
                         </span>
                         <h1 className="text-4xl md:text-5xl font-black mb-4">Všeobecné obchodní podmínky</h1>
@@ -24,7 +24,7 @@ export default function VOP() {
                         <div className="text-sm text-muted-foreground mb-12 space-y-1">
                             <p><strong>Provozovatel:</strong> Patrik Vlček, IČO: 23266023</p>
                             <p><strong>Sídlo:</strong> Na Škvárovně 522, 549 32 Velké Poříčí, Česká republika</p>
-                            <p><strong>Email:</strong> <a href="mailto:support@firtcore.cz" className="text-primary">support@firtcore.cz</a></p>
+                            <p><strong>Email:</strong> <a href="mailto:support@firtcore.cz" className="text-brand">support@firtcore.cz</a></p>
                         </div>
 
                         <div className="space-y-8 legal-content">

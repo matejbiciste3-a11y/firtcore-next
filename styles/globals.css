@@ -4,8 +4,8 @@
 
 @layer base {
     :root {
-        --color-primary: 222 100% 50%;
-        --color-secondary: 217 100% 69%;
+        --color-primary: 280 100% 25%;     /* ZMĚNA: #800080 v HSL */
+        --color-secondary: 280 60% 40%;    /* ZMĚNA: světlejší fialová */
         --color-success: 142 71% 45%;
         --color-warning: 25 95% 53%;
         --color-background: 220 20% 98%;
@@ -32,7 +32,7 @@
         line-height: 1.6;
     }
 
-    /* Custom Scrollbar */
+    /* Custom Scrollbar - s fialovým nádechem */
     ::-webkit-scrollbar {
         width: 10px;
     }
@@ -48,11 +48,12 @@
     }
 
     ::-webkit-scrollbar-thumb:hover {
-        background: hsl(var(--color-primary) / 0.5);
+        background: #800080;
+        opacity: 0.5;
     }
 }
 
-/* ===== JEDNOTNÉ DARK MODE POZADÍ PRO CELÝ WEB ===== */
+/* ===== DARK MODE ===== */
 .dark {
     --color-background: 222 47% 6%;
     --color-background-secondary: 222 47% 10%;
@@ -75,7 +76,7 @@
     position: relative;
 }
 
-/* Efekt mlhoviny */
+/* Efekt mlhoviny - s fialovým akcentem */
 .dark::before {
     content: '';
     position: fixed;
@@ -315,11 +316,6 @@
         @apply px-[4%] pt-2.5;
     }
 
-    .navbar-inner {
-        @apply flex items-center justify-between h-16 max-w-7xl mx-auto px-4 md:px-8 relative z-[120];
-        transition: all 0.4s;
-    }
-
     .navbar.is-scrolled .navbar-inner {
         @apply rounded-xl bg-background-secondary/85 backdrop-blur-lg border border-neutral/50 shadow-lg;
     }
@@ -343,7 +339,7 @@
 
     .nav-links a:hover {
         background: hsl(var(--color-neutral) / 0.3);
-        color: hsl(var(--color-primary));
+        color: #800080;
         @apply scale-105;
     }
 
@@ -360,9 +356,52 @@
     }
 
     .theme-toggle:hover {
-        background: hsl(var(--color-primary) / 0.1);
-        color: hsl(var(--color-primary));
+        background: #800080;
+        opacity: 0.1;
+        color: #800080;
         @apply scale-110;
+    }
+
+    /* Mobile Menu - NOVÉ STYLY PRO HAMBURGER MENU */
+    .mobile-toggle {
+        @apply lg:hidden flex items-center justify-center w-12 h-12 rounded-xl bg-neutral/10 border border-white/5 hover:border-brand/50 transition-all duration-300;
+    }
+
+    .mobile-menu {
+        @apply lg:hidden fixed inset-x-0 top-[72px] bottom-0 z-[100] overflow-y-auto;
+        background: hsl(var(--color-background-secondary) / 0.95);
+        backdrop-filter: blur(12px);
+        border-top: 1px solid hsl(var(--color-neutral) / 0.3);
+        padding: 2rem 1.5rem;
+    }
+
+    .mobile-menu-item {
+        @apply flex items-center gap-4 p-4 rounded-xl transition-all duration-300;
+        color: hsl(var(--color-base));
+    }
+
+    .mobile-menu-item:hover {
+        @apply bg-brand/10 text-brand translate-x-2;
+    }
+
+    .mobile-menu-item.active {
+        @apply bg-brand/20 text-brand border-l-4 border-brand;
+    }
+
+    .mobile-menu-icon {
+        @apply w-10 h-10 rounded-xl bg-brand/10 flex items-center justify-center text-brand;
+    }
+
+    .mobile-menu-actions {
+        @apply mt-8 pt-8 space-y-3 border-t border-white/5;
+    }
+
+    .mobile-menu-socials {
+        @apply mt-8 pt-8 flex justify-center gap-4 border-t border-white/5;
+    }
+
+    .mobile-social-link {
+        @apply w-12 h-12 rounded-xl bg-brand/10 flex items-center justify-center text-brand hover:bg-brand hover:text-white transition-all duration-300 hover:scale-110;
     }
 
     /* Hero */
@@ -382,7 +421,7 @@
     .gradient-text {
         background: linear-gradient(90deg,
                 hsl(var(--color-primary)),
-                hsl(var(--color-secondary)));
+                #800080);
         background-size: 200% 100%;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -410,11 +449,15 @@
     }
 
     .stat-icon {
-        @apply inline-flex items-center justify-center w-14 h-14 rounded-xl mb-4 bg-primary/20 text-primary;
+        @apply inline-flex items-center justify-center w-14 h-14 rounded-xl mb-4;
+        background: #800080;
+        opacity: 0.2;
+        color: #800080;
     }
 
     .stat-value {
-        @apply text-3xl font-bold mb-2 text-primary;
+        @apply text-3xl font-bold mb-2;
+        color: #800080;
     }
 
     .stat-label {
@@ -451,7 +494,12 @@
         border: 1px solid hsl(var(--color-neutral)/0.5);
     }
 
-    /* SPECIAL OFFER - NOVÝ DESIGN */
+    .service-img {
+        @apply relative h-52 flex items-center justify-center;
+        background: linear-gradient(to bottom right, hsl(var(--color-primary) / 0.1), transparent);
+    }
+
+    /* SPECIAL OFFER */
     .special-offer-section {
         @apply py-16 lg:py-32 px-6 lg:px-8;
     }
@@ -459,8 +507,8 @@
     .offer-box {
         @apply max-w-7xl mx-auto relative overflow-hidden rounded-[3rem];
         background: linear-gradient(135deg, 
-            hsl(260, 80%, 60%, 0.1) 0%, 
-            hsl(200, 100%, 50%, 0.05) 100%);
+            hsla(280, 80%, 60%, 0.1) 0%, 
+            hsla(200, 100%, 50%, 0.05) 100%);
         border: 1px solid rgba(255, 255, 255, 0.1);
         box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
         backdrop-filter: blur(10px);
@@ -476,13 +524,13 @@
         background: conic-gradient(
             from 0deg at 50% 50%,
             transparent 0deg,
-            hsl(var(--color-primary) / 0.2) 90deg,
+            #800080 90deg,
             transparent 180deg,
-            hsl(var(--color-secondary) / 0.2) 270deg,
+            hsl(var(--color-secondary)) 270deg,
             transparent 360deg
         );
+        opacity: 0.2;
         animation: rotateGradient 20s linear infinite;
-        opacity: 0.3;
         pointer-events: none;
     }
 
@@ -491,8 +539,9 @@
         position: absolute;
         inset: 0;
         background: radial-gradient(circle at 70% 30%, 
-            hsl(var(--color-primary) / 0.15) 0%, 
-            transparent 50%);
+            #800080 0%, 
+            transparent 70%);
+        opacity: 0.15;
         pointer-events: none;
     }
 
@@ -502,7 +551,8 @@
 
     .offer-content h2 {
         @apply text-3xl lg:text-5xl font-black mb-8 leading-tight;
-        text-shadow: 0 0 30px hsl(var(--color-primary) / 0.3);
+        text-shadow: 0 0 30px #800080;
+        opacity: 0.3;
     }
 
     .offer-description {
@@ -516,9 +566,12 @@
 
     .promo-code .badge {
         @apply px-8 py-4 text-lg font-mono tracking-wider;
-        background: hsl(var(--color-primary) / 0.1);
-        border: 1px solid hsl(var(--color-primary) / 0.3);
-        box-shadow: 0 0 30px hsl(var(--color-primary) / 0.2);
+        background: #800080;
+        opacity: 0.1;
+        border: 1px solid #800080;
+        opacity: 0.3;
+        box-shadow: 0 0 30px #800080;
+        opacity: 0.2;
     }
 
     .promo-note {
@@ -537,37 +590,90 @@
 
     /* Footer */
     .site-footer {
-        @apply mx-10 mb-8 rounded-xl;
+        @apply mx-4 md:mx-8 lg:mx-10 mb-4 md:mb-6 lg:mb-8 rounded-xl;
         background: hsl(var(--color-background-secondary)/0.8);
         backdrop-filter: blur(12px);
         border: 1px solid hsl(var(--color-neutral)/0.5);
     }
 
     .footer-inner {
-        @apply p-12;
+        @apply p-6 md:p-8 lg:p-10;
     }
 
     .footer-cols {
-        @apply grid grid-cols-1 md:grid-cols-[1.5fr_1fr_1fr_1fr] gap-8;
+        @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-6;
     }
 
-    .footer-section h4 {
-        @apply font-semibold mb-3;
+    .footer-brand {
+        @apply col-span-1;
     }
 
-    .footer-section li {
-        @apply text-sm py-1;
+    .footer-brand p {
+        @apply text-sm text-brand-muted leading-relaxed max-w-[250px];
+    }
+
+    .footer-brand-socials {
+        @apply flex gap-3 mt-4;
+    }
+
+    .social-icon {
+        @apply flex items-center justify-center w-10 h-10 rounded-xl bg-neutral/10 hover:bg-primary/10 border border-white/5 transition-all duration-300;
         color: hsl(var(--color-muted));
     }
 
-    .footer-section a:hover {
-        color: hsl(var(--color-primary));
+    .social-icon:hover {
+        @apply scale-110;
+        color: #800080;
+    }
+
+    .footer-heading {
+        @apply text-base font-bold mb-4 text-base;
+        position: relative;
+        padding-bottom: 0.5rem;
+    }
+
+    .footer-heading::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 30px;
+        height: 2px;
+        background: linear-gradient(90deg, #800080, transparent);
+    }
+
+    .footer-links {
+        @apply space-y-2;
+    }
+
+    .footer-links li {
+        @apply text-sm;
+    }
+
+    .footer-links a {
+        @apply text-brand-muted hover:text-brand transition-colors duration-300;
+    }
+
+    .footer-links span {
+        @apply text-muted;
+    }
+
+    .legal-link {
+        @apply inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-primary/5 hover:bg-primary/10 border border-primary/10 transition-all duration-300;
+        color: #800080;
+    }
+
+    .legal-link:hover {
+        @apply translate-x-1;
     }
 
     .footer-copyright {
-        @apply text-xs text-center mt-8 pt-6;
+        @apply mt-8 pt-6 text-xs text-center border-t border-white/5;
         color: hsl(var(--color-muted)/0.5);
-        border-top: 1px solid hsl(var(--color-neutral)/0.3);
+    }
+
+    .footer-copyright p {
+        @apply text-xs;
     }
 
     /* Pricing Cards */
@@ -578,7 +684,7 @@
     }
 
     .pricing-card.popular {
-        border-color: hsl(var(--color-primary));
+        border-color: #800080;
         @apply shadow-xl scale-105;
     }
 
@@ -588,7 +694,7 @@
 
     .pricing-card h3 {
         @apply text-lg font-bold mb-4;
-        color: hsl(var(--color-primary));
+        color: #800080;
     }
 
     .pricing-card .amount {
@@ -616,7 +722,7 @@
 
     .loader-bar {
         @apply h-full rounded;
-        background: hsl(222, 100%, 50%);
+        background: #800080;
         animation: loaderBar 1.2s ease-in-out forwards;
     }
 
@@ -628,7 +734,7 @@
     /* Liquid blobs - pro light mode */
     .liquid-blob {
         @apply absolute -z-10 opacity-20;
-        background: radial-gradient(circle, hsl(var(--color-primary)) 0%, transparent 70%);
+        background: radial-gradient(circle, #800080 0%, transparent 70%);
         width: 500px;
         height: 500px;
         filter: blur(80px);
@@ -650,92 +756,28 @@
     .text-muted {
         color: hsl(var(--color-muted));
     }
-}
-
-/* Footer vylepšení */
-.site-footer {
-    @apply mx-4 md:mx-8 lg:mx-10 mb-4 md:mb-6 lg:mb-8 rounded-xl;
-    background: hsl(var(--color-background-secondary)/0.8);
-    backdrop-filter: blur(12px);
-    border: 1px solid hsl(var(--color-neutral)/0.5);
-}
-
-.footer-inner {
-    @apply p-6 md:p-8 lg:p-10;
-}
-
-.footer-cols {
-    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-6;
-}
-
-.footer-brand {
-    @apply col-span-1;
-}
-
-.footer-brand p {
-    @apply text-sm text-muted-foreground leading-relaxed max-w-[250px];
-}
-
-.footer-brand-socials {
-    @apply flex gap-3 mt-4;
-}
-
-.social-icon {
-    @apply flex items-center justify-center w-10 h-10 rounded-xl bg-neutral/10 hover:bg-primary/10 border border-white/5 transition-all duration-300;
-    color: hsl(var(--color-muted));
-}
-
-.social-icon:hover {
-    @apply scale-110;
-    color: hsl(var(--color-primary));
-}
-
-.footer-heading {
-    @apply text-base font-bold mb-4 text-foreground;
-    position: relative;
-    padding-bottom: 0.5rem;
-}
-
-.footer-heading::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 30px;
-    height: 2px;
-    background: linear-gradient(90deg, hsl(var(--color-primary)), transparent);
-}
-
-.footer-links {
-    @apply space-y-2;
-}
-
-.footer-links li {
-    @apply text-sm;
-}
-
-.footer-links a {
-    @apply text-muted-foreground hover:text-primary transition-colors duration-300;
-}
-
-.footer-links span {
-    @apply text-muted-foreground;
-}
-
-.legal-link {
-    @apply inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-primary/5 hover:bg-primary/10 border border-primary/10 transition-all duration-300;
-    color: hsl(var(--color-primary));
-}
-
-.legal-link:hover {
-    @apply translate-x-1;
-}
-
-.footer-copyright {
-    @apply mt-8 pt-6 text-xs text-center border-t border-white/5;
-    color: hsl(var(--color-muted)/0.5);
-}
-
-.footer-copyright p {
-    @apply text-xs;
+    
+    .text-base {
+        color: hsl(var(--color-base));
+    }
+    
+    .text-brand {
+        color: #800080;
+    }
+    
+    .text-brand-muted {
+        color: #b3b3ff;
+    }
+    
+    .bg-brand {
+        background-color: #800080;
+    }
+    
+    .bg-brand-light {
+        background-color: #b3b3ff;
+    }
+    
+    .border-brand {
+        border-color: #800080;
+    }
 }

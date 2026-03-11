@@ -18,7 +18,7 @@ export default function DiscordCommunity() {
                     transition={{ duration: 0.8 }}
                     className="discord-box glass-morphism-v2 p-12 lg:p-20 rounded-[2.5rem] relative overflow-hidden group"
                 >
-                    <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 blur-[100px] rounded-full translate-x-1/2 -translate-y-1/2 group-hover:scale-125 transition-transform duration-700"></div>
+                    <div className="absolute top-0 right-0 w-64 h-64 bg-brand/10 blur-[100px] rounded-full translate-x-1/2 -translate-y-1/2 group-hover:scale-125 transition-transform duration-700"></div>
 
                     <div className="discord-grid grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                         <div className="discord-content text-center lg:text-left">
@@ -29,8 +29,8 @@ export default function DiscordCommunity() {
                                 transition={{ delay: 0.2 }}
                                 className="text-4xl lg:text-5xl font-black mb-6 leading-tight"
                             >
-                                {t('discord.title')}{' '}
-                                <span className="gradient-text">{t('discord.titleGradient')}</span>
+                                Připojte se k více než{' '}
+                                <span className="gradient-text">100 členům</span>
                             </motion.h2>
                             <motion.p
                                 initial={{ opacity: 0, x: -20 }}
@@ -39,7 +39,7 @@ export default function DiscordCommunity() {
                                 transition={{ delay: 0.3 }}
                                 className="text-xl text-muted-foreground/80 mb-10 leading-relaxed"
                             >
-                                {t('discord.description')}
+                                Okamžitá podpora, novinky jako první a aktivní komunita hráčů i provozovatelů. Buďte součástí něčeho většího.
                             </motion.p>
                             <motion.div
                                 initial={{ opacity: 0, y: 20 }}
@@ -48,14 +48,14 @@ export default function DiscordCommunity() {
                                 transition={{ delay: 0.4 }}
                             >
                                 <Button
-                                    href="https://discord.gg/firtcore-cz"
+                                    href="https://discord.gg/J9WuqZZtJ4"
                                     variant="discord"
                                     size="large"
                                     icon="discord"
                                     target="_blank"
                                     className="hover-glow shadow-2xl"
                                 >
-                                    {t('discord.cta')}
+                                    Vstoupit do komunity
                                 </Button>
                             </motion.div>
                         </div>
@@ -71,7 +71,7 @@ export default function DiscordCommunity() {
                             </motion.div>
 
                             {/* Decorative elements */}
-                            <div className="absolute -top-10 -right-10 w-32 h-32 border border-primary/20 rounded-full animate-spin-slow"></div>
+                            <div className="absolute -top-10 -right-10 w-32 h-32 border border-brand/20 rounded-full animate-spin-slow"></div>
                             <div className="absolute -bottom-5 -left-5 w-24 h-24 border border-secondary/20 rounded-full animate-reverse-spin"></div>
                         </div>
                     </div>

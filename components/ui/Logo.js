@@ -6,7 +6,7 @@ import { useTheme } from '@/hooks/useTheme'
 export default function Logo({ className, showText = true, size = 40 }) {
     const { theme } = useTheme()
     
-    const logoSrc = '/images/firtcore-web.png'
+    const logoSrc = '/images/firtcore-web-rem.png'
     
     return (
         <div className={clsx("flex items-center gap-3", className)}>
